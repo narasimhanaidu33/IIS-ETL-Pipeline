@@ -1,0 +1,28 @@
+2025-04-04T21:34:24.289+0000 [INFO] Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: iis_etl.processing.extract manual__2025-04-04T21:22:32.237586+00:00 [queued]>
+2025-04-04T21:34:24.295+0000 [INFO] Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: iis_etl.processing.extract manual__2025-04-04T21:22:32.237586+00:00 [queued]>
+2025-04-04T21:34:24.295+0000 [INFO] Starting attempt 2 of 4
+2025-04-04T21:34:24.509+0000 [INFO] Executing <Task(PythonOperator): processing.extract> on 2025-04-04 21:22:32.237586+00:00
+2025-04-04T21:34:24.514+0000 [INFO] Started process 1566 to run task
+2025-04-04T21:34:24.520+0000 [INFO] Running: ['airflow', 'tasks', 'run', 'iis_etl', 'processing.extract', 'manual__2025-04-04T21:22:32.237586+00:00', '--job-id', '509', '--raw', '--subdir', 'DAGS_FOLDER/iis_etl.py', '--cfg-path', '/tmp/tmp0cdtz6rm']
+2025-04-04T21:34:24.523+0000 [INFO] Job 509: Subtask processing.extract
+2025-04-04T21:34:24.575+0000 [INFO] Running <TaskInstance: iis_etl.processing.extract manual__2025-04-04T21:22:32.237586+00:00 [running]> on host b8e5693c89ab
+2025-04-04T21:34:24.627+0000 [INFO] Exporting env vars: AIRFLOW_CTX_DAG_OWNER='airflow' AIRFLOW_CTX_DAG_ID='iis_etl' AIRFLOW_CTX_TASK_ID='processing.extract' AIRFLOW_CTX_EXECUTION_DATE='2025-04-04T21:22:32.237586+00:00' AIRFLOW_CTX_TRY_NUMBER='2' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-04-04T21:22:32.237586+00:00'
+2025-04-04T21:34:24.637+0000 [ERROR] Invalid log file format detected in /opt/airflow/data/raw_logs/u_ex100718.log
+2025-04-04T21:34:24.637+0000 [ERROR] Extraction failed: Invalid log file format: /opt/airflow/data/raw_logs/u_ex100718.log
+Traceback (most recent call last):
+  File "/opt/airflow/dags/iis_etl.py", line 577, in extract
+    raise ValueError(f"Invalid log file format: {log_path}")
+ValueError: Invalid log file format: /opt/airflow/data/raw_logs/u_ex100718.log
+2025-04-04T21:34:24.639+0000 [ERROR] Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/python.py", line 181, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/python.py", line 198, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/opt/airflow/dags/iis_etl.py", line 577, in extract
+    raise ValueError(f"Invalid log file format: {log_path}")
+ValueError: Invalid log file format: /opt/airflow/data/raw_logs/u_ex100718.log
+2025-04-04T21:34:24.643+0000 [INFO] Marking task as UP_FOR_RETRY. dag_id=iis_etl, task_id=processing.extract, execution_date=20250404T212232, start_date=20250404T213424, end_date=20250404T213424
+2025-04-04T21:34:24.648+0000 [ERROR] Failed to execute job 509 for task processing.extract (Invalid log file format: /opt/airflow/data/raw_logs/u_ex100718.log; 1566)
+2025-04-04T21:34:24.661+0000 [INFO] Task exited with return code 1
+2025-04-04T21:34:24.677+0000 [INFO] 0 downstream tasks scheduled from follow-on schedule check

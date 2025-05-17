@@ -1,0 +1,15 @@
+2025-04-03T21:51:20.963+0000 [INFO] Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: iis_etl.processing.load scheduled__2025-04-03T21:49:28.005585+00:00 [queued]>
+2025-04-03T21:51:21.032+0000 [INFO] Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: iis_etl.processing.load scheduled__2025-04-03T21:49:28.005585+00:00 [queued]>
+2025-04-03T21:51:21.032+0000 [INFO] Starting attempt 1 of 4
+2025-04-03T21:51:21.051+0000 [INFO] Executing <Task(PythonOperator): processing.load> on 2025-04-03 21:49:28.005585+00:00
+2025-04-03T21:51:21.060+0000 [INFO] Started process 490 to run task
+2025-04-03T21:51:21.080+0000 [INFO] Running: ['airflow', 'tasks', 'run', 'iis_etl', 'processing.load', 'scheduled__2025-04-03T21:49:28.005585+00:00', '--job-id', '150', '--raw', '--subdir', 'DAGS_FOLDER/iis_etl.py', '--cfg-path', '/tmp/tmpa518j9v_']
+2025-04-03T21:51:21.090+0000 [INFO] Job 150: Subtask processing.load
+2025-04-03T21:51:21.252+0000 [INFO] Running <TaskInstance: iis_etl.processing.load scheduled__2025-04-03T21:49:28.005585+00:00 [running]> on host 8d34dc648251
+2025-04-03T21:51:22.552+0000 [INFO] Exporting env vars: AIRFLOW_CTX_DAG_OWNER='airflow' AIRFLOW_CTX_DAG_ID='iis_etl' AIRFLOW_CTX_TASK_ID='processing.load' AIRFLOW_CTX_EXECUTION_DATE='2025-04-03T21:49:28.005585+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2025-04-03T21:49:28.005585+00:00'
+2025-04-03T21:51:22.860+0000 [INFO] Using connection ID 'postgres_iis' for task execution.
+2025-04-03T21:51:25.538+0000 [INFO] Successfully loaded 1681 records
+2025-04-03T21:51:25.543+0000 [INFO] Done. Returned value was: Loaded 1681 records
+2025-04-03T21:51:25.572+0000 [INFO] Marking task as SUCCESS. dag_id=iis_etl, task_id=processing.load, execution_date=20250403T214928, start_date=20250403T215120, end_date=20250403T215125
+2025-04-03T21:51:25.631+0000 [INFO] Task exited with return code 0
+2025-04-03T21:51:25.688+0000 [INFO] 1 downstream tasks scheduled from follow-on schedule check

@@ -1,0 +1,15 @@
+2025-04-04T21:44:36.599+0000 [INFO] Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: iis_etl.verify_db_connection manual__2025-04-04T21:44:18.688608+00:00 [queued]>
+2025-04-04T21:44:36.604+0000 [INFO] Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: iis_etl.verify_db_connection manual__2025-04-04T21:44:18.688608+00:00 [queued]>
+2025-04-04T21:44:36.604+0000 [INFO] Starting attempt 1 of 4
+2025-04-04T21:44:36.721+0000 [INFO] Executing <Task(PythonOperator): verify_db_connection> on 2025-04-04 21:44:18.688608+00:00
+2025-04-04T21:44:36.724+0000 [INFO] Started process 1887 to run task
+2025-04-04T21:44:36.728+0000 [INFO] Running: ['airflow', 'tasks', 'run', 'iis_etl', 'verify_db_connection', 'manual__2025-04-04T21:44:18.688608+00:00', '--job-id', '616', '--raw', '--subdir', 'DAGS_FOLDER/iis_etl.py', '--cfg-path', '/tmp/tmp1un48dpy']
+2025-04-04T21:44:36.730+0000 [INFO] Job 616: Subtask verify_db_connection
+2025-04-04T21:44:36.760+0000 [INFO] Running <TaskInstance: iis_etl.verify_db_connection manual__2025-04-04T21:44:18.688608+00:00 [running]> on host b8e5693c89ab
+2025-04-04T21:44:36.810+0000 [INFO] Exporting env vars: AIRFLOW_CTX_DAG_OWNER='airflow' AIRFLOW_CTX_DAG_ID='iis_etl' AIRFLOW_CTX_TASK_ID='verify_db_connection' AIRFLOW_CTX_EXECUTION_DATE='2025-04-04T21:44:18.688608+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-04-04T21:44:18.688608+00:00'
+2025-04-04T21:44:36.816+0000 [INFO] Using connection ID 'postgres_iis' for task execution.
+2025-04-04T21:44:36.822+0000 [INFO] PostgreSQL connection verified successfully
+2025-04-04T21:44:36.822+0000 [INFO] Done. Returned value was: True
+2025-04-04T21:44:36.835+0000 [INFO] Marking task as SUCCESS. dag_id=iis_etl, task_id=verify_db_connection, execution_date=20250404T214418, start_date=20250404T214436, end_date=20250404T214436
+2025-04-04T21:44:36.866+0000 [INFO] Task exited with return code 0
+2025-04-04T21:44:36.886+0000 [INFO] 1 downstream tasks scheduled from follow-on schedule check

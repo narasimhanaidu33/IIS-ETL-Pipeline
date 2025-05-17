@@ -1,0 +1,138 @@
+2025-04-04T17:31:28.974+0000 [INFO] Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: iis_etl.processing.load_dimensions scheduled__2025-04-04T16:57:03.736845+00:00 [queued]>
+2025-04-04T17:31:29.038+0000 [INFO] Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: iis_etl.processing.load_dimensions scheduled__2025-04-04T16:57:03.736845+00:00 [queued]>
+2025-04-04T17:31:29.039+0000 [INFO] Starting attempt 1 of 4
+2025-04-04T17:31:29.060+0000 [INFO] Executing <Task(PythonOperator): processing.load_dimensions> on 2025-04-04 16:57:03.736845+00:00
+2025-04-04T17:31:29.112+0000 [INFO] Started process 2577 to run task
+2025-04-04T17:31:29.127+0000 [INFO] Running: ['airflow', 'tasks', 'run', 'iis_etl', 'processing.load_dimensions', 'scheduled__2025-04-04T16:57:03.736845+00:00', '--job-id', '844', '--raw', '--subdir', 'DAGS_FOLDER/iis_etl.py', '--cfg-path', '/tmp/tmphtm2wj42']
+2025-04-04T17:31:29.137+0000 [INFO] Job 844: Subtask processing.load_dimensions
+2025-04-04T17:31:29.409+0000 [INFO] Running <TaskInstance: iis_etl.processing.load_dimensions scheduled__2025-04-04T16:57:03.736845+00:00 [running]> on host 6adf0d434abe
+2025-04-04T17:31:31.027+0000 [INFO] Exporting env vars: AIRFLOW_CTX_DAG_OWNER='airflow' AIRFLOW_CTX_DAG_ID='iis_etl' AIRFLOW_CTX_TASK_ID='processing.load_dimensions' AIRFLOW_CTX_EXECUTION_DATE='2025-04-04T16:57:03.736845+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2025-04-04T16:57:03.736845+00:00'
+2025-04-04T17:31:31.226+0000 [INFO] Using connection ID 'postgres_iis' for task execution.
+2025-04-04T17:31:31.446+0000 [ERROR] Dimension loading failed: (psycopg2.errors.NotNullViolation) null value in column "part_of_day" of relation "dim_time" violates not-null constraint
+DETAIL:  Failing row contains (182932, 2010-12-15 00:00:20, 0, null, 2010-12-15, 12, 4, 2010, Night).
+
+[SQL: INSERT INTO dim_time (timestamp, hour, date, month, quarter, year, time_period) VALUES (%(timestamp)s, %(hour)s, %(date)s, %(month)s, %(quarter)s, %(year)s, %(time_period)s)]
+[parameters: ({'timestamp': datetime.datetime(2010, 12, 15, 0, 0, 20, tzinfo=<UTC>), 'hour': 0, 'date': datetime.date(2010, 12, 15), 'month': 12, 'quarter': 4, 'year': 2010, 'time_period': 'Night'}, {'timestamp': datetime.datetime(2010, 12, 15, 0, 0, 22, tzinfo=<UTC>), 'hour': 0, 'date': datetime.date(2010, 12, 15), 'month': 12, 'quarter': 4, 'year': 2010, 'time_period': 'Night'}, {'timestamp': datetime.datetime(2010, 12, 15, 0, 2, 46, tzinfo=<UTC>), 'hour': 0, 'date': datetime.date(2010, 12, 15), 'month': 12, 'quarter': 4, 'year': 2010, 'time_period': 'Night'}, {'timestamp': datetime.datetime(2010, 12, 15, 0, 2, 48, tzinfo=<UTC>), 'hour': 0, 'date': datetime.date(2010, 12, 15), 'month': 12, 'quarter': 4, 'year': 2010, 'time_period': 'Night'}, {'timestamp': datetime.datetime(2010, 12, 15, 0, 3, 21, tzinfo=<UTC>), 'hour': 0, 'date': datetime.date(2010, 12, 15), 'month': 12, 'quarter': 4, 'year': 2010, 'time_period': 'Night'}, {'timestamp': datetime.datetime(2010, 12, 15, 0, 3, 23, tzinfo=<UTC>), 'hour': 0, 'date': datetime.date(2010, 12, 15), 'month': 12, 'quarter': 4, 'year': 2010, 'time_period': 'Night'}, {'timestamp': datetime.datetime(2010, 12, 15, 0, 3, 44, tzinfo=<UTC>), 'hour': 0, 'date': datetime.date(2010, 12, 15), 'month': 12, 'quarter': 4, 'year': 2010, 'time_period': 'Night'}, {'timestamp': datetime.datetime(2010, 12, 15, 0, 3, 46, tzinfo=<UTC>), 'hour': 0, 'date': datetime.date(2010, 12, 15), 'month': 12, 'quarter': 4, 'year': 2010, 'time_period': 'Night'}  ... displaying 10 of 1000 total bound parameter sets ...  {'timestamp': datetime.datetime(2010, 12, 15, 17, 23, 36, tzinfo=<UTC>), 'hour': 17, 'date': datetime.date(2010, 12, 15), 'month': 12, 'quarter': 4, 'year': 2010, 'time_period': 'Afternoon'}, {'timestamp': datetime.datetime(2010, 12, 15, 17, 23, 36, tzinfo=<UTC>), 'hour': 17, 'date': datetime.date(2010, 12, 15), 'month': 12, 'quarter': 4, 'year': 2010, 'time_period': 'Afternoon'})]
+(Background on this error at: https://sqlalche.me/e/14/gkpj)
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/engine/base.py", line 1881, in _execute_context
+    cursor, statement, parameters, context
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/dialects/postgresql/psycopg2.py", line 988, in do_executemany
+    **kwargs
+  File "/home/airflow/.local/lib/python3.7/site-packages/psycopg2/extras.py", line 1299, in execute_values
+    cur.execute(b''.join(parts))
+psycopg2.errors.NotNullViolation: null value in column "part_of_day" of relation "dim_time" violates not-null constraint
+DETAIL:  Failing row contains (182932, 2010-12-15 00:00:20, 0, null, 2010-12-15, 12, 4, 2010, Night).
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/opt/airflow/dags/iis_etl.py", line 311, in load_dimensions
+    time_df.to_sql('dim_time', conn, if_exists='append', index=False, chunksize=1000)
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/core/generic.py", line 2882, in to_sql
+    method=method,
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/io/sql.py", line 728, in to_sql
+    **engine_kwargs,
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/io/sql.py", line 1770, in to_sql
+    **engine_kwargs,
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/io/sql.py", line 1350, in insert_records
+    raise err
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/io/sql.py", line 1340, in insert_records
+    table.insert(chunksize=chunksize, method=method)
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/io/sql.py", line 967, in insert
+    exec_insert(conn, keys, chunk_iter)
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/io/sql.py", line 882, in _execute_insert
+    conn.execute(self.table.insert(), data)
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/engine/base.py", line 1380, in execute
+    return meth(self, multiparams, params, _EMPTY_EXECUTION_OPTS)
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/sql/elements.py", line 335, in _execute_on_connection
+    self, multiparams, params, execution_options
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/engine/base.py", line 1582, in _execute_clauseelement
+    cache_hit=cache_hit,
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/engine/base.py", line 1944, in _execute_context
+    e, statement, parameters, cursor, context
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/engine/base.py", line 2125, in _handle_dbapi_exception
+    sqlalchemy_exception, with_traceback=exc_info[2], from_=e
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/util/compat.py", line 211, in raise_
+    raise exception
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/engine/base.py", line 1881, in _execute_context
+    cursor, statement, parameters, context
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/dialects/postgresql/psycopg2.py", line 988, in do_executemany
+    **kwargs
+  File "/home/airflow/.local/lib/python3.7/site-packages/psycopg2/extras.py", line 1299, in execute_values
+    cur.execute(b''.join(parts))
+sqlalchemy.exc.IntegrityError: (psycopg2.errors.NotNullViolation) null value in column "part_of_day" of relation "dim_time" violates not-null constraint
+DETAIL:  Failing row contains (182932, 2010-12-15 00:00:20, 0, null, 2010-12-15, 12, 4, 2010, Night).
+
+[SQL: INSERT INTO dim_time (timestamp, hour, date, month, quarter, year, time_period) VALUES (%(timestamp)s, %(hour)s, %(date)s, %(month)s, %(quarter)s, %(year)s, %(time_period)s)]
+[parameters: ({'timestamp': datetime.datetime(2010, 12, 15, 0, 0, 20, tzinfo=<UTC>), 'hour': 0, 'date': datetime.date(2010, 12, 15), 'month': 12, 'quarter': 4, 'year': 2010, 'time_period': 'Night'}, {'timestamp': datetime.datetime(2010, 12, 15, 0, 0, 22, tzinfo=<UTC>), 'hour': 0, 'date': datetime.date(2010, 12, 15), 'month': 12, 'quarter': 4, 'year': 2010, 'time_period': 'Night'}, {'timestamp': datetime.datetime(2010, 12, 15, 0, 2, 46, tzinfo=<UTC>), 'hour': 0, 'date': datetime.date(2010, 12, 15), 'month': 12, 'quarter': 4, 'year': 2010, 'time_period': 'Night'}, {'timestamp': datetime.datetime(2010, 12, 15, 0, 2, 48, tzinfo=<UTC>), 'hour': 0, 'date': datetime.date(2010, 12, 15), 'month': 12, 'quarter': 4, 'year': 2010, 'time_period': 'Night'}, {'timestamp': datetime.datetime(2010, 12, 15, 0, 3, 21, tzinfo=<UTC>), 'hour': 0, 'date': datetime.date(2010, 12, 15), 'month': 12, 'quarter': 4, 'year': 2010, 'time_period': 'Night'}, {'timestamp': datetime.datetime(2010, 12, 15, 0, 3, 23, tzinfo=<UTC>), 'hour': 0, 'date': datetime.date(2010, 12, 15), 'month': 12, 'quarter': 4, 'year': 2010, 'time_period': 'Night'}, {'timestamp': datetime.datetime(2010, 12, 15, 0, 3, 44, tzinfo=<UTC>), 'hour': 0, 'date': datetime.date(2010, 12, 15), 'month': 12, 'quarter': 4, 'year': 2010, 'time_period': 'Night'}, {'timestamp': datetime.datetime(2010, 12, 15, 0, 3, 46, tzinfo=<UTC>), 'hour': 0, 'date': datetime.date(2010, 12, 15), 'month': 12, 'quarter': 4, 'year': 2010, 'time_period': 'Night'}  ... displaying 10 of 1000 total bound parameter sets ...  {'timestamp': datetime.datetime(2010, 12, 15, 17, 23, 36, tzinfo=<UTC>), 'hour': 17, 'date': datetime.date(2010, 12, 15), 'month': 12, 'quarter': 4, 'year': 2010, 'time_period': 'Afternoon'}, {'timestamp': datetime.datetime(2010, 12, 15, 17, 23, 36, tzinfo=<UTC>), 'hour': 17, 'date': datetime.date(2010, 12, 15), 'month': 12, 'quarter': 4, 'year': 2010, 'time_period': 'Afternoon'})]
+(Background on this error at: https://sqlalche.me/e/14/gkpj)
+2025-04-04T17:31:31.508+0000 [ERROR] Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/engine/base.py", line 1881, in _execute_context
+    cursor, statement, parameters, context
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/dialects/postgresql/psycopg2.py", line 988, in do_executemany
+    **kwargs
+  File "/home/airflow/.local/lib/python3.7/site-packages/psycopg2/extras.py", line 1299, in execute_values
+    cur.execute(b''.join(parts))
+psycopg2.errors.NotNullViolation: null value in column "part_of_day" of relation "dim_time" violates not-null constraint
+DETAIL:  Failing row contains (182932, 2010-12-15 00:00:20, 0, null, 2010-12-15, 12, 4, 2010, Night).
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/python.py", line 181, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/python.py", line 198, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/opt/airflow/dags/iis_etl.py", line 311, in load_dimensions
+    time_df.to_sql('dim_time', conn, if_exists='append', index=False, chunksize=1000)
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/core/generic.py", line 2882, in to_sql
+    method=method,
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/io/sql.py", line 728, in to_sql
+    **engine_kwargs,
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/io/sql.py", line 1770, in to_sql
+    **engine_kwargs,
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/io/sql.py", line 1350, in insert_records
+    raise err
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/io/sql.py", line 1340, in insert_records
+    table.insert(chunksize=chunksize, method=method)
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/io/sql.py", line 967, in insert
+    exec_insert(conn, keys, chunk_iter)
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/io/sql.py", line 882, in _execute_insert
+    conn.execute(self.table.insert(), data)
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/engine/base.py", line 1380, in execute
+    return meth(self, multiparams, params, _EMPTY_EXECUTION_OPTS)
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/sql/elements.py", line 335, in _execute_on_connection
+    self, multiparams, params, execution_options
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/engine/base.py", line 1582, in _execute_clauseelement
+    cache_hit=cache_hit,
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/engine/base.py", line 1944, in _execute_context
+    e, statement, parameters, cursor, context
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/engine/base.py", line 2125, in _handle_dbapi_exception
+    sqlalchemy_exception, with_traceback=exc_info[2], from_=e
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/util/compat.py", line 211, in raise_
+    raise exception
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/engine/base.py", line 1881, in _execute_context
+    cursor, statement, parameters, context
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/dialects/postgresql/psycopg2.py", line 988, in do_executemany
+    **kwargs
+  File "/home/airflow/.local/lib/python3.7/site-packages/psycopg2/extras.py", line 1299, in execute_values
+    cur.execute(b''.join(parts))
+sqlalchemy.exc.IntegrityError: (psycopg2.errors.NotNullViolation) null value in column "part_of_day" of relation "dim_time" violates not-null constraint
+DETAIL:  Failing row contains (182932, 2010-12-15 00:00:20, 0, null, 2010-12-15, 12, 4, 2010, Night).
+
+[SQL: INSERT INTO dim_time (timestamp, hour, date, month, quarter, year, time_period) VALUES (%(timestamp)s, %(hour)s, %(date)s, %(month)s, %(quarter)s, %(year)s, %(time_period)s)]
+[parameters: ({'timestamp': datetime.datetime(2010, 12, 15, 0, 0, 20, tzinfo=<UTC>), 'hour': 0, 'date': datetime.date(2010, 12, 15), 'month': 12, 'quarter': 4, 'year': 2010, 'time_period': 'Night'}, {'timestamp': datetime.datetime(2010, 12, 15, 0, 0, 22, tzinfo=<UTC>), 'hour': 0, 'date': datetime.date(2010, 12, 15), 'month': 12, 'quarter': 4, 'year': 2010, 'time_period': 'Night'}, {'timestamp': datetime.datetime(2010, 12, 15, 0, 2, 46, tzinfo=<UTC>), 'hour': 0, 'date': datetime.date(2010, 12, 15), 'month': 12, 'quarter': 4, 'year': 2010, 'time_period': 'Night'}, {'timestamp': datetime.datetime(2010, 12, 15, 0, 2, 48, tzinfo=<UTC>), 'hour': 0, 'date': datetime.date(2010, 12, 15), 'month': 12, 'quarter': 4, 'year': 2010, 'time_period': 'Night'}, {'timestamp': datetime.datetime(2010, 12, 15, 0, 3, 21, tzinfo=<UTC>), 'hour': 0, 'date': datetime.date(2010, 12, 15), 'month': 12, 'quarter': 4, 'year': 2010, 'time_period': 'Night'}, {'timestamp': datetime.datetime(2010, 12, 15, 0, 3, 23, tzinfo=<UTC>), 'hour': 0, 'date': datetime.date(2010, 12, 15), 'month': 12, 'quarter': 4, 'year': 2010, 'time_period': 'Night'}, {'timestamp': datetime.datetime(2010, 12, 15, 0, 3, 44, tzinfo=<UTC>), 'hour': 0, 'date': datetime.date(2010, 12, 15), 'month': 12, 'quarter': 4, 'year': 2010, 'time_period': 'Night'}, {'timestamp': datetime.datetime(2010, 12, 15, 0, 3, 46, tzinfo=<UTC>), 'hour': 0, 'date': datetime.date(2010, 12, 15), 'month': 12, 'quarter': 4, 'year': 2010, 'time_period': 'Night'}  ... displaying 10 of 1000 total bound parameter sets ...  {'timestamp': datetime.datetime(2010, 12, 15, 17, 23, 36, tzinfo=<UTC>), 'hour': 17, 'date': datetime.date(2010, 12, 15), 'month': 12, 'quarter': 4, 'year': 2010, 'time_period': 'Afternoon'}, {'timestamp': datetime.datetime(2010, 12, 15, 17, 23, 36, tzinfo=<UTC>), 'hour': 17, 'date': datetime.date(2010, 12, 15), 'month': 12, 'quarter': 4, 'year': 2010, 'time_period': 'Afternoon'})]
+(Background on this error at: https://sqlalche.me/e/14/gkpj)
+2025-04-04T17:31:31.549+0000 [INFO] Marking task as UP_FOR_RETRY. dag_id=iis_etl, task_id=processing.load_dimensions, execution_date=20250404T165703, start_date=20250404T173129, end_date=20250404T173131
+2025-04-04T17:31:31.837+0000 [ERROR] Failed to execute job 844 for task processing.load_dimensions ((psycopg2.errors.NotNullViolation) null value in column "part_of_day" of relation "dim_time" violates not-null constraint
+DETAIL:  Failing row contains (182932, 2010-12-15 00:00:20, 0, null, 2010-12-15, 12, 4, 2010, Night).
+
+[SQL: INSERT INTO dim_time (timestamp, hour, date, month, quarter, year, time_period) VALUES (%(timestamp)s, %(hour)s, %(date)s, %(month)s, %(quarter)s, %(year)s, %(time_period)s)]
+[parameters: ({'timestamp': datetime.datetime(2010, 12, 15, 0, 0, 20, tzinfo=<UTC>), 'hour': 0, 'date': datetime.date(2010, 12, 15), 'month': 12, 'quarter': 4, 'year': 2010, 'time_period': 'Night'}, {'timestamp': datetime.datetime(2010, 12, 15, 0, 0, 22, tzinfo=<UTC>), 'hour': 0, 'date': datetime.date(2010, 12, 15), 'month': 12, 'quarter': 4, 'year': 2010, 'time_period': 'Night'}, {'timestamp': datetime.datetime(2010, 12, 15, 0, 2, 46, tzinfo=<UTC>), 'hour': 0, 'date': datetime.date(2010, 12, 15), 'month': 12, 'quarter': 4, 'year': 2010, 'time_period': 'Night'}, {'timestamp': datetime.datetime(2010, 12, 15, 0, 2, 48, tzinfo=<UTC>), 'hour': 0, 'date': datetime.date(2010, 12, 15), 'month': 12, 'quarter': 4, 'year': 2010, 'time_period': 'Night'}, {'timestamp': datetime.datetime(2010, 12, 15, 0, 3, 21, tzinfo=<UTC>), 'hour': 0, 'date': datetime.date(2010, 12, 15), 'month': 12, 'quarter': 4, 'year': 2010, 'time_period': 'Night'}, {'timestamp': datetime.datetime(2010, 12, 15, 0, 3, 23, tzinfo=<UTC>), 'hour': 0, 'date': datetime.date(2010, 12, 15), 'month': 12, 'quarter': 4, 'year': 2010, 'time_period': 'Night'}, {'timestamp': datetime.datetime(2010, 12, 15, 0, 3, 44, tzinfo=<UTC>), 'hour': 0, 'date': datetime.date(2010, 12, 15), 'month': 12, 'quarter': 4, 'year': 2010, 'time_period': 'Night'}, {'timestamp': datetime.datetime(2010, 12, 15, 0, 3, 46, tzinfo=<UTC>), 'hour': 0, 'date': datetime.date(2010, 12, 15), 'month': 12, 'quarter': 4, 'year': 2010, 'time_period': 'Night'}  ... displaying 10 of 1000 total bound parameter sets ...  {'timestamp': datetime.datetime(2010, 12, 15, 17, 23, 36, tzinfo=<UTC>), 'hour': 17, 'date': datetime.date(2010, 12, 15), 'month': 12, 'quarter': 4, 'year': 2010, 'time_period': 'Afternoon'}, {'timestamp': datetime.datetime(2010, 12, 15, 17, 23, 36, tzinfo=<UTC>), 'hour': 17, 'date': datetime.date(2010, 12, 15), 'month': 12, 'quarter': 4, 'year': 2010, 'time_period': 'Afternoon'})]
+(Background on this error at: https://sqlalche.me/e/14/gkpj); 2577)
+2025-04-04T17:31:31.943+0000 [INFO] Task exited with return code 1
+2025-04-04T17:31:32.154+0000 [INFO] 0 downstream tasks scheduled from follow-on schedule check

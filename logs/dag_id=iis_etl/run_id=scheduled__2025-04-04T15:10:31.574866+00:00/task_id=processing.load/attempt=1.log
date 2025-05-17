@@ -1,0 +1,131 @@
+2025-04-04T15:21:44.049+0000 [INFO] Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: iis_etl.processing.load scheduled__2025-04-04T15:10:31.574866+00:00 [queued]>
+2025-04-04T15:21:44.056+0000 [INFO] Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: iis_etl.processing.load scheduled__2025-04-04T15:10:31.574866+00:00 [queued]>
+2025-04-04T15:21:44.056+0000 [INFO] Starting attempt 1 of 4
+2025-04-04T15:21:44.063+0000 [INFO] Executing <Task(PythonOperator): processing.load> on 2025-04-04 15:10:31.574866+00:00
+2025-04-04T15:21:44.066+0000 [INFO] Started process 1632 to run task
+2025-04-04T15:21:44.069+0000 [INFO] Running: ['airflow', 'tasks', 'run', 'iis_etl', 'processing.load', 'scheduled__2025-04-04T15:10:31.574866+00:00', '--job-id', '531', '--raw', '--subdir', 'DAGS_FOLDER/iis_etl.py', '--cfg-path', '/tmp/tmplm4i35kw']
+2025-04-04T15:21:44.070+0000 [INFO] Job 531: Subtask processing.load
+2025-04-04T15:21:44.101+0000 [INFO] Running <TaskInstance: iis_etl.processing.load scheduled__2025-04-04T15:10:31.574866+00:00 [running]> on host 6adf0d434abe
+2025-04-04T15:21:44.266+0000 [INFO] Exporting env vars: AIRFLOW_CTX_DAG_OWNER='airflow' AIRFLOW_CTX_DAG_ID='iis_etl' AIRFLOW_CTX_TASK_ID='processing.load' AIRFLOW_CTX_EXECUTION_DATE='2025-04-04T15:10:31.574866+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2025-04-04T15:10:31.574866+00:00'
+2025-04-04T15:21:44.302+0000 [INFO] Using connection ID 'postgres_iis' for task execution.
+2025-04-04T15:21:44.706+0000 [INFO] Successfully loaded 964 fact records
+2025-04-04T15:21:44.708+0000 [ERROR] Load failed: (psycopg2.errors.UndefinedColumn) column f.time_id does not exist
+LINE 6:                 AND f.time_id IS NULL
+                            ^
+HINT:  Perhaps you meant to reference the column "t.time_id".
+
+[SQL: 
+                UPDATE fact_visits f
+                SET time_id = t.time_id
+                FROM dim_time t
+                WHERE f.timestamp = t.timestamp
+                AND f.time_id IS NULL
+            ]
+(Background on this error at: https://sqlalche.me/e/14/f405)
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/engine/base.py", line 1901, in _execute_context
+    cursor, statement, parameters, context
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/engine/default.py", line 736, in do_execute
+    cursor.execute(statement, parameters)
+psycopg2.errors.UndefinedColumn: column f.time_id does not exist
+LINE 6:                 AND f.time_id IS NULL
+                            ^
+HINT:  Perhaps you meant to reference the column "t.time_id".
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/opt/airflow/dags/iis_etl.py", line 573, in load
+    """)
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/engine/base.py", line 1370, in execute
+    future=False,
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/engine/base.py", line 1676, in _exec_driver_sql
+    distilled_parameters,
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/engine/base.py", line 1944, in _execute_context
+    e, statement, parameters, cursor, context
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/engine/base.py", line 2125, in _handle_dbapi_exception
+    sqlalchemy_exception, with_traceback=exc_info[2], from_=e
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/util/compat.py", line 211, in raise_
+    raise exception
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/engine/base.py", line 1901, in _execute_context
+    cursor, statement, parameters, context
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/engine/default.py", line 736, in do_execute
+    cursor.execute(statement, parameters)
+sqlalchemy.exc.ProgrammingError: (psycopg2.errors.UndefinedColumn) column f.time_id does not exist
+LINE 6:                 AND f.time_id IS NULL
+                            ^
+HINT:  Perhaps you meant to reference the column "t.time_id".
+
+[SQL: 
+                UPDATE fact_visits f
+                SET time_id = t.time_id
+                FROM dim_time t
+                WHERE f.timestamp = t.timestamp
+                AND f.time_id IS NULL
+            ]
+(Background on this error at: https://sqlalche.me/e/14/f405)
+2025-04-04T15:21:44.710+0000 [ERROR] Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/engine/base.py", line 1901, in _execute_context
+    cursor, statement, parameters, context
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/engine/default.py", line 736, in do_execute
+    cursor.execute(statement, parameters)
+psycopg2.errors.UndefinedColumn: column f.time_id does not exist
+LINE 6:                 AND f.time_id IS NULL
+                            ^
+HINT:  Perhaps you meant to reference the column "t.time_id".
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/python.py", line 181, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/python.py", line 198, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/opt/airflow/dags/iis_etl.py", line 573, in load
+    """)
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/engine/base.py", line 1370, in execute
+    future=False,
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/engine/base.py", line 1676, in _exec_driver_sql
+    distilled_parameters,
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/engine/base.py", line 1944, in _execute_context
+    e, statement, parameters, cursor, context
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/engine/base.py", line 2125, in _handle_dbapi_exception
+    sqlalchemy_exception, with_traceback=exc_info[2], from_=e
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/util/compat.py", line 211, in raise_
+    raise exception
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/engine/base.py", line 1901, in _execute_context
+    cursor, statement, parameters, context
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/engine/default.py", line 736, in do_execute
+    cursor.execute(statement, parameters)
+sqlalchemy.exc.ProgrammingError: (psycopg2.errors.UndefinedColumn) column f.time_id does not exist
+LINE 6:                 AND f.time_id IS NULL
+                            ^
+HINT:  Perhaps you meant to reference the column "t.time_id".
+
+[SQL: 
+                UPDATE fact_visits f
+                SET time_id = t.time_id
+                FROM dim_time t
+                WHERE f.timestamp = t.timestamp
+                AND f.time_id IS NULL
+            ]
+(Background on this error at: https://sqlalche.me/e/14/f405)
+2025-04-04T15:21:44.717+0000 [INFO] Marking task as UP_FOR_RETRY. dag_id=iis_etl, task_id=processing.load, execution_date=20250404T151031, start_date=20250404T152144, end_date=20250404T152144
+2025-04-04T15:21:44.724+0000 [ERROR] Failed to execute job 531 for task processing.load ((psycopg2.errors.UndefinedColumn) column f.time_id does not exist
+LINE 6:                 AND f.time_id IS NULL
+                            ^
+HINT:  Perhaps you meant to reference the column "t.time_id".
+
+[SQL: 
+                UPDATE fact_visits f
+                SET time_id = t.time_id
+                FROM dim_time t
+                WHERE f.timestamp = t.timestamp
+                AND f.time_id IS NULL
+            ]
+(Background on this error at: https://sqlalche.me/e/14/f405); 1632)
+2025-04-04T15:21:44.763+0000 [INFO] Task exited with return code 1
+2025-04-04T15:21:44.839+0000 [INFO] 0 downstream tasks scheduled from follow-on schedule check

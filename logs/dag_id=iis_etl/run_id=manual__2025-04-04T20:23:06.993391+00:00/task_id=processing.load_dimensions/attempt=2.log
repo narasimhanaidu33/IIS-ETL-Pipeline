@@ -1,0 +1,84 @@
+2025-04-04T20:37:25.683+0000 [INFO] Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: iis_etl.processing.load_dimensions manual__2025-04-04T20:23:06.993391+00:00 [queued]>
+2025-04-04T20:37:25.689+0000 [INFO] Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: iis_etl.processing.load_dimensions manual__2025-04-04T20:23:06.993391+00:00 [queued]>
+2025-04-04T20:37:25.689+0000 [INFO] Starting attempt 2 of 4
+2025-04-04T20:37:25.696+0000 [INFO] Executing <Task(PythonOperator): processing.load_dimensions> on 2025-04-04 20:23:06.993391+00:00
+2025-04-04T20:37:25.700+0000 [INFO] Started process 105 to run task
+2025-04-04T20:37:25.703+0000 [INFO] Running: ['airflow', 'tasks', 'run', 'iis_etl', 'processing.load_dimensions', 'manual__2025-04-04T20:23:06.993391+00:00', '--job-id', '22', '--raw', '--subdir', 'DAGS_FOLDER/iis_etl.py', '--cfg-path', '/tmp/tmpqb1hu89a']
+2025-04-04T20:37:25.705+0000 [INFO] Job 22: Subtask processing.load_dimensions
+2025-04-04T20:37:25.904+0000 [INFO] Running <TaskInstance: iis_etl.processing.load_dimensions manual__2025-04-04T20:23:06.993391+00:00 [running]> on host b8e5693c89ab
+2025-04-04T20:37:25.945+0000 [INFO] Exporting env vars: AIRFLOW_CTX_DAG_OWNER='airflow' AIRFLOW_CTX_DAG_ID='iis_etl' AIRFLOW_CTX_TASK_ID='processing.load_dimensions' AIRFLOW_CTX_EXECUTION_DATE='2025-04-04T20:23:06.993391+00:00' AIRFLOW_CTX_TRY_NUMBER='2' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-04-04T20:23:06.993391+00:00'
+2025-04-04T20:37:26.038+0000 [INFO] Using connection ID 'postgres_iis' for task execution.
+2025-04-04T20:37:26.050+0000 [ERROR] Dimension loading failed: This Connection is closed
+Traceback (most recent call last):
+  File "/opt/airflow/dags/iis_etl.py", line 413, in load_dimensions
+    time_df.to_sql('temp_time', conn, if_exists='replace', index=False)
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/core/generic.py", line 2882, in to_sql
+    method=method,
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/io/sql.py", line 728, in to_sql
+    **engine_kwargs,
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/io/sql.py", line 1758, in to_sql
+    dtype=dtype,
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/io/sql.py", line 1650, in prep_table
+    table.create()
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/io/sql.py", line 856, in create
+    if self.exists():
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/io/sql.py", line 840, in exists
+    return self.pd_sql.has_table(self.name, self.schema)
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/io/sql.py", line 1784, in has_table
+    return insp.has_table(name, schema or self.meta.schema)
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/engine/reflection.py", line 283, in has_table
+    return self.dialect.has_table(conn, table_name, schema)
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/dialects/postgresql/base.py", line 3606, in has_table
+    type_=sqltypes.Unicode,
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/engine/base.py", line 1380, in execute
+    return meth(self, multiparams, params, _EMPTY_EXECUTION_OPTS)
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/sql/elements.py", line 335, in _execute_on_connection
+    self, multiparams, params, execution_options
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/engine/base.py", line 1582, in _execute_clauseelement
+    cache_hit=cache_hit,
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/engine/base.py", line 1798, in _execute_context
+    conn = self._revalidate_connection()
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/engine/base.py", line 650, in _revalidate_connection
+    raise exc.ResourceClosedError("This Connection is closed")
+sqlalchemy.exc.ResourceClosedError: This Connection is closed
+2025-04-04T20:37:26.054+0000 [ERROR] Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/python.py", line 181, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/python.py", line 198, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/opt/airflow/dags/iis_etl.py", line 413, in load_dimensions
+    time_df.to_sql('temp_time', conn, if_exists='replace', index=False)
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/core/generic.py", line 2882, in to_sql
+    method=method,
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/io/sql.py", line 728, in to_sql
+    **engine_kwargs,
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/io/sql.py", line 1758, in to_sql
+    dtype=dtype,
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/io/sql.py", line 1650, in prep_table
+    table.create()
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/io/sql.py", line 856, in create
+    if self.exists():
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/io/sql.py", line 840, in exists
+    return self.pd_sql.has_table(self.name, self.schema)
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/io/sql.py", line 1784, in has_table
+    return insp.has_table(name, schema or self.meta.schema)
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/engine/reflection.py", line 283, in has_table
+    return self.dialect.has_table(conn, table_name, schema)
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/dialects/postgresql/base.py", line 3606, in has_table
+    type_=sqltypes.Unicode,
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/engine/base.py", line 1380, in execute
+    return meth(self, multiparams, params, _EMPTY_EXECUTION_OPTS)
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/sql/elements.py", line 335, in _execute_on_connection
+    self, multiparams, params, execution_options
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/engine/base.py", line 1582, in _execute_clauseelement
+    cache_hit=cache_hit,
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/engine/base.py", line 1798, in _execute_context
+    conn = self._revalidate_connection()
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/engine/base.py", line 650, in _revalidate_connection
+    raise exc.ResourceClosedError("This Connection is closed")
+sqlalchemy.exc.ResourceClosedError: This Connection is closed
+2025-04-04T20:37:26.058+0000 [INFO] Marking task as UP_FOR_RETRY. dag_id=iis_etl, task_id=processing.load_dimensions, execution_date=20250404T202306, start_date=20250404T203725, end_date=20250404T203726
+2025-04-04T20:37:26.064+0000 [ERROR] Failed to execute job 22 for task processing.load_dimensions (This Connection is closed; 105)
+2025-04-04T20:37:26.092+0000 [INFO] Task exited with return code 1
+2025-04-04T20:37:26.197+0000 [INFO] 0 downstream tasks scheduled from follow-on schedule check

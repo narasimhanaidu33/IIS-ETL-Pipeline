@@ -1,0 +1,15 @@
+2025-04-03T19:03:47.922+0000 [INFO] Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: iis_etl.verify_db_connection manual__2025-04-03T19:03:44.743733+00:00 [queued]>
+2025-04-03T19:03:47.933+0000 [INFO] Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: iis_etl.verify_db_connection manual__2025-04-03T19:03:44.743733+00:00 [queued]>
+2025-04-03T19:03:47.933+0000 [INFO] Starting attempt 1 of 4
+2025-04-03T19:03:47.943+0000 [INFO] Executing <Task(PythonOperator): verify_db_connection> on 2025-04-03 19:03:44.743733+00:00
+2025-04-03T19:03:47.950+0000 [INFO] Started process 52 to run task
+2025-04-03T19:03:47.953+0000 [INFO] Running: ['airflow', 'tasks', 'run', 'iis_etl', 'verify_db_connection', 'manual__2025-04-03T19:03:44.743733+00:00', '--job-id', '3', '--raw', '--subdir', 'DAGS_FOLDER/iis_etl.py', '--cfg-path', '/tmp/tmp7wxgc4y5']
+2025-04-03T19:03:47.955+0000 [INFO] Job 3: Subtask verify_db_connection
+2025-04-03T19:03:48.044+0000 [INFO] Running <TaskInstance: iis_etl.verify_db_connection manual__2025-04-03T19:03:44.743733+00:00 [running]> on host 30b90d2a4398
+2025-04-03T19:03:49.128+0000 [INFO] Exporting env vars: AIRFLOW_CTX_DAG_OWNER='airflow' AIRFLOW_CTX_DAG_ID='iis_etl' AIRFLOW_CTX_TASK_ID='verify_db_connection' AIRFLOW_CTX_EXECUTION_DATE='2025-04-03T19:03:44.743733+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-04-03T19:03:44.743733+00:00'
+2025-04-03T19:03:49.139+0000 [INFO] Using connection ID 'postgres_iis' for task execution.
+2025-04-03T19:03:49.142+0000 [INFO] PostgreSQL connection verified successfully
+2025-04-03T19:03:49.142+0000 [INFO] Done. Returned value was: True
+2025-04-03T19:03:49.158+0000 [INFO] Marking task as SUCCESS. dag_id=iis_etl, task_id=verify_db_connection, execution_date=20250403T190344, start_date=20250403T190347, end_date=20250403T190349
+2025-04-03T19:03:49.199+0000 [INFO] Task exited with return code 0
+2025-04-03T19:03:49.233+0000 [INFO] 0 downstream tasks scheduled from follow-on schedule check

@@ -1,0 +1,77 @@
+[2025-04-03T18:06:27.641+0000] {taskinstance.py:1103} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: iis_etl.processing.extract manual__2025-04-03T18:01:23.277309+00:00 [queued]>
+[2025-04-03T18:06:27.647+0000] {taskinstance.py:1103} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: iis_etl.processing.extract manual__2025-04-03T18:01:23.277309+00:00 [queued]>
+[2025-04-03T18:06:27.647+0000] {taskinstance.py:1308} INFO - Starting attempt 2 of 4
+[2025-04-03T18:06:27.654+0000] {taskinstance.py:1327} INFO - Executing <Task(PythonOperator): processing.extract> on 2025-04-03 18:01:23.277309+00:00
+[2025-04-03T18:06:27.657+0000] {standard_task_runner.py:57} INFO - Started process 57 to run task
+[2025-04-03T18:06:27.660+0000] {standard_task_runner.py:84} INFO - Running: ['airflow', 'tasks', 'run', 'iis_etl', 'processing.extract', 'manual__2025-04-03T18:01:23.277309+00:00', '--job-id', '6', '--raw', '--subdir', 'DAGS_FOLDER/iis_etl.py', '--cfg-path', '/tmp/tmpgwewgyog']
+[2025-04-03T18:06:27.662+0000] {standard_task_runner.py:85} INFO - Job 6: Subtask processing.extract
+[2025-04-03T18:06:27.690+0000] {task_command.py:410} INFO - Running <TaskInstance: iis_etl.processing.extract manual__2025-04-03T18:01:23.277309+00:00 [running]> on host 9d773aeac6dd
+[2025-04-03T18:06:27.912+0000] {taskinstance.py:1547} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='airflow' AIRFLOW_CTX_DAG_ID='iis_etl' AIRFLOW_CTX_TASK_ID='processing.extract' AIRFLOW_CTX_EXECUTION_DATE='2025-04-03T18:01:23.277309+00:00' AIRFLOW_CTX_TRY_NUMBER='2' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-04-03T18:01:23.277309+00:00'
+[2025-04-03T18:06:27.922+0000] {iis_etl.py:122} INFO - Moving /opt/airflow/data/raw_logs/u_ex091130.log to /opt/airflow/data/processing/u_ex091130.log for processing
+[2025-04-03T18:06:27.943+0000] {iis_etl.py:178} ERROR - Extraction failed: Unable to parse string "134.36.36.75" at position 603
+Traceback (most recent call last):
+  File "pandas/_libs/lib.pyx", line 2305, in pandas._libs.lib.maybe_convert_numeric
+ValueError: Unable to parse string "134.36.36.75"
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/opt/airflow/dags/iis_etl.py", line 156, in extract
+    for i, chunk in enumerate(reader):
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/io/parsers/readers.py", line 1024, in __next__
+    return self.get_chunk()
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/io/parsers/readers.py", line 1074, in get_chunk
+    return self.read(nrows=size)
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/io/parsers/readers.py", line 1047, in read
+    index, columns, col_dict = self._engine.read(nrows)
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/io/parsers/c_parser_wrapper.py", line 224, in read
+    chunks = self._reader.read_low_memory(nrows)
+  File "pandas/_libs/parsers.pyx", line 813, in pandas._libs.parsers.TextReader.read_low_memory
+  File "pandas/_libs/parsers.pyx", line 880, in pandas._libs.parsers.TextReader._read_rows
+  File "pandas/_libs/parsers.pyx", line 1026, in pandas._libs.parsers.TextReader._convert_column_data
+  File "pandas/_libs/parsers.pyx", line 1058, in pandas._libs.parsers.TextReader._convert_tokens
+  File "pandas/_libs/parsers.pyx", line 1143, in pandas._libs.parsers.TextReader._convert_with_dtype
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/core/arrays/integer.py", line 330, in _from_sequence_of_strings
+    scalars = to_numeric(strings, errors="raise")
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/core/tools/numeric.py", line 184, in to_numeric
+    values, set(), coerce_numeric=coerce_numeric
+  File "pandas/_libs/lib.pyx", line 2347, in pandas._libs.lib.maybe_convert_numeric
+ValueError: Unable to parse string "134.36.36.75" at position 603
+[2025-04-03T18:06:27.945+0000] {iis_etl.py:180} INFO - Returning failed file /opt/airflow/data/processing/u_ex091130.log to original location
+[2025-04-03T18:06:27.945+0000] {taskinstance.py:1824} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "pandas/_libs/lib.pyx", line 2305, in pandas._libs.lib.maybe_convert_numeric
+ValueError: Unable to parse string "134.36.36.75"
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/python.py", line 181, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/python.py", line 198, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/opt/airflow/dags/iis_etl.py", line 156, in extract
+    for i, chunk in enumerate(reader):
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/io/parsers/readers.py", line 1024, in __next__
+    return self.get_chunk()
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/io/parsers/readers.py", line 1074, in get_chunk
+    return self.read(nrows=size)
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/io/parsers/readers.py", line 1047, in read
+    index, columns, col_dict = self._engine.read(nrows)
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/io/parsers/c_parser_wrapper.py", line 224, in read
+    chunks = self._reader.read_low_memory(nrows)
+  File "pandas/_libs/parsers.pyx", line 813, in pandas._libs.parsers.TextReader.read_low_memory
+  File "pandas/_libs/parsers.pyx", line 880, in pandas._libs.parsers.TextReader._read_rows
+  File "pandas/_libs/parsers.pyx", line 1026, in pandas._libs.parsers.TextReader._convert_column_data
+  File "pandas/_libs/parsers.pyx", line 1058, in pandas._libs.parsers.TextReader._convert_tokens
+  File "pandas/_libs/parsers.pyx", line 1143, in pandas._libs.parsers.TextReader._convert_with_dtype
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/core/arrays/integer.py", line 330, in _from_sequence_of_strings
+    scalars = to_numeric(strings, errors="raise")
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/core/tools/numeric.py", line 184, in to_numeric
+    values, set(), coerce_numeric=coerce_numeric
+  File "pandas/_libs/lib.pyx", line 2347, in pandas._libs.lib.maybe_convert_numeric
+ValueError: Unable to parse string "134.36.36.75" at position 603
+[2025-04-03T18:06:27.949+0000] {taskinstance.py:1350} INFO - Marking task as UP_FOR_RETRY. dag_id=iis_etl, task_id=processing.extract, execution_date=20250403T180123, start_date=20250403T180627, end_date=20250403T180627
+[2025-04-03T18:06:27.955+0000] {standard_task_runner.py:109} ERROR - Failed to execute job 6 for task processing.extract (Unable to parse string "134.36.36.75" at position 603; 57)
+[2025-04-03T18:06:27.974+0000] {local_task_job_runner.py:225} INFO - Task exited with return code 1
+[2025-04-03T18:06:27.991+0000] {taskinstance.py:2653} INFO - 0 downstream tasks scheduled from follow-on schedule check

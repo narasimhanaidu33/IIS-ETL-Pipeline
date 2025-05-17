@@ -1,0 +1,27 @@
+2025-04-04T19:29:36.498+0000 [INFO] Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: iis_etl.processing.extract manual__2025-04-04T19:29:27.959550+00:00 [queued]>
+2025-04-04T19:29:36.507+0000 [INFO] Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: iis_etl.processing.extract manual__2025-04-04T19:29:27.959550+00:00 [queued]>
+2025-04-04T19:29:36.508+0000 [INFO] Starting attempt 1 of 4
+2025-04-04T19:29:36.523+0000 [INFO] Executing <Task(PythonOperator): processing.extract> on 2025-04-04 19:29:27.959550+00:00
+2025-04-04T19:29:36.531+0000 [INFO] Started process 244 to run task
+2025-04-04T19:29:36.564+0000 [INFO] Running: ['airflow', 'tasks', 'run', 'iis_etl', 'processing.extract', 'manual__2025-04-04T19:29:27.959550+00:00', '--job-id', '67', '--raw', '--subdir', 'DAGS_FOLDER/iis_etl.py', '--cfg-path', '/tmp/tmpb3h2m645']
+2025-04-04T19:29:36.567+0000 [INFO] Job 67: Subtask processing.extract
+2025-04-04T19:29:36.612+0000 [INFO] Running <TaskInstance: iis_etl.processing.extract manual__2025-04-04T19:29:27.959550+00:00 [running]> on host 4c7227608743
+2025-04-04T19:29:37.194+0000 [INFO] Exporting env vars: AIRFLOW_CTX_DAG_OWNER='airflow' AIRFLOW_CTX_DAG_ID='iis_etl' AIRFLOW_CTX_TASK_ID='processing.extract' AIRFLOW_CTX_EXECUTION_DATE='2025-04-04T19:29:27.959550+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-04-04T19:29:27.959550+00:00'
+2025-04-04T19:29:37.222+0000 [ERROR] Extraction failed: [Errno 2] No such file or directory: '/opt/airflow/data/processing/u_ex091130.log'
+Traceback (most recent call last):
+  File "/opt/airflow/dags/iis_etl.py", line 512, in extract
+    with open(processing_path, 'r', encoding='utf-8', errors='replace') as f:
+FileNotFoundError: [Errno 2] No such file or directory: '/opt/airflow/data/processing/u_ex091130.log'
+2025-04-04T19:29:37.227+0000 [ERROR] Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/python.py", line 181, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/python.py", line 198, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/opt/airflow/dags/iis_etl.py", line 512, in extract
+    with open(processing_path, 'r', encoding='utf-8', errors='replace') as f:
+FileNotFoundError: [Errno 2] No such file or directory: '/opt/airflow/data/processing/u_ex091130.log'
+2025-04-04T19:29:37.240+0000 [INFO] Marking task as UP_FOR_RETRY. dag_id=iis_etl, task_id=processing.extract, execution_date=20250404T192927, start_date=20250404T192936, end_date=20250404T192937
+2025-04-04T19:29:37.252+0000 [ERROR] Failed to execute job 67 for task processing.extract ([Errno 2] No such file or directory: '/opt/airflow/data/processing/u_ex091130.log'; 244)
+2025-04-04T19:29:37.275+0000 [INFO] Task exited with return code 1
+2025-04-04T19:29:37.334+0000 [INFO] 0 downstream tasks scheduled from follow-on schedule check

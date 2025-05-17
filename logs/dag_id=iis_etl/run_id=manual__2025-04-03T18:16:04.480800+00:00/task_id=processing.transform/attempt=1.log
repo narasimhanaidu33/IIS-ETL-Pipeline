@@ -1,0 +1,49 @@
+2025-04-03T18:16:09.438+0000 [INFO] Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: iis_etl.processing.transform manual__2025-04-03T18:16:04.480800+00:00 [queued]>
+2025-04-03T18:16:09.446+0000 [INFO] Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: iis_etl.processing.transform manual__2025-04-03T18:16:04.480800+00:00 [queued]>
+2025-04-03T18:16:09.447+0000 [INFO] Starting attempt 1 of 4
+2025-04-03T18:16:09.456+0000 [INFO] Executing <Task(PythonOperator): processing.transform> on 2025-04-03 18:16:04.480800+00:00
+2025-04-03T18:16:09.460+0000 [INFO] Started process 54 to run task
+2025-04-03T18:16:09.464+0000 [INFO] Running: ['airflow', 'tasks', 'run', 'iis_etl', 'processing.transform', 'manual__2025-04-03T18:16:04.480800+00:00', '--job-id', '5', '--raw', '--subdir', 'DAGS_FOLDER/iis_etl.py', '--cfg-path', '/tmp/tmpcdycjxci']
+2025-04-03T18:16:09.468+0000 [INFO] Job 5: Subtask processing.transform
+2025-04-03T18:16:09.502+0000 [INFO] Running <TaskInstance: iis_etl.processing.transform manual__2025-04-03T18:16:04.480800+00:00 [running]> on host 828dc78d8deb
+2025-04-03T18:16:09.734+0000 [INFO] Exporting env vars: AIRFLOW_CTX_DAG_OWNER='airflow' AIRFLOW_CTX_DAG_ID='iis_etl' AIRFLOW_CTX_TASK_ID='processing.transform' AIRFLOW_CTX_EXECUTION_DATE='2025-04-03T18:16:04.480800+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-04-03T18:16:04.480800+00:00'
+2025-04-03T18:16:09.786+0000 [ERROR] Transform failed: unsupported operand type(s) for +: 'Timestamp' and 'str'
+Data sample: {'date': {0: Timestamp('2010-01-04 00:00:00'), 1: Timestamp('2010-01-04 00:00:00'), 2: Timestamp('2010-01-04 00:00:00'), 3: Timestamp('2010-01-04 00:00:00'), 4: Timestamp('2010-01-04 00:00:00')}, 'time': {0: '00:00:50', 1: '00:03:19', 2: '00:05:41', 3: '00:05:55', 4: '00:06:06'}, 's-ip': {0: '134.36.36.75', 1: '134.36.36.75', 2: '134.36.36.75', 3: '134.36.36.75', 4: '134.36.36.75'}, 'cs-method': {0: 'GET', 1: 'GET', 2: 'GET', 3: 'GET', 4: 'GET'}, 'cs-uri-stem': {0: '/Darwin/Plant.aspx', 1: '/Darwin/MyAccount.aspx', 2: '/Darwin/ImageCache/cache_7jmvTwU_23.jpeg', 3: '/CMSShared/Document.aspx', 4: '/Darwin/MyAccount.aspx'}, 'cs-uri-query': {0: 'p=25&ix=920&pid=10&prcid=26&ppid=1502', 1: 'p=25&pid=738&prcid=62&ppid=1505', 2: '-', 3: 'p=25&ix=5&pid=100004&prcid=4&ppid=1506', 4: 'p=25&pid=142&prcid=62&ppid=1505'}, 's-port': {0: 80, 1: 80, 2: 80, 3: 80, 4: 80}, 'cs-username': {0: '-', 1: '-', 2: '-', 3: '-', 4: '-'}, 'c-ip': {0: '66.249.65.172', 1: '67.195.111.153', 2: '66.249.65.172', 3: '67.195.111.153', 4: '77.88.43.25'}, 'cs(User-Agent)': {0: 'Mozilla/5.0+(compatible;+Googlebot/2.1;++http://www.google.com/bot.html)', 1: 'Mozilla/5.0+(compatible;+Yahoo!+Slurp/3.0;+http://help.yahoo.com/help/us/ysearch/slurp)', 2: 'Googlebot-Image/1.0', 3: 'Mozilla/5.0+(compatible;+Yahoo!+Slurp/3.0;+http://help.yahoo.com/help/us/ysearch/slurp)', 4: 'Yandex/1.01.001+(compatible;+Win16;+I)'}, 'sc-status': {0: 200, 1: 200, 2: 304, 3: 200, 4: 200}, 'sc-substatus': {0: 0, 1: 0, 2: 0, 3: 0, 4: 0}, 'sc-win32-status': {0: 0, 1: 0, 2: 0, 3: 0, 4: 0}, 'time-taken': {0: 360, 1: 424, 2: 87, 3: 395, 4: 193}, 'timestamp': {0: Timestamp('2010-01-04 00:00:50+0000', tz='UTC'), 1: Timestamp('2010-01-04 00:03:19+0000', tz='UTC'), 2: Timestamp('2010-01-04 00:05:41+0000', tz='UTC'), 3: Timestamp('2010-01-04 00:05:55+0000', tz='UTC'), 4: Timestamp('2010-01-04 00:06:06+0000', tz='UTC')}, 'hour': {0: 0, 1: 0, 2: 0, 3: 0, 4: 0}, 'time_period': {0: 'Night', 1: 'Night', 2: 'Night', 3: 'Night', 4: 'Night'}, 'ip_prefix': {0: 66.249, 1: 67.195, 2: 66.249, 3: 67.195, 4: 77.88}, 'user_agent': {0: 'Spider / Other / Googlebot 2.1', 1: 'Spider / Other / Slurp 3.0', 2: 'Spider / Other / Googlebot-Image 1.0', 3: 'Spider / Other / Slurp 3.0', 4: 'Other / Windows 3.1 / Other'}, 'is_error': {0: False, 1: False, 2: False, 3: False, 4: False}, 'is_suspicious': {0: False, 1: False, 2: False, 3: False, 4: False}}
+2025-04-03T18:16:09.786+0000 [ERROR] Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/core/ops/array_ops.py", line 166, in _na_arithmetic_op
+    result = func(left, right)
+TypeError: unsupported operand type(s) for +: 'Timestamp' and 'str'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/python.py", line 181, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/python.py", line 198, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/opt/airflow/dags/iis_etl.py", line 254, in transform
+    is_suspicious=lambda x: (
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/core/frame.py", line 4486, in assign
+    data[k] = com.apply_if_callable(v, data)
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/core/common.py", line 358, in apply_if_callable
+    return maybe_callable(obj, **kwargs)
+  File "/opt/airflow/dags/iis_etl.py", line 252, in <lambda>
+    timestamp=lambda x: pd.to_datetime(x['date'] + ' ' + x['time']),
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/core/ops/common.py", line 69, in new_method
+    return method(self, other)
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/core/arraylike.py", line 92, in __add__
+    return self._arith_method(other, operator.add)
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/core/series.py", line 5526, in _arith_method
+    result = ops.arithmetic_op(lvalues, rvalues, op)
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/core/ops/array_ops.py", line 224, in arithmetic_op
+    res_values = _na_arithmetic_op(left, right, op)
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/core/ops/array_ops.py", line 173, in _na_arithmetic_op
+    result = _masked_arith_op(left, right, op)
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/core/ops/array_ops.py", line 131, in _masked_arith_op
+    result[mask] = op(xrav[mask], y)
+TypeError: unsupported operand type(s) for +: 'Timestamp' and 'str'
+2025-04-03T18:16:09.797+0000 [INFO] Marking task as UP_FOR_RETRY. dag_id=iis_etl, task_id=processing.transform, execution_date=20250403T181604, start_date=20250403T181609, end_date=20250403T181609
+2025-04-03T18:16:09.806+0000 [ERROR] Failed to execute job 5 for task processing.transform (unsupported operand type(s) for +: 'Timestamp' and 'str'; 54)
+2025-04-03T18:16:09.854+0000 [INFO] Task exited with return code 1
+2025-04-03T18:16:09.872+0000 [INFO] 0 downstream tasks scheduled from follow-on schedule check

@@ -1,0 +1,49 @@
+2025-04-03T18:33:07.217+0000 [INFO] Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: iis_etl.processing.load manual__2025-04-03T18:33:03.509883+00:00 [queued]>
+2025-04-03T18:33:07.229+0000 [INFO] Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: iis_etl.processing.load manual__2025-04-03T18:33:03.509883+00:00 [queued]>
+2025-04-03T18:33:07.229+0000 [INFO] Starting attempt 1 of 4
+2025-04-03T18:33:07.237+0000 [INFO] Executing <Task(PythonOperator): processing.load> on 2025-04-03 18:33:03.509883+00:00
+2025-04-03T18:33:07.243+0000 [INFO] Started process 102 to run task
+2025-04-03T18:33:07.247+0000 [INFO] Running: ['airflow', 'tasks', 'run', 'iis_etl', 'processing.load', 'manual__2025-04-03T18:33:03.509883+00:00', '--job-id', '21', '--raw', '--subdir', 'DAGS_FOLDER/iis_etl.py', '--cfg-path', '/tmp/tmpf7tewqc4']
+2025-04-03T18:33:07.249+0000 [INFO] Job 21: Subtask processing.load
+2025-04-03T18:33:07.277+0000 [INFO] Running <TaskInstance: iis_etl.processing.load manual__2025-04-03T18:33:03.509883+00:00 [running]> on host bfc7849bd3d5
+2025-04-03T18:33:07.507+0000 [INFO] Exporting env vars: AIRFLOW_CTX_DAG_OWNER='airflow' AIRFLOW_CTX_DAG_ID='iis_etl' AIRFLOW_CTX_TASK_ID='processing.load' AIRFLOW_CTX_EXECUTION_DATE='2025-04-03T18:33:03.509883+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-04-03T18:33:03.509883+00:00'
+2025-04-03T18:33:07.515+0000 [INFO] Loading 6163 bytes of transformed data
+2025-04-03T18:33:07.529+0000 [ERROR] Database connection failed: The conn_id `postgres_iis` isn't defined
+2025-04-03T18:33:07.530+0000 [ERROR] Load failed: The conn_id `postgres_iis` isn't defined
+Traceback (most recent call last):
+  File "/opt/airflow/dags/iis_etl.py", line 284, in load
+    engine = get_db_engine()
+  File "/opt/airflow/dags/iis_etl.py", line 37, in get_db_engine
+    engine = pg_hook.get_sqlalchemy_engine()
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/providers/common/sql/hooks/sql.py", line 181, in get_sqlalchemy_engine
+    return create_engine(self.get_uri(), **engine_kwargs)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/providers/postgres/hooks/postgres.py", line 176, in get_uri
+    conn = self.get_connection(getattr(self, self.conn_name_attr))
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/hooks/base.py", line 72, in get_connection
+    conn = Connection.get_connection_from_secrets(conn_id)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/connection.py", line 434, in get_connection_from_secrets
+    raise AirflowNotFoundException(f"The conn_id `{conn_id}` isn't defined")
+airflow.exceptions.AirflowNotFoundException: The conn_id `postgres_iis` isn't defined
+2025-04-03T18:33:07.536+0000 [ERROR] Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/python.py", line 181, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/python.py", line 198, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/opt/airflow/dags/iis_etl.py", line 284, in load
+    engine = get_db_engine()
+  File "/opt/airflow/dags/iis_etl.py", line 37, in get_db_engine
+    engine = pg_hook.get_sqlalchemy_engine()
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/providers/common/sql/hooks/sql.py", line 181, in get_sqlalchemy_engine
+    return create_engine(self.get_uri(), **engine_kwargs)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/providers/postgres/hooks/postgres.py", line 176, in get_uri
+    conn = self.get_connection(getattr(self, self.conn_name_attr))
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/hooks/base.py", line 72, in get_connection
+    conn = Connection.get_connection_from_secrets(conn_id)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/connection.py", line 434, in get_connection_from_secrets
+    raise AirflowNotFoundException(f"The conn_id `{conn_id}` isn't defined")
+airflow.exceptions.AirflowNotFoundException: The conn_id `postgres_iis` isn't defined
+2025-04-03T18:33:07.538+0000 [INFO] Marking task as UP_FOR_RETRY. dag_id=iis_etl, task_id=processing.load, execution_date=20250403T183303, start_date=20250403T183307, end_date=20250403T183307
+2025-04-03T18:33:07.543+0000 [ERROR] Failed to execute job 21 for task processing.load (The conn_id `postgres_iis` isn't defined; 102)
+2025-04-03T18:33:07.563+0000 [INFO] Task exited with return code 1
+2025-04-03T18:33:07.579+0000 [INFO] 0 downstream tasks scheduled from follow-on schedule check

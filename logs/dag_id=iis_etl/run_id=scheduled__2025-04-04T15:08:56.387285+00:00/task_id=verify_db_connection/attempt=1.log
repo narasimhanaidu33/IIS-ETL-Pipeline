@@ -1,0 +1,15 @@
+2025-04-04T15:09:58.874+0000 [INFO] Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: iis_etl.verify_db_connection scheduled__2025-04-04T15:08:56.387285+00:00 [queued]>
+2025-04-04T15:09:58.887+0000 [INFO] Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: iis_etl.verify_db_connection scheduled__2025-04-04T15:08:56.387285+00:00 [queued]>
+2025-04-04T15:09:58.888+0000 [INFO] Starting attempt 1 of 4
+2025-04-04T15:09:58.899+0000 [INFO] Executing <Task(PythonOperator): verify_db_connection> on 2025-04-04 15:08:56.387285+00:00
+2025-04-04T15:09:58.902+0000 [INFO] Started process 1294 to run task
+2025-04-04T15:09:58.906+0000 [INFO] Running: ['airflow', 'tasks', 'run', 'iis_etl', 'verify_db_connection', 'scheduled__2025-04-04T15:08:56.387285+00:00', '--job-id', '417', '--raw', '--subdir', 'DAGS_FOLDER/iis_etl.py', '--cfg-path', '/tmp/tmp8sqghcoo']
+2025-04-04T15:09:58.909+0000 [INFO] Job 417: Subtask verify_db_connection
+2025-04-04T15:09:58.995+0000 [INFO] Running <TaskInstance: iis_etl.verify_db_connection scheduled__2025-04-04T15:08:56.387285+00:00 [running]> on host 6adf0d434abe
+2025-04-04T15:09:59.912+0000 [INFO] Exporting env vars: AIRFLOW_CTX_DAG_OWNER='airflow' AIRFLOW_CTX_DAG_ID='iis_etl' AIRFLOW_CTX_TASK_ID='verify_db_connection' AIRFLOW_CTX_EXECUTION_DATE='2025-04-04T15:08:56.387285+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2025-04-04T15:08:56.387285+00:00'
+2025-04-04T15:09:59.925+0000 [INFO] Using connection ID 'postgres_iis' for task execution.
+2025-04-04T15:09:59.932+0000 [INFO] PostgreSQL connection verified successfully
+2025-04-04T15:09:59.933+0000 [INFO] Done. Returned value was: True
+2025-04-04T15:09:59.993+0000 [INFO] Marking task as SUCCESS. dag_id=iis_etl, task_id=verify_db_connection, execution_date=20250404T150856, start_date=20250404T150958, end_date=20250404T150959
+2025-04-04T15:10:00.059+0000 [INFO] Task exited with return code 0
+2025-04-04T15:10:00.103+0000 [INFO] 0 downstream tasks scheduled from follow-on schedule check

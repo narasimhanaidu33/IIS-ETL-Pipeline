@@ -1,0 +1,15 @@
+2025-04-05T23:40:09.999+0000 [INFO] Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: iis_etl.processing.load_dimensions manual__2025-04-05T23:39:37.607662+00:00 [queued]>
+2025-04-05T23:40:10.017+0000 [INFO] Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: iis_etl.processing.load_dimensions manual__2025-04-05T23:39:37.607662+00:00 [queued]>
+2025-04-05T23:40:10.017+0000 [INFO] Starting attempt 1 of 4
+2025-04-05T23:40:10.258+0000 [INFO] Executing <Task(PythonOperator): processing.load_dimensions> on 2025-04-05 23:39:37.607662+00:00
+2025-04-05T23:40:10.265+0000 [INFO] Started process 2615 to run task
+2025-04-05T23:40:10.270+0000 [INFO] Running: ['airflow', 'tasks', 'run', 'iis_etl', 'processing.load_dimensions', 'manual__2025-04-05T23:39:37.607662+00:00', '--job-id', '852', '--raw', '--subdir', 'DAGS_FOLDER/iis_etl.py', '--cfg-path', '/tmp/tmpc4mm5bro']
+2025-04-05T23:40:10.272+0000 [INFO] Job 852: Subtask processing.load_dimensions
+2025-04-05T23:40:10.332+0000 [INFO] Running <TaskInstance: iis_etl.processing.load_dimensions manual__2025-04-05T23:39:37.607662+00:00 [running]> on host b8e5693c89ab
+2025-04-05T23:40:10.396+0000 [INFO] Exporting env vars: AIRFLOW_CTX_DAG_OWNER='airflow' AIRFLOW_CTX_DAG_ID='iis_etl' AIRFLOW_CTX_TASK_ID='processing.load_dimensions' AIRFLOW_CTX_EXECUTION_DATE='2025-04-05T23:39:37.607662+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-04-05T23:39:37.607662+00:00'
+2025-04-05T23:40:10.499+0000 [INFO] Using connection ID 'postgres_iis' for task execution.
+2025-04-05T23:40:10.752+0000 [INFO] Successfully updated all dimension relationships
+2025-04-05T23:40:10.753+0000 [INFO] Done. Returned value was: Dimension loading completed successfully
+2025-04-05T23:40:10.769+0000 [INFO] Marking task as SUCCESS. dag_id=iis_etl, task_id=processing.load_dimensions, execution_date=20250405T233937, start_date=20250405T234010, end_date=20250405T234010
+2025-04-05T23:40:10.819+0000 [INFO] Task exited with return code 0
+2025-04-05T23:40:10.840+0000 [INFO] 1 downstream tasks scheduled from follow-on schedule check

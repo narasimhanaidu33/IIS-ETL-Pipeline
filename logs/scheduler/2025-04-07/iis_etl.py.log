@@ -1,0 +1,402 @@
+[2025-04-07T00:33:33.562+0000] {processor.py:157} INFO - Started process (PID=8061) to work on /opt/airflow/dags/iis_etl.py
+[2025-04-07T00:33:33.567+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/iis_etl.py for tasks to queue
+[2025-04-07T00:33:33.570+0000] {logging_mixin.py:149} INFO - [2025-04-07T00:33:33.569+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/iis_etl.py
+[2025-04-07T00:33:34.390+0000] {processor.py:836} INFO - DAG(s) dict_keys(['iis_etl']) retrieved from /opt/airflow/dags/iis_etl.py
+[2025-04-07T00:33:34.454+0000] {logging_mixin.py:149} INFO - [2025-04-07T00:33:34.454+0000] {dag.py:2726} INFO - Sync 1 DAGs
+[2025-04-07T00:33:34.478+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/iis_etl.py took 0.932 seconds
+[2025-04-07T01:11:33.849+0000] {processor.py:157} INFO - Started process (PID=8070) to work on /opt/airflow/dags/iis_etl.py
+[2025-04-07T01:11:33.851+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/iis_etl.py for tasks to queue
+[2025-04-07T01:11:33.851+0000] {logging_mixin.py:149} INFO - [2025-04-07T01:11:33.851+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/iis_etl.py
+[2025-04-07T01:11:35.129+0000] {processor.py:836} INFO - DAG(s) dict_keys(['iis_etl']) retrieved from /opt/airflow/dags/iis_etl.py
+[2025-04-07T01:11:35.277+0000] {logging_mixin.py:149} INFO - [2025-04-07T01:11:35.271+0000] {dag.py:2726} INFO - Sync 1 DAGs
+[2025-04-07T01:11:35.339+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/iis_etl.py took 1.495 seconds
+[2025-04-07T02:35:27.423+0000] {processor.py:157} INFO - Started process (PID=8079) to work on /opt/airflow/dags/iis_etl.py
+[2025-04-07T02:35:27.425+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/iis_etl.py for tasks to queue
+[2025-04-07T02:35:27.425+0000] {logging_mixin.py:149} INFO - [2025-04-07T02:35:27.425+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/iis_etl.py
+[2025-04-07T02:35:28.901+0000] {processor.py:836} INFO - DAG(s) dict_keys(['iis_etl']) retrieved from /opt/airflow/dags/iis_etl.py
+[2025-04-07T02:35:28.959+0000] {logging_mixin.py:149} INFO - [2025-04-07T02:35:28.958+0000] {dag.py:2726} INFO - Sync 1 DAGs
+[2025-04-07T02:35:29.001+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/iis_etl.py took 1.583 seconds
+[2025-04-07T03:09:18.491+0000] {processor.py:157} INFO - Started process (PID=8088) to work on /opt/airflow/dags/iis_etl.py
+[2025-04-07T03:09:18.493+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/iis_etl.py for tasks to queue
+[2025-04-07T03:09:18.494+0000] {logging_mixin.py:149} INFO - [2025-04-07T03:09:18.494+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/iis_etl.py
+[2025-04-07T03:09:19.942+0000] {processor.py:836} INFO - DAG(s) dict_keys(['iis_etl']) retrieved from /opt/airflow/dags/iis_etl.py
+[2025-04-07T03:09:20.021+0000] {logging_mixin.py:149} INFO - [2025-04-07T03:09:20.020+0000] {dag.py:2726} INFO - Sync 1 DAGs
+[2025-04-07T03:09:20.054+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/iis_etl.py took 1.566 seconds
+[2025-04-07T04:02:18.188+0000] {processor.py:157} INFO - Started process (PID=8097) to work on /opt/airflow/dags/iis_etl.py
+[2025-04-07T04:02:18.190+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/iis_etl.py for tasks to queue
+[2025-04-07T04:02:18.191+0000] {logging_mixin.py:149} INFO - [2025-04-07T04:02:18.190+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/iis_etl.py
+[2025-04-07T04:02:19.201+0000] {processor.py:836} INFO - DAG(s) dict_keys(['iis_etl']) retrieved from /opt/airflow/dags/iis_etl.py
+[2025-04-07T04:02:19.260+0000] {logging_mixin.py:149} INFO - [2025-04-07T04:02:19.260+0000] {dag.py:2726} INFO - Sync 1 DAGs
+[2025-04-07T04:02:19.283+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/iis_etl.py took 1.105 seconds
+[2025-04-07T05:18:57.236+0000] {processor.py:157} INFO - Started process (PID=8106) to work on /opt/airflow/dags/iis_etl.py
+[2025-04-07T05:18:57.237+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/iis_etl.py for tasks to queue
+[2025-04-07T05:18:57.238+0000] {logging_mixin.py:149} INFO - [2025-04-07T05:18:57.238+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/iis_etl.py
+[2025-04-07T05:18:58.302+0000] {processor.py:836} INFO - DAG(s) dict_keys(['iis_etl']) retrieved from /opt/airflow/dags/iis_etl.py
+[2025-04-07T05:18:58.538+0000] {logging_mixin.py:149} INFO - [2025-04-07T05:18:58.535+0000] {dag.py:2726} INFO - Sync 1 DAGs
+[2025-04-07T05:18:58.707+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/iis_etl.py took 1.475 seconds
+[2025-04-07T05:51:55.906+0000] {processor.py:157} INFO - Started process (PID=8115) to work on /opt/airflow/dags/iis_etl.py
+[2025-04-07T05:51:55.911+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/iis_etl.py for tasks to queue
+[2025-04-07T05:51:55.917+0000] {logging_mixin.py:149} INFO - [2025-04-07T05:51:55.916+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/iis_etl.py
+[2025-04-07T05:51:56.952+0000] {processor.py:836} INFO - DAG(s) dict_keys(['iis_etl']) retrieved from /opt/airflow/dags/iis_etl.py
+[2025-04-07T05:51:57.005+0000] {logging_mixin.py:149} INFO - [2025-04-07T05:51:57.004+0000] {dag.py:2726} INFO - Sync 1 DAGs
+[2025-04-07T05:51:57.030+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/iis_etl.py took 1.144 seconds
+[2025-04-07T06:26:08.519+0000] {processor.py:157} INFO - Started process (PID=8124) to work on /opt/airflow/dags/iis_etl.py
+[2025-04-07T06:26:08.522+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/iis_etl.py for tasks to queue
+[2025-04-07T06:26:08.525+0000] {logging_mixin.py:149} INFO - [2025-04-07T06:26:08.525+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/iis_etl.py
+[2025-04-07T06:26:09.512+0000] {processor.py:836} INFO - DAG(s) dict_keys(['iis_etl']) retrieved from /opt/airflow/dags/iis_etl.py
+[2025-04-07T06:26:09.586+0000] {logging_mixin.py:149} INFO - [2025-04-07T06:26:09.585+0000] {dag.py:2726} INFO - Sync 1 DAGs
+[2025-04-07T06:26:09.611+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/iis_etl.py took 1.109 seconds
+[2025-04-07T07:19:32.364+0000] {processor.py:157} INFO - Started process (PID=8133) to work on /opt/airflow/dags/iis_etl.py
+[2025-04-07T07:19:32.368+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/iis_etl.py for tasks to queue
+[2025-04-07T07:19:32.369+0000] {logging_mixin.py:149} INFO - [2025-04-07T07:19:32.369+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/iis_etl.py
+[2025-04-07T07:19:33.405+0000] {processor.py:836} INFO - DAG(s) dict_keys(['iis_etl']) retrieved from /opt/airflow/dags/iis_etl.py
+[2025-04-07T07:19:33.478+0000] {logging_mixin.py:149} INFO - [2025-04-07T07:19:33.478+0000] {dag.py:2726} INFO - Sync 1 DAGs
+[2025-04-07T07:19:33.518+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/iis_etl.py took 1.168 seconds
+[2025-04-07T08:35:42.416+0000] {processor.py:157} INFO - Started process (PID=8142) to work on /opt/airflow/dags/iis_etl.py
+[2025-04-07T08:35:42.417+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/iis_etl.py for tasks to queue
+[2025-04-07T08:35:42.418+0000] {logging_mixin.py:149} INFO - [2025-04-07T08:35:42.418+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/iis_etl.py
+[2025-04-07T08:35:43.202+0000] {processor.py:836} INFO - DAG(s) dict_keys(['iis_etl']) retrieved from /opt/airflow/dags/iis_etl.py
+[2025-04-07T08:35:43.394+0000] {logging_mixin.py:149} INFO - [2025-04-07T08:35:43.393+0000] {dag.py:2726} INFO - Sync 1 DAGs
+[2025-04-07T08:35:43.493+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/iis_etl.py took 1.083 seconds
+[2025-04-07T09:04:12.068+0000] {processor.py:157} INFO - Started process (PID=8151) to work on /opt/airflow/dags/iis_etl.py
+[2025-04-07T09:04:12.070+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/iis_etl.py for tasks to queue
+[2025-04-07T09:04:12.071+0000] {logging_mixin.py:149} INFO - [2025-04-07T09:04:12.071+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/iis_etl.py
+[2025-04-07T09:04:13.470+0000] {processor.py:836} INFO - DAG(s) dict_keys(['iis_etl']) retrieved from /opt/airflow/dags/iis_etl.py
+[2025-04-07T09:04:13.566+0000] {logging_mixin.py:149} INFO - [2025-04-07T09:04:13.565+0000] {dag.py:2726} INFO - Sync 1 DAGs
+[2025-04-07T09:04:13.615+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/iis_etl.py took 1.553 seconds
+[2025-04-07T10:05:13.316+0000] {processor.py:157} INFO - Started process (PID=8160) to work on /opt/airflow/dags/iis_etl.py
+[2025-04-07T10:05:13.317+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/iis_etl.py for tasks to queue
+[2025-04-07T10:05:13.318+0000] {logging_mixin.py:149} INFO - [2025-04-07T10:05:13.318+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/iis_etl.py
+[2025-04-07T10:05:13.777+0000] {processor.py:836} INFO - DAG(s) dict_keys(['iis_etl']) retrieved from /opt/airflow/dags/iis_etl.py
+[2025-04-07T10:05:14.009+0000] {logging_mixin.py:149} INFO - [2025-04-07T10:05:14.008+0000] {dag.py:2726} INFO - Sync 1 DAGs
+[2025-04-07T10:05:14.032+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/iis_etl.py took 0.721 seconds
+[2025-04-07T10:37:24.614+0000] {processor.py:157} INFO - Started process (PID=8169) to work on /opt/airflow/dags/iis_etl.py
+[2025-04-07T10:37:24.615+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/iis_etl.py for tasks to queue
+[2025-04-07T10:37:24.616+0000] {logging_mixin.py:149} INFO - [2025-04-07T10:37:24.616+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/iis_etl.py
+[2025-04-07T10:37:25.921+0000] {processor.py:836} INFO - DAG(s) dict_keys(['iis_etl']) retrieved from /opt/airflow/dags/iis_etl.py
+[2025-04-07T10:37:25.972+0000] {logging_mixin.py:149} INFO - [2025-04-07T10:37:25.972+0000] {dag.py:2726} INFO - Sync 1 DAGs
+[2025-04-07T10:37:25.996+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/iis_etl.py took 1.389 seconds
+[2025-04-07T11:06:14.081+0000] {processor.py:157} INFO - Started process (PID=8178) to work on /opt/airflow/dags/iis_etl.py
+[2025-04-07T11:06:14.088+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/iis_etl.py for tasks to queue
+[2025-04-07T11:06:14.091+0000] {logging_mixin.py:149} INFO - [2025-04-07T11:06:14.091+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/iis_etl.py
+[2025-04-07T11:06:15.439+0000] {processor.py:836} INFO - DAG(s) dict_keys(['iis_etl']) retrieved from /opt/airflow/dags/iis_etl.py
+[2025-04-07T11:06:15.496+0000] {logging_mixin.py:149} INFO - [2025-04-07T11:06:15.495+0000] {dag.py:2726} INFO - Sync 1 DAGs
+[2025-04-07T11:06:15.522+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/iis_etl.py took 1.462 seconds
+[2025-04-07T11:07:38.539+0000] {processor.py:157} INFO - Started process (PID=8187) to work on /opt/airflow/dags/iis_etl.py
+[2025-04-07T11:07:38.541+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/iis_etl.py for tasks to queue
+[2025-04-07T11:07:38.542+0000] {logging_mixin.py:149} INFO - [2025-04-07T11:07:38.542+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/iis_etl.py
+[2025-04-07T11:07:39.137+0000] {processor.py:836} INFO - DAG(s) dict_keys(['iis_etl']) retrieved from /opt/airflow/dags/iis_etl.py
+[2025-04-07T11:07:39.194+0000] {logging_mixin.py:149} INFO - [2025-04-07T11:07:39.194+0000] {dag.py:2726} INFO - Sync 1 DAGs
+[2025-04-07T11:07:39.216+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/iis_etl.py took 0.687 seconds
+[2025-04-07T11:08:09.632+0000] {processor.py:157} INFO - Started process (PID=8196) to work on /opt/airflow/dags/iis_etl.py
+[2025-04-07T11:08:09.634+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/iis_etl.py for tasks to queue
+[2025-04-07T11:08:09.635+0000] {logging_mixin.py:149} INFO - [2025-04-07T11:08:09.635+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/iis_etl.py
+[2025-04-07T11:08:10.215+0000] {processor.py:836} INFO - DAG(s) dict_keys(['iis_etl']) retrieved from /opt/airflow/dags/iis_etl.py
+[2025-04-07T11:08:10.266+0000] {logging_mixin.py:149} INFO - [2025-04-07T11:08:10.266+0000] {dag.py:2726} INFO - Sync 1 DAGs
+[2025-04-07T11:08:10.288+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/iis_etl.py took 0.666 seconds
+[2025-04-07T11:08:40.673+0000] {processor.py:157} INFO - Started process (PID=8205) to work on /opt/airflow/dags/iis_etl.py
+[2025-04-07T11:08:40.674+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/iis_etl.py for tasks to queue
+[2025-04-07T11:08:40.675+0000] {logging_mixin.py:149} INFO - [2025-04-07T11:08:40.675+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/iis_etl.py
+[2025-04-07T11:08:41.155+0000] {processor.py:836} INFO - DAG(s) dict_keys(['iis_etl']) retrieved from /opt/airflow/dags/iis_etl.py
+[2025-04-07T11:08:41.200+0000] {logging_mixin.py:149} INFO - [2025-04-07T11:08:41.200+0000] {dag.py:2726} INFO - Sync 1 DAGs
+[2025-04-07T11:08:41.221+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/iis_etl.py took 0.553 seconds
+[2025-04-07T11:09:11.539+0000] {processor.py:157} INFO - Started process (PID=8214) to work on /opt/airflow/dags/iis_etl.py
+[2025-04-07T11:09:11.541+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/iis_etl.py for tasks to queue
+[2025-04-07T11:09:11.542+0000] {logging_mixin.py:149} INFO - [2025-04-07T11:09:11.542+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/iis_etl.py
+[2025-04-07T11:09:12.126+0000] {processor.py:836} INFO - DAG(s) dict_keys(['iis_etl']) retrieved from /opt/airflow/dags/iis_etl.py
+[2025-04-07T11:09:12.174+0000] {logging_mixin.py:149} INFO - [2025-04-07T11:09:12.174+0000] {dag.py:2726} INFO - Sync 1 DAGs
+[2025-04-07T11:09:12.196+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/iis_etl.py took 0.664 seconds
+[2025-04-07T11:09:42.545+0000] {processor.py:157} INFO - Started process (PID=8223) to work on /opt/airflow/dags/iis_etl.py
+[2025-04-07T11:09:42.546+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/iis_etl.py for tasks to queue
+[2025-04-07T11:09:42.548+0000] {logging_mixin.py:149} INFO - [2025-04-07T11:09:42.548+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/iis_etl.py
+[2025-04-07T11:09:42.943+0000] {processor.py:836} INFO - DAG(s) dict_keys(['iis_etl']) retrieved from /opt/airflow/dags/iis_etl.py
+[2025-04-07T11:09:42.990+0000] {logging_mixin.py:149} INFO - [2025-04-07T11:09:42.990+0000] {dag.py:2726} INFO - Sync 1 DAGs
+[2025-04-07T11:09:43.011+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/iis_etl.py took 0.475 seconds
+[2025-04-07T11:10:13.122+0000] {processor.py:157} INFO - Started process (PID=8232) to work on /opt/airflow/dags/iis_etl.py
+[2025-04-07T11:10:13.123+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/iis_etl.py for tasks to queue
+[2025-04-07T11:10:13.124+0000] {logging_mixin.py:149} INFO - [2025-04-07T11:10:13.124+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/iis_etl.py
+[2025-04-07T11:10:13.583+0000] {processor.py:836} INFO - DAG(s) dict_keys(['iis_etl']) retrieved from /opt/airflow/dags/iis_etl.py
+[2025-04-07T11:10:13.630+0000] {logging_mixin.py:149} INFO - [2025-04-07T11:10:13.630+0000] {dag.py:2726} INFO - Sync 1 DAGs
+[2025-04-07T11:10:13.655+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/iis_etl.py took 0.538 seconds
+[2025-04-07T11:10:43.966+0000] {processor.py:157} INFO - Started process (PID=8241) to work on /opt/airflow/dags/iis_etl.py
+[2025-04-07T11:10:43.967+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/iis_etl.py for tasks to queue
+[2025-04-07T11:10:43.968+0000] {logging_mixin.py:149} INFO - [2025-04-07T11:10:43.967+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/iis_etl.py
+[2025-04-07T11:10:44.584+0000] {processor.py:836} INFO - DAG(s) dict_keys(['iis_etl']) retrieved from /opt/airflow/dags/iis_etl.py
+[2025-04-07T11:10:44.640+0000] {logging_mixin.py:149} INFO - [2025-04-07T11:10:44.640+0000] {dag.py:2726} INFO - Sync 1 DAGs
+[2025-04-07T11:10:44.665+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/iis_etl.py took 0.706 seconds
+[2025-04-07T11:11:15.024+0000] {processor.py:157} INFO - Started process (PID=8250) to work on /opt/airflow/dags/iis_etl.py
+[2025-04-07T11:11:15.026+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/iis_etl.py for tasks to queue
+[2025-04-07T11:11:15.027+0000] {logging_mixin.py:149} INFO - [2025-04-07T11:11:15.026+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/iis_etl.py
+[2025-04-07T11:11:15.577+0000] {processor.py:836} INFO - DAG(s) dict_keys(['iis_etl']) retrieved from /opt/airflow/dags/iis_etl.py
+[2025-04-07T11:11:15.625+0000] {logging_mixin.py:149} INFO - [2025-04-07T11:11:15.625+0000] {dag.py:2726} INFO - Sync 1 DAGs
+[2025-04-07T11:11:15.649+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/iis_etl.py took 0.631 seconds
+[2025-04-07T11:11:46.209+0000] {processor.py:157} INFO - Started process (PID=8259) to work on /opt/airflow/dags/iis_etl.py
+[2025-04-07T11:11:46.210+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/iis_etl.py for tasks to queue
+[2025-04-07T11:11:46.211+0000] {logging_mixin.py:149} INFO - [2025-04-07T11:11:46.210+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/iis_etl.py
+[2025-04-07T11:11:46.561+0000] {processor.py:836} INFO - DAG(s) dict_keys(['iis_etl']) retrieved from /opt/airflow/dags/iis_etl.py
+[2025-04-07T11:11:46.610+0000] {logging_mixin.py:149} INFO - [2025-04-07T11:11:46.610+0000] {dag.py:2726} INFO - Sync 1 DAGs
+[2025-04-07T11:11:46.634+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/iis_etl.py took 0.429 seconds
+[2025-04-07T11:12:16.747+0000] {processor.py:157} INFO - Started process (PID=8268) to work on /opt/airflow/dags/iis_etl.py
+[2025-04-07T11:12:16.748+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/iis_etl.py for tasks to queue
+[2025-04-07T11:12:16.749+0000] {logging_mixin.py:149} INFO - [2025-04-07T11:12:16.749+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/iis_etl.py
+[2025-04-07T11:12:17.175+0000] {processor.py:836} INFO - DAG(s) dict_keys(['iis_etl']) retrieved from /opt/airflow/dags/iis_etl.py
+[2025-04-07T11:12:17.229+0000] {logging_mixin.py:149} INFO - [2025-04-07T11:12:17.229+0000] {dag.py:2726} INFO - Sync 1 DAGs
+[2025-04-07T11:12:17.257+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/iis_etl.py took 0.516 seconds
+[2025-04-07T11:12:47.636+0000] {processor.py:157} INFO - Started process (PID=8277) to work on /opt/airflow/dags/iis_etl.py
+[2025-04-07T11:12:47.638+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/iis_etl.py for tasks to queue
+[2025-04-07T11:12:47.639+0000] {logging_mixin.py:149} INFO - [2025-04-07T11:12:47.639+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/iis_etl.py
+[2025-04-07T11:12:48.026+0000] {processor.py:836} INFO - DAG(s) dict_keys(['iis_etl']) retrieved from /opt/airflow/dags/iis_etl.py
+[2025-04-07T11:12:48.078+0000] {logging_mixin.py:149} INFO - [2025-04-07T11:12:48.078+0000] {dag.py:2726} INFO - Sync 1 DAGs
+[2025-04-07T11:12:48.226+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/iis_etl.py took 0.598 seconds
+[2025-04-07T11:13:18.563+0000] {processor.py:157} INFO - Started process (PID=8286) to work on /opt/airflow/dags/iis_etl.py
+[2025-04-07T11:13:18.564+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/iis_etl.py for tasks to queue
+[2025-04-07T11:13:18.565+0000] {logging_mixin.py:149} INFO - [2025-04-07T11:13:18.565+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/iis_etl.py
+[2025-04-07T11:13:18.872+0000] {processor.py:836} INFO - DAG(s) dict_keys(['iis_etl']) retrieved from /opt/airflow/dags/iis_etl.py
+[2025-04-07T11:13:18.915+0000] {logging_mixin.py:149} INFO - [2025-04-07T11:13:18.915+0000] {dag.py:2726} INFO - Sync 1 DAGs
+[2025-04-07T11:13:19.002+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/iis_etl.py took 0.442 seconds
+[2025-04-07T11:13:49.329+0000] {processor.py:157} INFO - Started process (PID=8295) to work on /opt/airflow/dags/iis_etl.py
+[2025-04-07T11:13:49.330+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/iis_etl.py for tasks to queue
+[2025-04-07T11:13:49.331+0000] {logging_mixin.py:149} INFO - [2025-04-07T11:13:49.331+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/iis_etl.py
+[2025-04-07T11:13:49.682+0000] {processor.py:836} INFO - DAG(s) dict_keys(['iis_etl']) retrieved from /opt/airflow/dags/iis_etl.py
+[2025-04-07T11:13:49.730+0000] {logging_mixin.py:149} INFO - [2025-04-07T11:13:49.730+0000] {dag.py:2726} INFO - Sync 1 DAGs
+[2025-04-07T11:13:49.819+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/iis_etl.py took 0.496 seconds
+[2025-04-07T11:14:20.175+0000] {processor.py:157} INFO - Started process (PID=8304) to work on /opt/airflow/dags/iis_etl.py
+[2025-04-07T11:14:20.176+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/iis_etl.py for tasks to queue
+[2025-04-07T11:14:20.177+0000] {logging_mixin.py:149} INFO - [2025-04-07T11:14:20.177+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/iis_etl.py
+[2025-04-07T11:14:20.670+0000] {processor.py:836} INFO - DAG(s) dict_keys(['iis_etl']) retrieved from /opt/airflow/dags/iis_etl.py
+[2025-04-07T11:14:20.719+0000] {logging_mixin.py:149} INFO - [2025-04-07T11:14:20.718+0000] {dag.py:2726} INFO - Sync 1 DAGs
+[2025-04-07T11:14:20.740+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/iis_etl.py took 0.569 seconds
+[2025-04-07T11:14:51.113+0000] {processor.py:157} INFO - Started process (PID=8313) to work on /opt/airflow/dags/iis_etl.py
+[2025-04-07T11:14:51.115+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/iis_etl.py for tasks to queue
+[2025-04-07T11:14:51.116+0000] {logging_mixin.py:149} INFO - [2025-04-07T11:14:51.116+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/iis_etl.py
+[2025-04-07T11:14:51.710+0000] {processor.py:836} INFO - DAG(s) dict_keys(['iis_etl']) retrieved from /opt/airflow/dags/iis_etl.py
+[2025-04-07T11:14:51.803+0000] {logging_mixin.py:149} INFO - [2025-04-07T11:14:51.802+0000] {dag.py:2726} INFO - Sync 1 DAGs
+[2025-04-07T11:14:51.836+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/iis_etl.py took 0.730 seconds
+[2025-04-07T11:15:22.224+0000] {processor.py:157} INFO - Started process (PID=8322) to work on /opt/airflow/dags/iis_etl.py
+[2025-04-07T11:15:22.225+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/iis_etl.py for tasks to queue
+[2025-04-07T11:15:22.226+0000] {logging_mixin.py:149} INFO - [2025-04-07T11:15:22.226+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/iis_etl.py
+[2025-04-07T11:15:22.753+0000] {processor.py:836} INFO - DAG(s) dict_keys(['iis_etl']) retrieved from /opt/airflow/dags/iis_etl.py
+[2025-04-07T11:15:22.802+0000] {logging_mixin.py:149} INFO - [2025-04-07T11:15:22.802+0000] {dag.py:2726} INFO - Sync 1 DAGs
+[2025-04-07T11:15:22.826+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/iis_etl.py took 0.608 seconds
+[2025-04-07T11:15:53.241+0000] {processor.py:157} INFO - Started process (PID=8331) to work on /opt/airflow/dags/iis_etl.py
+[2025-04-07T11:15:53.243+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/iis_etl.py for tasks to queue
+[2025-04-07T11:15:53.245+0000] {logging_mixin.py:149} INFO - [2025-04-07T11:15:53.244+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/iis_etl.py
+[2025-04-07T11:15:53.829+0000] {processor.py:836} INFO - DAG(s) dict_keys(['iis_etl']) retrieved from /opt/airflow/dags/iis_etl.py
+[2025-04-07T11:15:53.877+0000] {logging_mixin.py:149} INFO - [2025-04-07T11:15:53.877+0000] {dag.py:2726} INFO - Sync 1 DAGs
+[2025-04-07T11:15:53.900+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/iis_etl.py took 0.668 seconds
+[2025-04-07T11:16:24.128+0000] {processor.py:157} INFO - Started process (PID=8340) to work on /opt/airflow/dags/iis_etl.py
+[2025-04-07T11:16:24.129+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/iis_etl.py for tasks to queue
+[2025-04-07T11:16:24.130+0000] {logging_mixin.py:149} INFO - [2025-04-07T11:16:24.130+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/iis_etl.py
+[2025-04-07T11:16:24.711+0000] {processor.py:836} INFO - DAG(s) dict_keys(['iis_etl']) retrieved from /opt/airflow/dags/iis_etl.py
+[2025-04-07T11:16:24.783+0000] {logging_mixin.py:149} INFO - [2025-04-07T11:16:24.783+0000] {dag.py:2726} INFO - Sync 1 DAGs
+[2025-04-07T11:16:24.807+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/iis_etl.py took 0.685 seconds
+[2025-04-07T11:16:55.201+0000] {processor.py:157} INFO - Started process (PID=8349) to work on /opt/airflow/dags/iis_etl.py
+[2025-04-07T11:16:55.204+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/iis_etl.py for tasks to queue
+[2025-04-07T11:16:55.205+0000] {logging_mixin.py:149} INFO - [2025-04-07T11:16:55.205+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/iis_etl.py
+[2025-04-07T11:16:55.788+0000] {processor.py:836} INFO - DAG(s) dict_keys(['iis_etl']) retrieved from /opt/airflow/dags/iis_etl.py
+[2025-04-07T11:16:55.849+0000] {logging_mixin.py:149} INFO - [2025-04-07T11:16:55.849+0000] {dag.py:2726} INFO - Sync 1 DAGs
+[2025-04-07T11:16:55.877+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/iis_etl.py took 0.683 seconds
+[2025-04-07T11:17:26.226+0000] {processor.py:157} INFO - Started process (PID=8358) to work on /opt/airflow/dags/iis_etl.py
+[2025-04-07T11:17:26.229+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/iis_etl.py for tasks to queue
+[2025-04-07T11:17:26.229+0000] {logging_mixin.py:149} INFO - [2025-04-07T11:17:26.229+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/iis_etl.py
+[2025-04-07T11:17:26.827+0000] {processor.py:836} INFO - DAG(s) dict_keys(['iis_etl']) retrieved from /opt/airflow/dags/iis_etl.py
+[2025-04-07T11:17:26.875+0000] {logging_mixin.py:149} INFO - [2025-04-07T11:17:26.875+0000] {dag.py:2726} INFO - Sync 1 DAGs
+[2025-04-07T11:17:26.897+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/iis_etl.py took 0.678 seconds
+[2025-04-07T11:17:57.183+0000] {processor.py:157} INFO - Started process (PID=8367) to work on /opt/airflow/dags/iis_etl.py
+[2025-04-07T11:17:57.186+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/iis_etl.py for tasks to queue
+[2025-04-07T11:17:57.186+0000] {logging_mixin.py:149} INFO - [2025-04-07T11:17:57.186+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/iis_etl.py
+[2025-04-07T11:17:57.774+0000] {processor.py:836} INFO - DAG(s) dict_keys(['iis_etl']) retrieved from /opt/airflow/dags/iis_etl.py
+[2025-04-07T11:17:57.824+0000] {logging_mixin.py:149} INFO - [2025-04-07T11:17:57.824+0000] {dag.py:2726} INFO - Sync 1 DAGs
+[2025-04-07T11:17:57.848+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/iis_etl.py took 0.670 seconds
+[2025-04-07T11:18:28.301+0000] {processor.py:157} INFO - Started process (PID=8376) to work on /opt/airflow/dags/iis_etl.py
+[2025-04-07T11:18:28.303+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/iis_etl.py for tasks to queue
+[2025-04-07T11:18:28.303+0000] {logging_mixin.py:149} INFO - [2025-04-07T11:18:28.303+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/iis_etl.py
+[2025-04-07T11:18:28.615+0000] {processor.py:836} INFO - DAG(s) dict_keys(['iis_etl']) retrieved from /opt/airflow/dags/iis_etl.py
+[2025-04-07T11:18:28.659+0000] {logging_mixin.py:149} INFO - [2025-04-07T11:18:28.659+0000] {dag.py:2726} INFO - Sync 1 DAGs
+[2025-04-07T11:18:28.681+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/iis_etl.py took 0.382 seconds
+[2025-04-07T11:18:58.874+0000] {processor.py:157} INFO - Started process (PID=8385) to work on /opt/airflow/dags/iis_etl.py
+[2025-04-07T11:18:58.875+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/iis_etl.py for tasks to queue
+[2025-04-07T11:18:58.876+0000] {logging_mixin.py:149} INFO - [2025-04-07T11:18:58.875+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/iis_etl.py
+[2025-04-07T11:18:59.235+0000] {processor.py:836} INFO - DAG(s) dict_keys(['iis_etl']) retrieved from /opt/airflow/dags/iis_etl.py
+[2025-04-07T11:18:59.295+0000] {logging_mixin.py:149} INFO - [2025-04-07T11:18:59.294+0000] {dag.py:2726} INFO - Sync 1 DAGs
+[2025-04-07T11:18:59.322+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/iis_etl.py took 0.450 seconds
+[2025-04-07T11:19:29.627+0000] {processor.py:157} INFO - Started process (PID=8394) to work on /opt/airflow/dags/iis_etl.py
+[2025-04-07T11:19:29.629+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/iis_etl.py for tasks to queue
+[2025-04-07T11:19:29.630+0000] {logging_mixin.py:149} INFO - [2025-04-07T11:19:29.630+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/iis_etl.py
+[2025-04-07T11:19:29.965+0000] {processor.py:836} INFO - DAG(s) dict_keys(['iis_etl']) retrieved from /opt/airflow/dags/iis_etl.py
+[2025-04-07T11:19:30.013+0000] {logging_mixin.py:149} INFO - [2025-04-07T11:19:30.013+0000] {dag.py:2726} INFO - Sync 1 DAGs
+[2025-04-07T11:19:30.037+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/iis_etl.py took 0.417 seconds
+[2025-04-07T11:20:00.353+0000] {processor.py:157} INFO - Started process (PID=8403) to work on /opt/airflow/dags/iis_etl.py
+[2025-04-07T11:20:00.354+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/iis_etl.py for tasks to queue
+[2025-04-07T11:20:00.355+0000] {logging_mixin.py:149} INFO - [2025-04-07T11:20:00.355+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/iis_etl.py
+[2025-04-07T11:20:00.706+0000] {processor.py:836} INFO - DAG(s) dict_keys(['iis_etl']) retrieved from /opt/airflow/dags/iis_etl.py
+[2025-04-07T11:20:00.762+0000] {logging_mixin.py:149} INFO - [2025-04-07T11:20:00.762+0000] {dag.py:2726} INFO - Sync 1 DAGs
+[2025-04-07T11:20:00.789+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/iis_etl.py took 0.442 seconds
+[2025-04-07T11:20:31.168+0000] {processor.py:157} INFO - Started process (PID=8412) to work on /opt/airflow/dags/iis_etl.py
+[2025-04-07T11:20:31.174+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/iis_etl.py for tasks to queue
+[2025-04-07T11:20:31.177+0000] {logging_mixin.py:149} INFO - [2025-04-07T11:20:31.177+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/iis_etl.py
+[2025-04-07T11:20:31.602+0000] {processor.py:836} INFO - DAG(s) dict_keys(['iis_etl']) retrieved from /opt/airflow/dags/iis_etl.py
+[2025-04-07T11:20:31.830+0000] {logging_mixin.py:149} INFO - [2025-04-07T11:20:31.830+0000] {dag.py:2726} INFO - Sync 1 DAGs
+[2025-04-07T11:20:31.855+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/iis_etl.py took 0.706 seconds
+[2025-04-07T11:21:02.116+0000] {processor.py:157} INFO - Started process (PID=8421) to work on /opt/airflow/dags/iis_etl.py
+[2025-04-07T11:21:02.118+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/iis_etl.py for tasks to queue
+[2025-04-07T11:21:02.119+0000] {logging_mixin.py:149} INFO - [2025-04-07T11:21:02.119+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/iis_etl.py
+[2025-04-07T11:21:02.709+0000] {processor.py:836} INFO - DAG(s) dict_keys(['iis_etl']) retrieved from /opt/airflow/dags/iis_etl.py
+[2025-04-07T11:21:02.760+0000] {logging_mixin.py:149} INFO - [2025-04-07T11:21:02.760+0000] {dag.py:2726} INFO - Sync 1 DAGs
+[2025-04-07T11:21:02.785+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/iis_etl.py took 0.678 seconds
+[2025-04-07T11:21:33.156+0000] {processor.py:157} INFO - Started process (PID=8430) to work on /opt/airflow/dags/iis_etl.py
+[2025-04-07T11:21:33.158+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/iis_etl.py for tasks to queue
+[2025-04-07T11:21:33.159+0000] {logging_mixin.py:149} INFO - [2025-04-07T11:21:33.159+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/iis_etl.py
+[2025-04-07T11:21:33.767+0000] {processor.py:836} INFO - DAG(s) dict_keys(['iis_etl']) retrieved from /opt/airflow/dags/iis_etl.py
+[2025-04-07T11:21:33.827+0000] {logging_mixin.py:149} INFO - [2025-04-07T11:21:33.827+0000] {dag.py:2726} INFO - Sync 1 DAGs
+[2025-04-07T11:21:33.852+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/iis_etl.py took 0.704 seconds
+[2025-04-07T11:22:04.204+0000] {processor.py:157} INFO - Started process (PID=8439) to work on /opt/airflow/dags/iis_etl.py
+[2025-04-07T11:22:04.207+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/iis_etl.py for tasks to queue
+[2025-04-07T11:22:04.208+0000] {logging_mixin.py:149} INFO - [2025-04-07T11:22:04.208+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/iis_etl.py
+[2025-04-07T11:22:04.788+0000] {processor.py:836} INFO - DAG(s) dict_keys(['iis_etl']) retrieved from /opt/airflow/dags/iis_etl.py
+[2025-04-07T11:22:04.837+0000] {logging_mixin.py:149} INFO - [2025-04-07T11:22:04.837+0000] {dag.py:2726} INFO - Sync 1 DAGs
+[2025-04-07T11:22:04.861+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/iis_etl.py took 0.665 seconds
+[2025-04-07T11:22:35.106+0000] {processor.py:157} INFO - Started process (PID=8448) to work on /opt/airflow/dags/iis_etl.py
+[2025-04-07T11:22:35.108+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/iis_etl.py for tasks to queue
+[2025-04-07T11:22:35.109+0000] {logging_mixin.py:149} INFO - [2025-04-07T11:22:35.109+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/iis_etl.py
+[2025-04-07T11:22:35.703+0000] {processor.py:836} INFO - DAG(s) dict_keys(['iis_etl']) retrieved from /opt/airflow/dags/iis_etl.py
+[2025-04-07T11:22:35.749+0000] {logging_mixin.py:149} INFO - [2025-04-07T11:22:35.749+0000] {dag.py:2726} INFO - Sync 1 DAGs
+[2025-04-07T11:22:35.775+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/iis_etl.py took 0.676 seconds
+[2025-04-07T11:23:06.141+0000] {processor.py:157} INFO - Started process (PID=8457) to work on /opt/airflow/dags/iis_etl.py
+[2025-04-07T11:23:06.144+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/iis_etl.py for tasks to queue
+[2025-04-07T11:23:06.145+0000] {logging_mixin.py:149} INFO - [2025-04-07T11:23:06.145+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/iis_etl.py
+[2025-04-07T11:23:06.726+0000] {processor.py:836} INFO - DAG(s) dict_keys(['iis_etl']) retrieved from /opt/airflow/dags/iis_etl.py
+[2025-04-07T11:23:06.787+0000] {logging_mixin.py:149} INFO - [2025-04-07T11:23:06.787+0000] {dag.py:2726} INFO - Sync 1 DAGs
+[2025-04-07T11:23:06.812+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/iis_etl.py took 0.677 seconds
+[2025-04-07T11:23:37.105+0000] {processor.py:157} INFO - Started process (PID=8466) to work on /opt/airflow/dags/iis_etl.py
+[2025-04-07T11:23:37.106+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/iis_etl.py for tasks to queue
+[2025-04-07T11:23:37.107+0000] {logging_mixin.py:149} INFO - [2025-04-07T11:23:37.107+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/iis_etl.py
+[2025-04-07T11:23:37.656+0000] {processor.py:836} INFO - DAG(s) dict_keys(['iis_etl']) retrieved from /opt/airflow/dags/iis_etl.py
+[2025-04-07T11:23:37.706+0000] {logging_mixin.py:149} INFO - [2025-04-07T11:23:37.706+0000] {dag.py:2726} INFO - Sync 1 DAGs
+[2025-04-07T11:23:37.736+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/iis_etl.py took 0.636 seconds
+[2025-04-07T11:24:08.117+0000] {processor.py:157} INFO - Started process (PID=8475) to work on /opt/airflow/dags/iis_etl.py
+[2025-04-07T11:24:08.118+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/iis_etl.py for tasks to queue
+[2025-04-07T11:24:08.119+0000] {logging_mixin.py:149} INFO - [2025-04-07T11:24:08.119+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/iis_etl.py
+[2025-04-07T11:24:08.661+0000] {processor.py:836} INFO - DAG(s) dict_keys(['iis_etl']) retrieved from /opt/airflow/dags/iis_etl.py
+[2025-04-07T11:24:08.709+0000] {logging_mixin.py:149} INFO - [2025-04-07T11:24:08.708+0000] {dag.py:2726} INFO - Sync 1 DAGs
+[2025-04-07T11:24:08.731+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/iis_etl.py took 0.620 seconds
+[2025-04-07T11:24:39.135+0000] {processor.py:157} INFO - Started process (PID=8484) to work on /opt/airflow/dags/iis_etl.py
+[2025-04-07T11:24:39.137+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/iis_etl.py for tasks to queue
+[2025-04-07T11:24:39.137+0000] {logging_mixin.py:149} INFO - [2025-04-07T11:24:39.137+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/iis_etl.py
+[2025-04-07T11:24:39.706+0000] {processor.py:836} INFO - DAG(s) dict_keys(['iis_etl']) retrieved from /opt/airflow/dags/iis_etl.py
+[2025-04-07T11:24:39.757+0000] {logging_mixin.py:149} INFO - [2025-04-07T11:24:39.756+0000] {dag.py:2726} INFO - Sync 1 DAGs
+[2025-04-07T11:24:39.782+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/iis_etl.py took 0.653 seconds
+[2025-04-07T11:25:10.280+0000] {processor.py:157} INFO - Started process (PID=8493) to work on /opt/airflow/dags/iis_etl.py
+[2025-04-07T11:25:10.282+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/iis_etl.py for tasks to queue
+[2025-04-07T11:25:10.282+0000] {logging_mixin.py:149} INFO - [2025-04-07T11:25:10.282+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/iis_etl.py
+[2025-04-07T11:25:10.653+0000] {processor.py:836} INFO - DAG(s) dict_keys(['iis_etl']) retrieved from /opt/airflow/dags/iis_etl.py
+[2025-04-07T11:25:10.704+0000] {logging_mixin.py:149} INFO - [2025-04-07T11:25:10.704+0000] {dag.py:2726} INFO - Sync 1 DAGs
+[2025-04-07T11:25:10.731+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/iis_etl.py took 0.455 seconds
+[2025-04-07T11:25:41.149+0000] {processor.py:157} INFO - Started process (PID=8502) to work on /opt/airflow/dags/iis_etl.py
+[2025-04-07T11:25:41.151+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/iis_etl.py for tasks to queue
+[2025-04-07T11:25:41.152+0000] {logging_mixin.py:149} INFO - [2025-04-07T11:25:41.152+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/iis_etl.py
+[2025-04-07T11:25:41.613+0000] {processor.py:836} INFO - DAG(s) dict_keys(['iis_etl']) retrieved from /opt/airflow/dags/iis_etl.py
+[2025-04-07T11:25:41.669+0000] {logging_mixin.py:149} INFO - [2025-04-07T11:25:41.669+0000] {dag.py:2726} INFO - Sync 1 DAGs
+[2025-04-07T11:25:41.699+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/iis_etl.py took 0.556 seconds
+[2025-04-07T11:26:12.044+0000] {processor.py:157} INFO - Started process (PID=8511) to work on /opt/airflow/dags/iis_etl.py
+[2025-04-07T11:26:12.046+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/iis_etl.py for tasks to queue
+[2025-04-07T11:26:12.047+0000] {logging_mixin.py:149} INFO - [2025-04-07T11:26:12.047+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/iis_etl.py
+[2025-04-07T11:26:12.494+0000] {processor.py:836} INFO - DAG(s) dict_keys(['iis_etl']) retrieved from /opt/airflow/dags/iis_etl.py
+[2025-04-07T11:26:12.547+0000] {logging_mixin.py:149} INFO - [2025-04-07T11:26:12.547+0000] {dag.py:2726} INFO - Sync 1 DAGs
+[2025-04-07T11:26:12.575+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/iis_etl.py took 0.538 seconds
+[2025-04-07T11:26:42.818+0000] {processor.py:157} INFO - Started process (PID=8520) to work on /opt/airflow/dags/iis_etl.py
+[2025-04-07T11:26:42.819+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/iis_etl.py for tasks to queue
+[2025-04-07T11:26:42.820+0000] {logging_mixin.py:149} INFO - [2025-04-07T11:26:42.820+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/iis_etl.py
+[2025-04-07T11:26:43.137+0000] {processor.py:836} INFO - DAG(s) dict_keys(['iis_etl']) retrieved from /opt/airflow/dags/iis_etl.py
+[2025-04-07T11:26:43.185+0000] {logging_mixin.py:149} INFO - [2025-04-07T11:26:43.185+0000] {dag.py:2726} INFO - Sync 1 DAGs
+[2025-04-07T11:26:43.206+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/iis_etl.py took 0.393 seconds
+[2025-04-07T11:27:13.295+0000] {processor.py:157} INFO - Started process (PID=8529) to work on /opt/airflow/dags/iis_etl.py
+[2025-04-07T11:27:13.296+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/iis_etl.py for tasks to queue
+[2025-04-07T11:27:13.297+0000] {logging_mixin.py:149} INFO - [2025-04-07T11:27:13.297+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/iis_etl.py
+[2025-04-07T11:27:13.718+0000] {processor.py:836} INFO - DAG(s) dict_keys(['iis_etl']) retrieved from /opt/airflow/dags/iis_etl.py
+[2025-04-07T11:27:13.932+0000] {logging_mixin.py:149} INFO - [2025-04-07T11:27:13.932+0000] {dag.py:2726} INFO - Sync 1 DAGs
+[2025-04-07T11:27:13.956+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/iis_etl.py took 0.667 seconds
+[2025-04-07T11:27:44.381+0000] {processor.py:157} INFO - Started process (PID=8538) to work on /opt/airflow/dags/iis_etl.py
+[2025-04-07T11:27:44.383+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/iis_etl.py for tasks to queue
+[2025-04-07T11:27:44.384+0000] {logging_mixin.py:149} INFO - [2025-04-07T11:27:44.384+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/iis_etl.py
+[2025-04-07T11:27:44.958+0000] {processor.py:836} INFO - DAG(s) dict_keys(['iis_etl']) retrieved from /opt/airflow/dags/iis_etl.py
+[2025-04-07T11:27:45.005+0000] {logging_mixin.py:149} INFO - [2025-04-07T11:27:45.005+0000] {dag.py:2726} INFO - Sync 1 DAGs
+[2025-04-07T11:27:45.029+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/iis_etl.py took 0.654 seconds
+[2025-04-07T11:28:15.443+0000] {processor.py:157} INFO - Started process (PID=8547) to work on /opt/airflow/dags/iis_etl.py
+[2025-04-07T11:28:15.446+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/iis_etl.py for tasks to queue
+[2025-04-07T11:28:15.447+0000] {logging_mixin.py:149} INFO - [2025-04-07T11:28:15.446+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/iis_etl.py
+[2025-04-07T11:28:16.118+0000] {processor.py:836} INFO - DAG(s) dict_keys(['iis_etl']) retrieved from /opt/airflow/dags/iis_etl.py
+[2025-04-07T11:28:16.169+0000] {logging_mixin.py:149} INFO - [2025-04-07T11:28:16.168+0000] {dag.py:2726} INFO - Sync 1 DAGs
+[2025-04-07T11:28:16.193+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/iis_etl.py took 0.757 seconds
+[2025-04-07T11:28:46.452+0000] {processor.py:157} INFO - Started process (PID=8556) to work on /opt/airflow/dags/iis_etl.py
+[2025-04-07T11:28:46.456+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/iis_etl.py for tasks to queue
+[2025-04-07T11:28:46.458+0000] {logging_mixin.py:149} INFO - [2025-04-07T11:28:46.458+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/iis_etl.py
+[2025-04-07T11:28:47.052+0000] {processor.py:836} INFO - DAG(s) dict_keys(['iis_etl']) retrieved from /opt/airflow/dags/iis_etl.py
+[2025-04-07T11:28:47.103+0000] {logging_mixin.py:149} INFO - [2025-04-07T11:28:47.103+0000] {dag.py:2726} INFO - Sync 1 DAGs
+[2025-04-07T11:28:47.126+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/iis_etl.py took 0.682 seconds
+[2025-04-07T11:29:17.519+0000] {processor.py:157} INFO - Started process (PID=8565) to work on /opt/airflow/dags/iis_etl.py
+[2025-04-07T11:29:17.523+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/iis_etl.py for tasks to queue
+[2025-04-07T11:29:17.524+0000] {logging_mixin.py:149} INFO - [2025-04-07T11:29:17.524+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/iis_etl.py
+[2025-04-07T11:29:18.262+0000] {processor.py:836} INFO - DAG(s) dict_keys(['iis_etl']) retrieved from /opt/airflow/dags/iis_etl.py
+[2025-04-07T11:29:18.336+0000] {logging_mixin.py:149} INFO - [2025-04-07T11:29:18.336+0000] {dag.py:2726} INFO - Sync 1 DAGs
+[2025-04-07T11:29:18.366+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/iis_etl.py took 0.864 seconds
+[2025-04-07T11:29:48.881+0000] {processor.py:157} INFO - Started process (PID=8574) to work on /opt/airflow/dags/iis_etl.py
+[2025-04-07T11:29:48.883+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/iis_etl.py for tasks to queue
+[2025-04-07T11:29:48.884+0000] {logging_mixin.py:149} INFO - [2025-04-07T11:29:48.884+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/iis_etl.py
+[2025-04-07T11:29:49.461+0000] {processor.py:836} INFO - DAG(s) dict_keys(['iis_etl']) retrieved from /opt/airflow/dags/iis_etl.py
+[2025-04-07T11:29:49.514+0000] {logging_mixin.py:149} INFO - [2025-04-07T11:29:49.514+0000] {dag.py:2726} INFO - Sync 1 DAGs
+[2025-04-07T11:29:49.548+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/iis_etl.py took 0.672 seconds
+[2025-04-07T11:30:19.913+0000] {processor.py:157} INFO - Started process (PID=8583) to work on /opt/airflow/dags/iis_etl.py
+[2025-04-07T11:30:19.914+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/iis_etl.py for tasks to queue
+[2025-04-07T11:30:19.915+0000] {logging_mixin.py:149} INFO - [2025-04-07T11:30:19.915+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/iis_etl.py
+[2025-04-07T11:30:20.286+0000] {processor.py:836} INFO - DAG(s) dict_keys(['iis_etl']) retrieved from /opt/airflow/dags/iis_etl.py
+[2025-04-07T11:30:20.332+0000] {logging_mixin.py:149} INFO - [2025-04-07T11:30:20.332+0000] {dag.py:2726} INFO - Sync 1 DAGs
+[2025-04-07T11:30:20.364+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/iis_etl.py took 0.455 seconds
+[2025-04-07T11:30:50.527+0000] {processor.py:157} INFO - Started process (PID=8592) to work on /opt/airflow/dags/iis_etl.py
+[2025-04-07T11:30:50.528+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/iis_etl.py for tasks to queue
+[2025-04-07T11:30:50.529+0000] {logging_mixin.py:149} INFO - [2025-04-07T11:30:50.529+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/iis_etl.py
+[2025-04-07T11:30:50.895+0000] {processor.py:836} INFO - DAG(s) dict_keys(['iis_etl']) retrieved from /opt/airflow/dags/iis_etl.py
+[2025-04-07T11:30:50.938+0000] {logging_mixin.py:149} INFO - [2025-04-07T11:30:50.938+0000] {dag.py:2726} INFO - Sync 1 DAGs
+[2025-04-07T11:30:50.957+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/iis_etl.py took 0.433 seconds
+[2025-04-07T11:31:21.252+0000] {processor.py:157} INFO - Started process (PID=8601) to work on /opt/airflow/dags/iis_etl.py
+[2025-04-07T11:31:21.252+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/iis_etl.py for tasks to queue
+[2025-04-07T11:31:21.253+0000] {logging_mixin.py:149} INFO - [2025-04-07T11:31:21.253+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/iis_etl.py
+[2025-04-07T11:31:21.617+0000] {processor.py:836} INFO - DAG(s) dict_keys(['iis_etl']) retrieved from /opt/airflow/dags/iis_etl.py
+[2025-04-07T11:31:21.659+0000] {logging_mixin.py:149} INFO - [2025-04-07T11:31:21.659+0000] {dag.py:2726} INFO - Sync 1 DAGs
+[2025-04-07T11:31:21.679+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/iis_etl.py took 0.431 seconds
+[2025-04-07T11:31:52.130+0000] {processor.py:157} INFO - Started process (PID=8610) to work on /opt/airflow/dags/iis_etl.py
+[2025-04-07T11:31:52.131+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/iis_etl.py for tasks to queue
+[2025-04-07T11:31:52.131+0000] {logging_mixin.py:149} INFO - [2025-04-07T11:31:52.131+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/iis_etl.py
+[2025-04-07T11:31:52.448+0000] {processor.py:836} INFO - DAG(s) dict_keys(['iis_etl']) retrieved from /opt/airflow/dags/iis_etl.py
+[2025-04-07T11:31:52.491+0000] {logging_mixin.py:149} INFO - [2025-04-07T11:31:52.491+0000] {dag.py:2726} INFO - Sync 1 DAGs
+[2025-04-07T11:31:52.513+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/iis_etl.py took 0.384 seconds
+[2025-04-07T11:32:22.817+0000] {processor.py:157} INFO - Started process (PID=8619) to work on /opt/airflow/dags/iis_etl.py
+[2025-04-07T11:32:22.818+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/iis_etl.py for tasks to queue
+[2025-04-07T11:32:22.818+0000] {logging_mixin.py:149} INFO - [2025-04-07T11:32:22.818+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/iis_etl.py
+[2025-04-07T11:32:23.116+0000] {processor.py:836} INFO - DAG(s) dict_keys(['iis_etl']) retrieved from /opt/airflow/dags/iis_etl.py
+[2025-04-07T11:32:23.161+0000] {logging_mixin.py:149} INFO - [2025-04-07T11:32:23.160+0000] {dag.py:2726} INFO - Sync 1 DAGs
+[2025-04-07T11:32:23.181+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/iis_etl.py took 0.366 seconds
+[2025-04-07T11:32:53.499+0000] {processor.py:157} INFO - Started process (PID=8628) to work on /opt/airflow/dags/iis_etl.py
+[2025-04-07T11:32:53.499+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/iis_etl.py for tasks to queue
+[2025-04-07T11:32:53.500+0000] {logging_mixin.py:149} INFO - [2025-04-07T11:32:53.500+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/iis_etl.py
+[2025-04-07T11:32:53.811+0000] {processor.py:836} INFO - DAG(s) dict_keys(['iis_etl']) retrieved from /opt/airflow/dags/iis_etl.py
+[2025-04-07T11:32:53.855+0000] {logging_mixin.py:149} INFO - [2025-04-07T11:32:53.855+0000] {dag.py:2726} INFO - Sync 1 DAGs
+[2025-04-07T11:32:53.876+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/iis_etl.py took 0.380 seconds
+[2025-04-07T11:33:24.183+0000] {processor.py:157} INFO - Started process (PID=8637) to work on /opt/airflow/dags/iis_etl.py
+[2025-04-07T11:33:24.185+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/iis_etl.py for tasks to queue
+[2025-04-07T11:33:24.186+0000] {logging_mixin.py:149} INFO - [2025-04-07T11:33:24.186+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/iis_etl.py
+[2025-04-07T11:33:24.546+0000] {processor.py:836} INFO - DAG(s) dict_keys(['iis_etl']) retrieved from /opt/airflow/dags/iis_etl.py
+[2025-04-07T11:33:24.595+0000] {logging_mixin.py:149} INFO - [2025-04-07T11:33:24.595+0000] {dag.py:2726} INFO - Sync 1 DAGs
+[2025-04-07T11:33:24.621+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/iis_etl.py took 0.445 seconds
+[2025-04-07T11:33:54.947+0000] {processor.py:157} INFO - Started process (PID=8646) to work on /opt/airflow/dags/iis_etl.py
+[2025-04-07T11:33:54.948+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/iis_etl.py for tasks to queue
+[2025-04-07T11:33:54.948+0000] {logging_mixin.py:149} INFO - [2025-04-07T11:33:54.948+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/iis_etl.py
+[2025-04-07T11:33:55.253+0000] {processor.py:836} INFO - DAG(s) dict_keys(['iis_etl']) retrieved from /opt/airflow/dags/iis_etl.py
+[2025-04-07T11:33:55.416+0000] {logging_mixin.py:149} INFO - [2025-04-07T11:33:55.415+0000] {dag.py:2726} INFO - Sync 1 DAGs
+[2025-04-07T11:33:55.439+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/iis_etl.py took 0.497 seconds
+[2025-04-07T11:34:25.740+0000] {processor.py:157} INFO - Started process (PID=8655) to work on /opt/airflow/dags/iis_etl.py
+[2025-04-07T11:34:25.741+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/iis_etl.py for tasks to queue
+[2025-04-07T11:34:25.741+0000] {logging_mixin.py:149} INFO - [2025-04-07T11:34:25.741+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/iis_etl.py
+[2025-04-07T11:34:26.147+0000] {processor.py:836} INFO - DAG(s) dict_keys(['iis_etl']) retrieved from /opt/airflow/dags/iis_etl.py
+[2025-04-07T11:34:26.192+0000] {logging_mixin.py:149} INFO - [2025-04-07T11:34:26.191+0000] {dag.py:2726} INFO - Sync 1 DAGs
+[2025-04-07T11:34:26.213+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/iis_etl.py took 0.475 seconds

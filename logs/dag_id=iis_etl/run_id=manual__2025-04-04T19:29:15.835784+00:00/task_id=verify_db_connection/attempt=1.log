@@ -1,0 +1,15 @@
+2025-04-04T19:29:17.851+0000 [INFO] Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: iis_etl.verify_db_connection manual__2025-04-04T19:29:15.835784+00:00 [queued]>
+2025-04-04T19:29:17.859+0000 [INFO] Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: iis_etl.verify_db_connection manual__2025-04-04T19:29:15.835784+00:00 [queued]>
+2025-04-04T19:29:17.861+0000 [INFO] Starting attempt 1 of 4
+2025-04-04T19:29:17.871+0000 [INFO] Executing <Task(PythonOperator): verify_db_connection> on 2025-04-04 19:29:15.835784+00:00
+2025-04-04T19:29:17.880+0000 [INFO] Started process 194 to run task
+2025-04-04T19:29:17.885+0000 [INFO] Running: ['airflow', 'tasks', 'run', 'iis_etl', 'verify_db_connection', 'manual__2025-04-04T19:29:15.835784+00:00', '--job-id', '51', '--raw', '--subdir', 'DAGS_FOLDER/iis_etl.py', '--cfg-path', '/tmp/tmplu237aaq']
+2025-04-04T19:29:17.889+0000 [INFO] Job 51: Subtask verify_db_connection
+2025-04-04T19:29:17.923+0000 [INFO] Running <TaskInstance: iis_etl.verify_db_connection manual__2025-04-04T19:29:15.835784+00:00 [running]> on host 4c7227608743
+2025-04-04T19:29:18.392+0000 [INFO] Exporting env vars: AIRFLOW_CTX_DAG_OWNER='airflow' AIRFLOW_CTX_DAG_ID='iis_etl' AIRFLOW_CTX_TASK_ID='verify_db_connection' AIRFLOW_CTX_EXECUTION_DATE='2025-04-04T19:29:15.835784+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-04-04T19:29:15.835784+00:00'
+2025-04-04T19:29:18.399+0000 [INFO] Using connection ID 'postgres_iis' for task execution.
+2025-04-04T19:29:18.402+0000 [INFO] PostgreSQL connection verified successfully
+2025-04-04T19:29:18.402+0000 [INFO] Done. Returned value was: True
+2025-04-04T19:29:18.422+0000 [INFO] Marking task as SUCCESS. dag_id=iis_etl, task_id=verify_db_connection, execution_date=20250404T192915, start_date=20250404T192917, end_date=20250404T192918
+2025-04-04T19:29:18.435+0000 [INFO] Task exited with return code 0
+2025-04-04T19:29:18.472+0000 [INFO] 0 downstream tasks scheduled from follow-on schedule check

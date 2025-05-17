@@ -1,0 +1,28 @@
+[2025-04-03T16:55:52.712+0000] {taskinstance.py:1103} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: iis_etl.processing.transform scheduled__2025-04-02T00:00:00+00:00 [queued]>
+[2025-04-03T16:55:52.722+0000] {taskinstance.py:1103} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: iis_etl.processing.transform scheduled__2025-04-02T00:00:00+00:00 [queued]>
+[2025-04-03T16:55:52.722+0000] {taskinstance.py:1308} INFO - Starting attempt 4 of 4
+[2025-04-03T16:55:52.731+0000] {taskinstance.py:1327} INFO - Executing <Task(PythonOperator): processing.transform> on 2025-04-02 00:00:00+00:00
+[2025-04-03T16:55:52.737+0000] {standard_task_runner.py:57} INFO - Started process 77 to run task
+[2025-04-03T16:55:52.740+0000] {standard_task_runner.py:84} INFO - Running: ['airflow', 'tasks', 'run', 'iis_etl', 'processing.transform', 'scheduled__2025-04-02T00:00:00+00:00', '--job-id', '12', '--raw', '--subdir', 'DAGS_FOLDER/iis_etl.py', '--cfg-path', '/tmp/tmpx72nvi3x']
+[2025-04-03T16:55:52.741+0000] {standard_task_runner.py:85} INFO - Job 12: Subtask processing.transform
+[2025-04-03T16:55:52.781+0000] {task_command.py:410} INFO - Running <TaskInstance: iis_etl.processing.transform scheduled__2025-04-02T00:00:00+00:00 [running]> on host 2934a6d583dc
+[2025-04-03T16:55:52.898+0000] {taskinstance.py:1547} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='airflow' AIRFLOW_CTX_DAG_ID='iis_etl' AIRFLOW_CTX_TASK_ID='processing.transform' AIRFLOW_CTX_EXECUTION_DATE='2025-04-02T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='4' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2025-04-02T00:00:00+00:00'
+[2025-04-03T16:55:52.911+0000] {iis_etl.py:175} ERROR - Transform failed: No data received from extract task
+Traceback (most recent call last):
+  File "/opt/airflow/dags/iis_etl.py", line 152, in transform
+    raise ValueError("No data received from extract task")
+ValueError: No data received from extract task
+[2025-04-03T16:55:52.914+0000] {taskinstance.py:1824} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/python.py", line 181, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/python.py", line 198, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/opt/airflow/dags/iis_etl.py", line 152, in transform
+    raise ValueError("No data received from extract task")
+ValueError: No data received from extract task
+[2025-04-03T16:55:52.922+0000] {taskinstance.py:1350} INFO - Marking task as FAILED. dag_id=iis_etl, task_id=processing.transform, execution_date=20250402T000000, start_date=20250403T165552, end_date=20250403T165552
+[2025-04-03T16:55:52.922+0000] {iis_etl.py:251} ERROR - Task processing.transform failed. Exception: No data received from extract task
+[2025-04-03T16:55:52.931+0000] {standard_task_runner.py:109} ERROR - Failed to execute job 12 for task processing.transform (No data received from extract task; 77)
+[2025-04-03T16:55:52.969+0000] {local_task_job_runner.py:225} INFO - Task exited with return code 1
+[2025-04-03T16:55:53.000+0000] {taskinstance.py:2653} INFO - 0 downstream tasks scheduled from follow-on schedule check

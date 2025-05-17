@@ -1,0 +1,29 @@
+2025-04-04T14:47:48.292+0000 [INFO] Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: iis_etl.processing.load_dimensions scheduled__2025-04-04T14:46:39.799796+00:00 [queued]>
+2025-04-04T14:47:48.299+0000 [INFO] Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: iis_etl.processing.load_dimensions scheduled__2025-04-04T14:46:39.799796+00:00 [queued]>
+2025-04-04T14:47:48.299+0000 [INFO] Starting attempt 1 of 4
+2025-04-04T14:47:48.308+0000 [INFO] Executing <Task(PythonOperator): processing.load_dimensions> on 2025-04-04 14:46:39.799796+00:00
+2025-04-04T14:47:48.311+0000 [INFO] Started process 639 to run task
+2025-04-04T14:47:48.315+0000 [INFO] Running: ['airflow', 'tasks', 'run', 'iis_etl', 'processing.load_dimensions', 'scheduled__2025-04-04T14:46:39.799796+00:00', '--job-id', '200', '--raw', '--subdir', 'DAGS_FOLDER/iis_etl.py', '--cfg-path', '/tmp/tmpdjtgle1t']
+2025-04-04T14:47:48.316+0000 [INFO] Job 200: Subtask processing.load_dimensions
+2025-04-04T14:47:48.344+0000 [INFO] Running <TaskInstance: iis_etl.processing.load_dimensions scheduled__2025-04-04T14:46:39.799796+00:00 [running]> on host 6adf0d434abe
+2025-04-04T14:47:48.490+0000 [INFO] Exporting env vars: AIRFLOW_CTX_DAG_OWNER='airflow' AIRFLOW_CTX_DAG_ID='iis_etl' AIRFLOW_CTX_TASK_ID='processing.load_dimensions' AIRFLOW_CTX_EXECUTION_DATE='2025-04-04T14:46:39.799796+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2025-04-04T14:46:39.799796+00:00'
+2025-04-04T14:47:48.559+0000 [INFO] Using connection ID 'postgres_iis' for task execution.
+2025-04-04T14:47:48.744+0000 [ERROR] Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/python.py", line 181, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/python.py", line 198, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/opt/airflow/dags/iis_etl.py", line 256, in load_dimensions
+    client_df = df[['c-ip', 'cs(User-Agent)', 'cs(Cookie)', 'cs(Referer)']].drop_duplicates(subset=['c-ip'])
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/core/frame.py", line 3464, in __getitem__
+    indexer = self.loc._get_listlike_indexer(key, axis=1)[1]
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/core/indexing.py", line 1314, in _get_listlike_indexer
+    self._validate_read_indexer(keyarr, indexer, axis)
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/core/indexing.py", line 1377, in _validate_read_indexer
+    raise KeyError(f"{not_found} not in index")
+KeyError: "['cs(Cookie)', 'cs(Referer)'] not in index"
+2025-04-04T14:47:48.750+0000 [INFO] Marking task as UP_FOR_RETRY. dag_id=iis_etl, task_id=processing.load_dimensions, execution_date=20250404T144639, start_date=20250404T144748, end_date=20250404T144748
+2025-04-04T14:47:48.755+0000 [ERROR] Failed to execute job 200 for task processing.load_dimensions ("['cs(Cookie)', 'cs(Referer)'] not in index"; 639)
+2025-04-04T14:47:48.800+0000 [INFO] Task exited with return code 1
+2025-04-04T14:47:48.910+0000 [INFO] 0 downstream tasks scheduled from follow-on schedule check

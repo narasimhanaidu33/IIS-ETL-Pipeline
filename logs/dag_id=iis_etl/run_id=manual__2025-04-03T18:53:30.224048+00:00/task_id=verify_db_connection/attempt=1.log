@@ -1,0 +1,15 @@
+2025-04-03T18:53:31.499+0000 [INFO] Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: iis_etl.verify_db_connection manual__2025-04-03T18:53:30.224048+00:00 [queued]>
+2025-04-03T18:53:31.508+0000 [INFO] Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: iis_etl.verify_db_connection manual__2025-04-03T18:53:30.224048+00:00 [queued]>
+2025-04-03T18:53:31.509+0000 [INFO] Starting attempt 1 of 4
+2025-04-03T18:53:31.519+0000 [INFO] Executing <Task(PythonOperator): verify_db_connection> on 2025-04-03 18:53:30.224048+00:00
+2025-04-03T18:53:31.523+0000 [INFO] Started process 80 to run task
+2025-04-03T18:53:31.526+0000 [INFO] Running: ['airflow', 'tasks', 'run', 'iis_etl', 'verify_db_connection', 'manual__2025-04-03T18:53:30.224048+00:00', '--job-id', '13', '--raw', '--subdir', 'DAGS_FOLDER/iis_etl.py', '--cfg-path', '/tmp/tmp43mph6b8']
+2025-04-03T18:53:31.528+0000 [INFO] Job 13: Subtask verify_db_connection
+2025-04-03T18:53:31.563+0000 [INFO] Running <TaskInstance: iis_etl.verify_db_connection manual__2025-04-03T18:53:30.224048+00:00 [running]> on host 467791d2c6c6
+2025-04-03T18:53:31.637+0000 [INFO] Exporting env vars: AIRFLOW_CTX_DAG_OWNER='airflow' AIRFLOW_CTX_DAG_ID='iis_etl' AIRFLOW_CTX_TASK_ID='verify_db_connection' AIRFLOW_CTX_EXECUTION_DATE='2025-04-03T18:53:30.224048+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-04-03T18:53:30.224048+00:00'
+2025-04-03T18:53:32.008+0000 [INFO] Using connection ID 'postgres_iis' for task execution.
+2025-04-03T18:53:32.012+0000 [INFO] PostgreSQL connection verified successfully
+2025-04-03T18:53:32.012+0000 [INFO] Done. Returned value was: True
+2025-04-03T18:53:32.030+0000 [INFO] Marking task as SUCCESS. dag_id=iis_etl, task_id=verify_db_connection, execution_date=20250403T185330, start_date=20250403T185331, end_date=20250403T185332
+2025-04-03T18:53:32.072+0000 [INFO] Task exited with return code 0
+2025-04-03T18:53:32.089+0000 [INFO] 0 downstream tasks scheduled from follow-on schedule check

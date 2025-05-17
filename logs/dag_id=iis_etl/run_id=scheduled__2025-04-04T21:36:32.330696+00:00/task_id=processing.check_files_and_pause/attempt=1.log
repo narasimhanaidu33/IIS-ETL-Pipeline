@@ -1,0 +1,13 @@
+2025-04-04T21:41:36.498+0000 [INFO] Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: iis_etl.processing.check_files_and_pause scheduled__2025-04-04T21:36:32.330696+00:00 [queued]>
+2025-04-04T21:41:36.504+0000 [INFO] Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: iis_etl.processing.check_files_and_pause scheduled__2025-04-04T21:36:32.330696+00:00 [queued]>
+2025-04-04T21:41:36.504+0000 [INFO] Starting attempt 1 of 4
+2025-04-04T21:41:36.674+0000 [INFO] Executing <Task(PythonOperator): processing.check_files_and_pause> on 2025-04-04 21:36:32.330696+00:00
+2025-04-04T21:41:36.679+0000 [INFO] Started process 1683 to run task
+2025-04-04T21:41:36.685+0000 [INFO] Running: ['airflow', 'tasks', 'run', 'iis_etl', 'processing.check_files_and_pause', 'scheduled__2025-04-04T21:36:32.330696+00:00', '--job-id', '548', '--raw', '--subdir', 'DAGS_FOLDER/iis_etl.py', '--cfg-path', '/tmp/tmp1j6s_446']
+2025-04-04T21:41:36.687+0000 [INFO] Job 548: Subtask processing.check_files_and_pause
+2025-04-04T21:41:36.749+0000 [INFO] Running <TaskInstance: iis_etl.processing.check_files_and_pause scheduled__2025-04-04T21:36:32.330696+00:00 [running]> on host b8e5693c89ab
+2025-04-04T21:41:36.801+0000 [INFO] Exporting env vars: AIRFLOW_CTX_DAG_OWNER='airflow' AIRFLOW_CTX_DAG_ID='iis_etl' AIRFLOW_CTX_TASK_ID='processing.check_files_and_pause' AIRFLOW_CTX_EXECUTION_DATE='2025-04-04T21:36:32.330696+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2025-04-04T21:36:32.330696+00:00'
+2025-04-04T21:41:36.804+0000 [INFO] Done. Returned value was: True
+2025-04-04T21:41:36.817+0000 [INFO] Marking task as SUCCESS. dag_id=iis_etl, task_id=processing.check_files_and_pause, execution_date=20250404T213632, start_date=20250404T214136, end_date=20250404T214136
+2025-04-04T21:41:36.870+0000 [INFO] Task exited with return code 0
+2025-04-04T21:41:36.891+0000 [INFO] 1 downstream tasks scheduled from follow-on schedule check

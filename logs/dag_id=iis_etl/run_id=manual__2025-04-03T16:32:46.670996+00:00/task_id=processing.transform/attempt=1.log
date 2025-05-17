@@ -1,0 +1,22 @@
+[2025-04-03T16:32:49.699+0000] {taskinstance.py:1103} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: iis_etl.processing.transform manual__2025-04-03T16:32:46.670996+00:00 [queued]>
+[2025-04-03T16:32:49.704+0000] {taskinstance.py:1103} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: iis_etl.processing.transform manual__2025-04-03T16:32:46.670996+00:00 [queued]>
+[2025-04-03T16:32:49.704+0000] {taskinstance.py:1308} INFO - Starting attempt 1 of 4
+[2025-04-03T16:32:49.711+0000] {taskinstance.py:1327} INFO - Executing <Task(PythonOperator): processing.transform> on 2025-04-03 16:32:46.670996+00:00
+[2025-04-03T16:32:49.714+0000] {standard_task_runner.py:57} INFO - Started process 59 to run task
+[2025-04-03T16:32:49.716+0000] {standard_task_runner.py:84} INFO - Running: ['airflow', 'tasks', 'run', 'iis_etl', 'processing.transform', 'manual__2025-04-03T16:32:46.670996+00:00', '--job-id', '7', '--raw', '--subdir', 'DAGS_FOLDER/iis_etl.py', '--cfg-path', '/tmp/tmpmdqp5drj']
+[2025-04-03T16:32:49.717+0000] {standard_task_runner.py:85} INFO - Job 7: Subtask processing.transform
+[2025-04-03T16:32:49.741+0000] {task_command.py:410} INFO - Running <TaskInstance: iis_etl.processing.transform manual__2025-04-03T16:32:46.670996+00:00 [running]> on host 8c8ff3b60ca4
+[2025-04-03T16:32:49.772+0000] {taskinstance.py:1547} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='airflow' AIRFLOW_CTX_DAG_ID='iis_etl' AIRFLOW_CTX_TASK_ID='processing.transform' AIRFLOW_CTX_EXECUTION_DATE='2025-04-03T16:32:46.670996+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-04-03T16:32:46.670996+00:00'
+[2025-04-03T16:32:49.778+0000] {taskinstance.py:1824} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/python.py", line 181, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/python.py", line 198, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/opt/airflow/dags/iis_etl.py", line 152, in transform
+    raise ValueError("No data received from extract task")
+ValueError: No data received from extract task
+[2025-04-03T16:32:49.784+0000] {taskinstance.py:1350} INFO - Marking task as UP_FOR_RETRY. dag_id=iis_etl, task_id=processing.transform, execution_date=20250403T163246, start_date=20250403T163249, end_date=20250403T163249
+[2025-04-03T16:32:49.790+0000] {standard_task_runner.py:109} ERROR - Failed to execute job 7 for task processing.transform (No data received from extract task; 59)
+[2025-04-03T16:32:49.802+0000] {local_task_job_runner.py:225} INFO - Task exited with return code 1
+[2025-04-03T16:32:49.817+0000] {taskinstance.py:2653} INFO - 0 downstream tasks scheduled from follow-on schedule check

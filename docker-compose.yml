@@ -1,0 +1,116 @@
+services:
+  postgres:
+    image: postgres:13
+    environment:
+      POSTGRES_USER: ETLUsername
+      POSTGRES_PASSWORD: ETLPassword
+      POSTGRES_DB: etl
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U ETLUsername -d etl"]
+      interval: 5s
+      timeout: 5s
+      retries: 5
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+      - ./scripts/init_db.sql:/docker-entrypoint-initdb.d/init.sql
+    ports:
+      - "5432:5432"
+
+  redis:
+    image: redis:latest
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 5s
+      timeout: 5s
+      retries: 5
+    volumes:
+      - redis_data:/data
+
+  airflow-webserver:
+    image: apache/airflow:2.6.2
+    depends_on:
+      postgres:
+        condition: service_healthy
+      redis:
+        condition: service_healthy
+    environment:
+      AIRFLOW__DATABASE__SQL_ALCHEMY_CONN: postgresql+psycopg2://ETLUsername:ETLPassword@postgres/etl
+      AIRFLOW__CORE__SQL_ALCHEMY_CONN: postgresql+psycopg2://ETLUsername:ETLPassword@postgres/etl
+      AIRFLOW__CORE__EXECUTOR: CeleryExecutor
+      AIRFLOW__CELERY__BROKER_URL: redis://redis:6379/0
+      AIRFLOW_CONN_POSTGRES_IIS: postgresql+psycopg2://ETLUsername:ETLPassword@postgres/etl
+      AIRFLOW__CORE__LOAD_DEFAULT_CONNECTIONS: 'false'
+      AIRFLOW__CORE__LOAD_EXAMPLES: 'false'
+      AIRFLOW__SCHEDULER__DAG_DIR_LIST_INTERVAL: '30'
+      AIRFLOW__WEBSERVER__SECRET_KEY: 'your-secret-key-here'
+    volumes:
+      - ./dags:/opt/airflow/dags
+      - ./data:/opt/airflow/data
+      - ./logs:/opt/airflow/logs
+      - ./plugins:/opt/airflow/plugins
+    ports:
+      - "8080:8080"
+    command: >
+      bash -c "
+      airflow db init &&
+      airflow users create --username admin --password admin --firstname Admin --lastname User --role Admin --email admin@example.com || true &&
+      airflow webserver
+      "
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8080/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 5
+
+  airflow-scheduler:
+    image: apache/airflow:2.6.2
+    depends_on:
+      airflow-webserver:
+        condition: service_healthy
+    environment:
+      AIRFLOW__DATABASE__SQL_ALCHEMY_CONN: postgresql+psycopg2://ETLUsername:ETLPassword@postgres/etl
+      AIRFLOW__CORE__EXECUTOR: CeleryExecutor
+      AIRFLOW__CELERY__BROKER_URL: redis://redis:6379/0
+      AIRFLOW__SCHEDULER__MIN_FILE_PROCESS_INTERVAL: '30'
+      AIRFLOW__SCHEDULER__DAG_DIR_LIST_INTERVAL: '30'
+    volumes:
+      - ./dags:/opt/airflow/dags
+      - ./data:/opt/airflow/data
+      - ./logs:/opt/airflow/logs
+      - ./plugins:/opt/airflow/plugins
+    command: scheduler
+    restart: unless-stopped
+
+  airflow-worker:
+    image: apache/airflow:2.6.2
+    depends_on:
+      airflow-scheduler:
+        condition: service_started
+    environment:
+      AIRFLOW__DATABASE__SQL_ALCHEMY_CONN: postgresql+psycopg2://ETLUsername:ETLPassword@postgres/etl
+      AIRFLOW__CORE__EXECUTOR: CeleryExecutor
+      AIRFLOW__CELERY__BROKER_URL: redis://redis:6379/0
+      AIRFLOW__CELERY__WORKER_CONCURRENCY: 4
+      AIRFLOW__CORE__MAX_DB_RETRIES: "10"
+      AIRFLOW__CORE__TASK_MAX_RETRY_DELAY: "300"
+
+      AIRFLOW__LOGGING__LOG_LEVEL: "INFO"
+      AIRFLOW__LOGGING__COLORED_CONSOLE_LOG: "False"
+      AIRFLOW__LOGGING__LOG_FORMAT: "%(asctime)s [%(levelname)s] %(message)s"
+
+    volumes:
+      - ./dags:/opt/airflow/dags
+      - ./data:/opt/airflow/data
+      - ./logs:/opt/airflow/logs
+      - ./plugins:/opt/airflow/plugins
+    command: celery worker
+    restart: unless-stopped
+    deploy:
+      resources:
+        limits:
+          cpus: '2'
+          memory: 2G
+
+volumes:
+  postgres_data:
+  redis_data:

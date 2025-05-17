@@ -1,0 +1,15 @@
+2025-04-03T21:54:03.362+0000 [INFO] Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: iis_etl.verify_db_connection scheduled__2025-04-03T21:51:28.724636+00:00 [queued]>
+2025-04-03T21:54:03.372+0000 [INFO] Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: iis_etl.verify_db_connection scheduled__2025-04-03T21:51:28.724636+00:00 [queued]>
+2025-04-03T21:54:03.373+0000 [INFO] Starting attempt 1 of 4
+2025-04-03T21:54:03.385+0000 [INFO] Executing <Task(PythonOperator): verify_db_connection> on 2025-04-03 21:51:28.724636+00:00
+2025-04-03T21:54:03.426+0000 [INFO] Started process 982 to run task
+2025-04-03T21:54:03.430+0000 [INFO] Running: ['airflow', 'tasks', 'run', 'iis_etl', 'verify_db_connection', 'scheduled__2025-04-03T21:51:28.724636+00:00', '--job-id', '313', '--raw', '--subdir', 'DAGS_FOLDER/iis_etl.py', '--cfg-path', '/tmp/tmpbf4ydb7i']
+2025-04-03T21:54:03.432+0000 [INFO] Job 313: Subtask verify_db_connection
+2025-04-03T21:54:03.550+0000 [INFO] Running <TaskInstance: iis_etl.verify_db_connection scheduled__2025-04-03T21:51:28.724636+00:00 [running]> on host 8d34dc648251
+2025-04-03T21:54:04.869+0000 [INFO] Exporting env vars: AIRFLOW_CTX_DAG_OWNER='airflow' AIRFLOW_CTX_DAG_ID='iis_etl' AIRFLOW_CTX_TASK_ID='verify_db_connection' AIRFLOW_CTX_EXECUTION_DATE='2025-04-03T21:51:28.724636+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2025-04-03T21:51:28.724636+00:00'
+2025-04-03T21:54:04.886+0000 [INFO] Using connection ID 'postgres_iis' for task execution.
+2025-04-03T21:54:04.892+0000 [INFO] PostgreSQL connection verified successfully
+2025-04-03T21:54:04.893+0000 [INFO] Done. Returned value was: True
+2025-04-03T21:54:04.965+0000 [INFO] Marking task as SUCCESS. dag_id=iis_etl, task_id=verify_db_connection, execution_date=20250403T215128, start_date=20250403T215403, end_date=20250403T215404
+2025-04-03T21:54:05.007+0000 [INFO] Task exited with return code 0
+2025-04-03T21:54:05.076+0000 [INFO] 0 downstream tasks scheduled from follow-on schedule check

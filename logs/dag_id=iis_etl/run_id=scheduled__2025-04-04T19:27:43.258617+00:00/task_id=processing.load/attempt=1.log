@@ -1,0 +1,16 @@
+2025-04-04T19:28:54.377+0000 [INFO] Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: iis_etl.processing.load scheduled__2025-04-04T19:27:43.258617+00:00 [queued]>
+2025-04-04T19:28:54.383+0000 [INFO] Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: iis_etl.processing.load scheduled__2025-04-04T19:27:43.258617+00:00 [queued]>
+2025-04-04T19:28:54.383+0000 [INFO] Starting attempt 1 of 4
+2025-04-04T19:28:54.390+0000 [INFO] Executing <Task(PythonOperator): processing.load> on 2025-04-04 19:27:43.258617+00:00
+2025-04-04T19:28:54.393+0000 [INFO] Started process 183 to run task
+2025-04-04T19:28:54.396+0000 [INFO] Running: ['airflow', 'tasks', 'run', 'iis_etl', 'processing.load', 'scheduled__2025-04-04T19:27:43.258617+00:00', '--job-id', '48', '--raw', '--subdir', 'DAGS_FOLDER/iis_etl.py', '--cfg-path', '/tmp/tmpopvilz3o']
+2025-04-04T19:28:54.398+0000 [INFO] Job 48: Subtask processing.load
+2025-04-04T19:28:54.423+0000 [INFO] Running <TaskInstance: iis_etl.processing.load scheduled__2025-04-04T19:27:43.258617+00:00 [running]> on host 4c7227608743
+2025-04-04T19:28:54.578+0000 [INFO] Exporting env vars: AIRFLOW_CTX_DAG_OWNER='airflow' AIRFLOW_CTX_DAG_ID='iis_etl' AIRFLOW_CTX_TASK_ID='processing.load' AIRFLOW_CTX_EXECUTION_DATE='2025-04-04T19:27:43.258617+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2025-04-04T19:27:43.258617+00:00'
+2025-04-04T19:28:54.615+0000 [INFO] Using connection ID 'postgres_iis' for task execution.
+2025-04-04T19:28:54.992+0000 [INFO] Successfully loaded 967 fact records
+2025-04-04T19:28:55.055+0000 [INFO] Updated foreign keys: time(967), clients(967), requests(967), responses(967)
+2025-04-04T19:28:55.060+0000 [INFO] Done. Returned value was: Loaded 967 records. Dimension links: {'time': 967, 'clients': 967, 'requests': 967, 'responses': 967}
+2025-04-04T19:28:55.072+0000 [INFO] Marking task as SUCCESS. dag_id=iis_etl, task_id=processing.load, execution_date=20250404T192743, start_date=20250404T192854, end_date=20250404T192855
+2025-04-04T19:28:55.097+0000 [INFO] Task exited with return code 0
+2025-04-04T19:28:55.114+0000 [INFO] 1 downstream tasks scheduled from follow-on schedule check

@@ -1,0 +1,138 @@
+2025-04-04T18:34:37.214+0000 [INFO] Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: iis_etl.processing.load_dimensions scheduled__2025-04-04T18:22:13.277141+00:00 [queued]>
+2025-04-04T18:34:37.222+0000 [INFO] Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: iis_etl.processing.load_dimensions scheduled__2025-04-04T18:22:13.277141+00:00 [queued]>
+2025-04-04T18:34:37.223+0000 [INFO] Starting attempt 2 of 4
+2025-04-04T18:34:37.231+0000 [INFO] Executing <Task(PythonOperator): processing.load_dimensions> on 2025-04-04 18:22:13.277141+00:00
+2025-04-04T18:34:37.236+0000 [INFO] Started process 88 to run task
+2025-04-04T18:34:37.239+0000 [INFO] Running: ['airflow', 'tasks', 'run', 'iis_etl', 'processing.load_dimensions', 'scheduled__2025-04-04T18:22:13.277141+00:00', '--job-id', '16', '--raw', '--subdir', 'DAGS_FOLDER/iis_etl.py', '--cfg-path', '/tmp/tmp7rpte70_']
+2025-04-04T18:34:37.241+0000 [INFO] Job 16: Subtask processing.load_dimensions
+2025-04-04T18:34:37.338+0000 [INFO] Running <TaskInstance: iis_etl.processing.load_dimensions scheduled__2025-04-04T18:22:13.277141+00:00 [running]> on host 558dced5c214
+2025-04-04T18:34:38.135+0000 [INFO] Exporting env vars: AIRFLOW_CTX_DAG_OWNER='airflow' AIRFLOW_CTX_DAG_ID='iis_etl' AIRFLOW_CTX_TASK_ID='processing.load_dimensions' AIRFLOW_CTX_EXECUTION_DATE='2025-04-04T18:22:13.277141+00:00' AIRFLOW_CTX_TRY_NUMBER='2' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2025-04-04T18:22:13.277141+00:00'
+2025-04-04T18:34:38.183+0000 [INFO] Using connection ID 'postgres_iis' for task execution.
+2025-04-04T18:34:38.235+0000 [ERROR] Dimension loading failed: (psycopg2.errors.UniqueViolation) duplicate key value violates unique constraint "dim_clients_ip_address_key"
+DETAIL:  Key (ip_address)=(86.156.68.62) already exists.
+
+[SQL: INSERT INTO dim_clients (ip_address, user_agent, browser, os, device_type) VALUES (%(ip_address)s, %(user_agent)s, %(browser)s, %(os)s, %(device_type)s)]
+[parameters: ({'ip_address': '86.156.68.62', 'user_agent': 'Mozilla/4.0+(compatible;+MSIE+6.0;+Windows+NT+5.1;+SV1;+.NET+CLR+1.1.4322;+.NET+CLR+2.0.50727;+.NET+CLR+3.0.4506.2152;+.NET+CLR+3.5.30729)', 'browser': 'Other', 'os': 'Windows', 'device_type': 'Desktop'}, {'ip_address': '206.51.228.161', 'user_agent': '-', 'browser': 'Other', 'os': 'Other', 'device_type': 'Desktop'})]
+(Background on this error at: https://sqlalche.me/e/14/gkpj)
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/engine/base.py", line 1881, in _execute_context
+    cursor, statement, parameters, context
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/dialects/postgresql/psycopg2.py", line 988, in do_executemany
+    **kwargs
+  File "/home/airflow/.local/lib/python3.7/site-packages/psycopg2/extras.py", line 1299, in execute_values
+    cur.execute(b''.join(parts))
+psycopg2.errors.UniqueViolation: duplicate key value violates unique constraint "dim_clients_ip_address_key"
+DETAIL:  Key (ip_address)=(86.156.68.62) already exists.
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/opt/airflow/dags/iis_etl.py", line 370, in load_dimensions
+    chunksize=1000)
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/core/generic.py", line 2882, in to_sql
+    method=method,
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/io/sql.py", line 728, in to_sql
+    **engine_kwargs,
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/io/sql.py", line 1770, in to_sql
+    **engine_kwargs,
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/io/sql.py", line 1350, in insert_records
+    raise err
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/io/sql.py", line 1340, in insert_records
+    table.insert(chunksize=chunksize, method=method)
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/io/sql.py", line 967, in insert
+    exec_insert(conn, keys, chunk_iter)
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/io/sql.py", line 882, in _execute_insert
+    conn.execute(self.table.insert(), data)
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/engine/base.py", line 1380, in execute
+    return meth(self, multiparams, params, _EMPTY_EXECUTION_OPTS)
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/sql/elements.py", line 335, in _execute_on_connection
+    self, multiparams, params, execution_options
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/engine/base.py", line 1582, in _execute_clauseelement
+    cache_hit=cache_hit,
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/engine/base.py", line 1944, in _execute_context
+    e, statement, parameters, cursor, context
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/engine/base.py", line 2125, in _handle_dbapi_exception
+    sqlalchemy_exception, with_traceback=exc_info[2], from_=e
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/util/compat.py", line 211, in raise_
+    raise exception
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/engine/base.py", line 1881, in _execute_context
+    cursor, statement, parameters, context
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/dialects/postgresql/psycopg2.py", line 988, in do_executemany
+    **kwargs
+  File "/home/airflow/.local/lib/python3.7/site-packages/psycopg2/extras.py", line 1299, in execute_values
+    cur.execute(b''.join(parts))
+sqlalchemy.exc.IntegrityError: (psycopg2.errors.UniqueViolation) duplicate key value violates unique constraint "dim_clients_ip_address_key"
+DETAIL:  Key (ip_address)=(86.156.68.62) already exists.
+
+[SQL: INSERT INTO dim_clients (ip_address, user_agent, browser, os, device_type) VALUES (%(ip_address)s, %(user_agent)s, %(browser)s, %(os)s, %(device_type)s)]
+[parameters: ({'ip_address': '86.156.68.62', 'user_agent': 'Mozilla/4.0+(compatible;+MSIE+6.0;+Windows+NT+5.1;+SV1;+.NET+CLR+1.1.4322;+.NET+CLR+2.0.50727;+.NET+CLR+3.0.4506.2152;+.NET+CLR+3.5.30729)', 'browser': 'Other', 'os': 'Windows', 'device_type': 'Desktop'}, {'ip_address': '206.51.228.161', 'user_agent': '-', 'browser': 'Other', 'os': 'Other', 'device_type': 'Desktop'})]
+(Background on this error at: https://sqlalche.me/e/14/gkpj)
+2025-04-04T18:34:38.243+0000 [ERROR] Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/engine/base.py", line 1881, in _execute_context
+    cursor, statement, parameters, context
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/dialects/postgresql/psycopg2.py", line 988, in do_executemany
+    **kwargs
+  File "/home/airflow/.local/lib/python3.7/site-packages/psycopg2/extras.py", line 1299, in execute_values
+    cur.execute(b''.join(parts))
+psycopg2.errors.UniqueViolation: duplicate key value violates unique constraint "dim_clients_ip_address_key"
+DETAIL:  Key (ip_address)=(86.156.68.62) already exists.
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/python.py", line 181, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/python.py", line 198, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/opt/airflow/dags/iis_etl.py", line 370, in load_dimensions
+    chunksize=1000)
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/core/generic.py", line 2882, in to_sql
+    method=method,
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/io/sql.py", line 728, in to_sql
+    **engine_kwargs,
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/io/sql.py", line 1770, in to_sql
+    **engine_kwargs,
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/io/sql.py", line 1350, in insert_records
+    raise err
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/io/sql.py", line 1340, in insert_records
+    table.insert(chunksize=chunksize, method=method)
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/io/sql.py", line 967, in insert
+    exec_insert(conn, keys, chunk_iter)
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/io/sql.py", line 882, in _execute_insert
+    conn.execute(self.table.insert(), data)
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/engine/base.py", line 1380, in execute
+    return meth(self, multiparams, params, _EMPTY_EXECUTION_OPTS)
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/sql/elements.py", line 335, in _execute_on_connection
+    self, multiparams, params, execution_options
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/engine/base.py", line 1582, in _execute_clauseelement
+    cache_hit=cache_hit,
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/engine/base.py", line 1944, in _execute_context
+    e, statement, parameters, cursor, context
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/engine/base.py", line 2125, in _handle_dbapi_exception
+    sqlalchemy_exception, with_traceback=exc_info[2], from_=e
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/util/compat.py", line 211, in raise_
+    raise exception
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/engine/base.py", line 1881, in _execute_context
+    cursor, statement, parameters, context
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/dialects/postgresql/psycopg2.py", line 988, in do_executemany
+    **kwargs
+  File "/home/airflow/.local/lib/python3.7/site-packages/psycopg2/extras.py", line 1299, in execute_values
+    cur.execute(b''.join(parts))
+sqlalchemy.exc.IntegrityError: (psycopg2.errors.UniqueViolation) duplicate key value violates unique constraint "dim_clients_ip_address_key"
+DETAIL:  Key (ip_address)=(86.156.68.62) already exists.
+
+[SQL: INSERT INTO dim_clients (ip_address, user_agent, browser, os, device_type) VALUES (%(ip_address)s, %(user_agent)s, %(browser)s, %(os)s, %(device_type)s)]
+[parameters: ({'ip_address': '86.156.68.62', 'user_agent': 'Mozilla/4.0+(compatible;+MSIE+6.0;+Windows+NT+5.1;+SV1;+.NET+CLR+1.1.4322;+.NET+CLR+2.0.50727;+.NET+CLR+3.0.4506.2152;+.NET+CLR+3.5.30729)', 'browser': 'Other', 'os': 'Windows', 'device_type': 'Desktop'}, {'ip_address': '206.51.228.161', 'user_agent': '-', 'browser': 'Other', 'os': 'Other', 'device_type': 'Desktop'})]
+(Background on this error at: https://sqlalche.me/e/14/gkpj)
+2025-04-04T18:34:38.250+0000 [INFO] Marking task as UP_FOR_RETRY. dag_id=iis_etl, task_id=processing.load_dimensions, execution_date=20250404T182213, start_date=20250404T183437, end_date=20250404T183438
+2025-04-04T18:34:38.267+0000 [ERROR] Failed to execute job 16 for task processing.load_dimensions ((psycopg2.errors.UniqueViolation) duplicate key value violates unique constraint "dim_clients_ip_address_key"
+DETAIL:  Key (ip_address)=(86.156.68.62) already exists.
+
+[SQL: INSERT INTO dim_clients (ip_address, user_agent, browser, os, device_type) VALUES (%(ip_address)s, %(user_agent)s, %(browser)s, %(os)s, %(device_type)s)]
+[parameters: ({'ip_address': '86.156.68.62', 'user_agent': 'Mozilla/4.0+(compatible;+MSIE+6.0;+Windows+NT+5.1;+SV1;+.NET+CLR+1.1.4322;+.NET+CLR+2.0.50727;+.NET+CLR+3.0.4506.2152;+.NET+CLR+3.5.30729)', 'browser': 'Other', 'os': 'Windows', 'device_type': 'Desktop'}, {'ip_address': '206.51.228.161', 'user_agent': '-', 'browser': 'Other', 'os': 'Other', 'device_type': 'Desktop'})]
+(Background on this error at: https://sqlalche.me/e/14/gkpj); 88)
+2025-04-04T18:34:38.310+0000 [INFO] Task exited with return code 1
+2025-04-04T18:34:38.366+0000 [INFO] 0 downstream tasks scheduled from follow-on schedule check

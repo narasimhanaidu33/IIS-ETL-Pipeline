@@ -1,0 +1,53 @@
+2025-04-04T18:59:44.038+0000 [INFO] Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: iis_etl.processing.extract scheduled__2025-04-04T18:58:28.588907+00:00 [queued]>
+2025-04-04T18:59:44.047+0000 [INFO] Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: iis_etl.processing.extract scheduled__2025-04-04T18:58:28.588907+00:00 [queued]>
+2025-04-04T18:59:44.048+0000 [INFO] Starting attempt 1 of 4
+2025-04-04T18:59:44.056+0000 [INFO] Executing <Task(PythonOperator): processing.extract> on 2025-04-04 18:58:28.588907+00:00
+2025-04-04T18:59:44.059+0000 [INFO] Started process 149 to run task
+2025-04-04T18:59:44.064+0000 [INFO] Running: ['airflow', 'tasks', 'run', 'iis_etl', 'processing.extract', 'scheduled__2025-04-04T18:58:28.588907+00:00', '--job-id', '36', '--raw', '--subdir', 'DAGS_FOLDER/iis_etl.py', '--cfg-path', '/tmp/tmpbe90sxgk']
+2025-04-04T18:59:44.065+0000 [INFO] Job 36: Subtask processing.extract
+2025-04-04T18:59:44.151+0000 [INFO] Running <TaskInstance: iis_etl.processing.extract scheduled__2025-04-04T18:58:28.588907+00:00 [running]> on host 4c8210097a4d
+2025-04-04T18:59:44.566+0000 [INFO] Exporting env vars: AIRFLOW_CTX_DAG_OWNER='airflow' AIRFLOW_CTX_DAG_ID='iis_etl' AIRFLOW_CTX_TASK_ID='processing.extract' AIRFLOW_CTX_EXECUTION_DATE='2025-04-04T18:58:28.588907+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2025-04-04T18:58:28.588907+00:00'
+2025-04-04T18:59:44.582+0000 [ERROR] Extraction failed: [Errno 2] No such file or directory: '/opt/airflow/data/raw_logs/u_ex100105.log'
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/shutil.py", line 566, in move
+    os.rename(src, real_dst)
+FileNotFoundError: [Errno 2] No such file or directory: '/opt/airflow/data/raw_logs/u_ex100105.log' -> '/opt/airflow/data/processing/u_ex100105.log'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/opt/airflow/dags/iis_etl.py", line 481, in extract
+    shutil.move(log_path, processing_path)
+  File "/usr/local/lib/python3.7/shutil.py", line 580, in move
+    copy_function(src, real_dst)
+  File "/usr/local/lib/python3.7/shutil.py", line 266, in copy2
+    copyfile(src, dst, follow_symlinks=follow_symlinks)
+  File "/usr/local/lib/python3.7/shutil.py", line 120, in copyfile
+    with open(src, 'rb') as fsrc:
+FileNotFoundError: [Errno 2] No such file or directory: '/opt/airflow/data/raw_logs/u_ex100105.log'
+2025-04-04T18:59:44.586+0000 [ERROR] Task failed with exception
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/shutil.py", line 566, in move
+    os.rename(src, real_dst)
+FileNotFoundError: [Errno 2] No such file or directory: '/opt/airflow/data/raw_logs/u_ex100105.log' -> '/opt/airflow/data/processing/u_ex100105.log'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/python.py", line 181, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/python.py", line 198, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/opt/airflow/dags/iis_etl.py", line 481, in extract
+    shutil.move(log_path, processing_path)
+  File "/usr/local/lib/python3.7/shutil.py", line 580, in move
+    copy_function(src, real_dst)
+  File "/usr/local/lib/python3.7/shutil.py", line 266, in copy2
+    copyfile(src, dst, follow_symlinks=follow_symlinks)
+  File "/usr/local/lib/python3.7/shutil.py", line 120, in copyfile
+    with open(src, 'rb') as fsrc:
+FileNotFoundError: [Errno 2] No such file or directory: '/opt/airflow/data/raw_logs/u_ex100105.log'
+2025-04-04T18:59:44.592+0000 [INFO] Marking task as UP_FOR_RETRY. dag_id=iis_etl, task_id=processing.extract, execution_date=20250404T185828, start_date=20250404T185944, end_date=20250404T185944
+2025-04-04T18:59:44.600+0000 [ERROR] Failed to execute job 36 for task processing.extract ([Errno 2] No such file or directory: '/opt/airflow/data/raw_logs/u_ex100105.log'; 149)
+2025-04-04T18:59:44.645+0000 [INFO] Task exited with return code 1
+2025-04-04T18:59:44.668+0000 [INFO] 0 downstream tasks scheduled from follow-on schedule check

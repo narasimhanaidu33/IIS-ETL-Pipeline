@@ -1,0 +1,15 @@
+2025-04-03T21:51:56.577+0000 [INFO] Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: iis_etl.verify_db_connection manual__2025-04-03T21:49:51.037894+00:00 [queued]>
+2025-04-03T21:51:56.589+0000 [INFO] Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: iis_etl.verify_db_connection manual__2025-04-03T21:49:51.037894+00:00 [queued]>
+2025-04-03T21:51:56.590+0000 [INFO] Starting attempt 1 of 4
+2025-04-03T21:51:56.601+0000 [INFO] Executing <Task(PythonOperator): verify_db_connection> on 2025-04-03 21:49:51.037894+00:00
+2025-04-03T21:51:56.630+0000 [INFO] Started process 594 to run task
+2025-04-03T21:51:56.640+0000 [INFO] Running: ['airflow', 'tasks', 'run', 'iis_etl', 'verify_db_connection', 'manual__2025-04-03T21:49:51.037894+00:00', '--job-id', '185', '--raw', '--subdir', 'DAGS_FOLDER/iis_etl.py', '--cfg-path', '/tmp/tmptf9e0dt9']
+2025-04-03T21:51:56.647+0000 [INFO] Job 185: Subtask verify_db_connection
+2025-04-03T21:51:56.732+0000 [INFO] Running <TaskInstance: iis_etl.verify_db_connection manual__2025-04-03T21:49:51.037894+00:00 [running]> on host 8d34dc648251
+2025-04-03T21:51:57.251+0000 [INFO] Exporting env vars: AIRFLOW_CTX_DAG_OWNER='airflow' AIRFLOW_CTX_DAG_ID='iis_etl' AIRFLOW_CTX_TASK_ID='verify_db_connection' AIRFLOW_CTX_EXECUTION_DATE='2025-04-03T21:49:51.037894+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-04-03T21:49:51.037894+00:00'
+2025-04-03T21:51:57.268+0000 [INFO] Using connection ID 'postgres_iis' for task execution.
+2025-04-03T21:51:57.276+0000 [INFO] PostgreSQL connection verified successfully
+2025-04-03T21:51:57.278+0000 [INFO] Done. Returned value was: True
+2025-04-03T21:51:57.336+0000 [INFO] Marking task as SUCCESS. dag_id=iis_etl, task_id=verify_db_connection, execution_date=20250403T214951, start_date=20250403T215156, end_date=20250403T215157
+2025-04-03T21:51:57.398+0000 [INFO] Task exited with return code 0
+2025-04-03T21:51:57.481+0000 [INFO] 0 downstream tasks scheduled from follow-on schedule check

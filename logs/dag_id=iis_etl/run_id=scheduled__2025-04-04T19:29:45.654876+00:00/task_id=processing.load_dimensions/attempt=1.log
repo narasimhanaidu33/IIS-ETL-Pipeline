@@ -1,0 +1,114 @@
+2025-04-04T19:30:55.952+0000 [INFO] Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: iis_etl.processing.load_dimensions scheduled__2025-04-04T19:29:45.654876+00:00 [queued]>
+2025-04-04T19:30:55.958+0000 [INFO] Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: iis_etl.processing.load_dimensions scheduled__2025-04-04T19:29:45.654876+00:00 [queued]>
+2025-04-04T19:30:55.958+0000 [INFO] Starting attempt 1 of 4
+2025-04-04T19:30:55.965+0000 [INFO] Executing <Task(PythonOperator): processing.load_dimensions> on 2025-04-04 19:29:45.654876+00:00
+2025-04-04T19:30:55.969+0000 [INFO] Started process 306 to run task
+2025-04-04T19:30:55.972+0000 [INFO] Running: ['airflow', 'tasks', 'run', 'iis_etl', 'processing.load_dimensions', 'scheduled__2025-04-04T19:29:45.654876+00:00', '--job-id', '89', '--raw', '--subdir', 'DAGS_FOLDER/iis_etl.py', '--cfg-path', '/tmp/tmptjf5ar_m']
+2025-04-04T19:30:55.974+0000 [INFO] Job 89: Subtask processing.load_dimensions
+2025-04-04T19:30:56.010+0000 [INFO] Running <TaskInstance: iis_etl.processing.load_dimensions scheduled__2025-04-04T19:29:45.654876+00:00 [running]> on host 4c7227608743
+2025-04-04T19:30:56.330+0000 [INFO] Exporting env vars: AIRFLOW_CTX_DAG_OWNER='airflow' AIRFLOW_CTX_DAG_ID='iis_etl' AIRFLOW_CTX_TASK_ID='processing.load_dimensions' AIRFLOW_CTX_EXECUTION_DATE='2025-04-04T19:29:45.654876+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2025-04-04T19:29:45.654876+00:00'
+2025-04-04T19:30:56.392+0000 [INFO] Using connection ID 'postgres_iis' for task execution.
+2025-04-04T19:31:26.563+0000 [WARNING] Geolocation failed for IP 66.249.65.172: HTTP Error 429: Too Many Requests
+2025-04-04T19:31:26.612+0000 [WARNING] Geolocation failed for IP 216.129.119.10: HTTP Error 429: Too Many Requests
+2025-04-04T19:31:26.658+0000 [WARNING] Geolocation failed for IP 67.195.115.229: HTTP Error 429: Too Many Requests
+2025-04-04T19:31:26.703+0000 [WARNING] Geolocation failed for IP 69.143.43.246: HTTP Error 429: Too Many Requests
+2025-04-04T19:31:26.747+0000 [WARNING] Geolocation failed for IP 122.174.113.132: HTTP Error 429: Too Many Requests
+2025-04-04T19:31:26.789+0000 [WARNING] Geolocation failed for IP 98.246.35.236: HTTP Error 429: Too Many Requests
+2025-04-04T19:31:26.831+0000 [WARNING] Geolocation failed for IP 63.110.125.22: HTTP Error 429: Too Many Requests
+2025-04-04T19:31:26.870+0000 [WARNING] Geolocation failed for IP 84.159.103.23: HTTP Error 429: Too Many Requests
+2025-04-04T19:31:26.913+0000 [WARNING] Geolocation failed for IP 200.111.150.2: HTTP Error 429: Too Many Requests
+2025-04-04T19:31:26.959+0000 [WARNING] Geolocation failed for IP 208.80.193.42: HTTP Error 429: Too Many Requests
+2025-04-04T19:31:27.008+0000 [WARNING] Geolocation failed for IP 93.158.145.27: HTTP Error 429: Too Many Requests
+2025-04-04T19:31:27.056+0000 [WARNING] Geolocation failed for IP 208.80.193.30: HTTP Error 429: Too Many Requests
+2025-04-04T19:31:27.107+0000 [WARNING] Geolocation failed for IP 203.128.250.31: HTTP Error 429: Too Many Requests
+2025-04-04T19:31:27.150+0000 [WARNING] Geolocation failed for IP 69.63.181.250: HTTP Error 429: Too Many Requests
+2025-04-04T19:31:27.194+0000 [WARNING] Geolocation failed for IP 85.210.170.201: HTTP Error 429: Too Many Requests
+2025-04-04T19:31:27.237+0000 [WARNING] Geolocation failed for IP 86.138.141.39: HTTP Error 429: Too Many Requests
+2025-04-04T19:31:27.284+0000 [WARNING] Geolocation failed for IP 217.227.131.203: HTTP Error 429: Too Many Requests
+2025-04-04T19:31:27.327+0000 [WARNING] Geolocation failed for IP 82.6.96.33: HTTP Error 429: Too Many Requests
+2025-04-04T19:31:27.370+0000 [WARNING] Geolocation failed for IP 217.227.182.234: HTTP Error 429: Too Many Requests
+2025-04-04T19:31:27.412+0000 [WARNING] Geolocation failed for IP 217.44.85.20: HTTP Error 429: Too Many Requests
+2025-04-04T19:31:27.456+0000 [WARNING] Geolocation failed for IP 190.14.186.130: HTTP Error 429: Too Many Requests
+2025-04-04T19:31:53.700+0000 [WARNING] Geolocation failed for IP 81.234.118.27: Remote end closed connection without response
+2025-04-04T19:32:16.313+0000 [WARNING] Geolocation failed for IP 94.68.160.208: Remote end closed connection without response
+2025-04-04T19:32:23.717+0000 [WARNING] Geolocation failed for IP 66.235.124.55: HTTP Error 429: Too Many Requests
+2025-04-04T19:32:23.772+0000 [WARNING] Geolocation failed for IP 154.20.181.97: HTTP Error 429: Too Many Requests
+2025-04-04T19:32:23.818+0000 [WARNING] Geolocation failed for IP 190.162.28.87: HTTP Error 429: Too Many Requests
+2025-04-04T19:32:23.865+0000 [WARNING] Geolocation failed for IP 83.67.65.16: HTTP Error 429: Too Many Requests
+2025-04-04T19:32:23.910+0000 [WARNING] Geolocation failed for IP 88.234.187.178: HTTP Error 429: Too Many Requests
+2025-04-04T19:32:23.955+0000 [WARNING] Geolocation failed for IP 77.88.43.25: HTTP Error 429: Too Many Requests
+2025-04-04T19:32:23.999+0000 [WARNING] Geolocation failed for IP 220.181.7.49: HTTP Error 429: Too Many Requests
+2025-04-04T19:32:24.043+0000 [WARNING] Geolocation failed for IP 66.249.65.177: HTTP Error 429: Too Many Requests
+2025-04-04T19:32:24.090+0000 [WARNING] Geolocation failed for IP 190.177.75.229: HTTP Error 429: Too Many Requests
+2025-04-04T19:32:24.167+0000 [WARNING] Geolocation failed for IP 66.249.65.172: HTTP Error 429: Too Many Requests
+2025-04-04T19:32:24.213+0000 [WARNING] Geolocation failed for IP 216.129.119.10: HTTP Error 429: Too Many Requests
+2025-04-04T19:32:24.258+0000 [WARNING] Geolocation failed for IP 67.195.115.229: HTTP Error 429: Too Many Requests
+2025-04-04T19:32:24.305+0000 [WARNING] Geolocation failed for IP 69.143.43.246: HTTP Error 429: Too Many Requests
+2025-04-04T19:32:24.354+0000 [WARNING] Geolocation failed for IP 122.174.113.132: HTTP Error 429: Too Many Requests
+2025-04-04T19:32:24.405+0000 [WARNING] Geolocation failed for IP 98.246.35.236: HTTP Error 429: Too Many Requests
+2025-04-04T19:32:24.452+0000 [WARNING] Geolocation failed for IP 63.110.125.22: HTTP Error 429: Too Many Requests
+2025-04-04T19:32:24.499+0000 [WARNING] Geolocation failed for IP 84.159.103.23: HTTP Error 429: Too Many Requests
+2025-04-04T19:32:24.545+0000 [WARNING] Geolocation failed for IP 200.111.150.2: HTTP Error 429: Too Many Requests
+2025-04-04T19:32:24.592+0000 [WARNING] Geolocation failed for IP 208.80.193.42: HTTP Error 429: Too Many Requests
+2025-04-04T19:32:24.640+0000 [WARNING] Geolocation failed for IP 93.158.145.27: HTTP Error 429: Too Many Requests
+2025-04-04T19:32:24.688+0000 [WARNING] Geolocation failed for IP 208.80.193.30: HTTP Error 429: Too Many Requests
+2025-04-04T19:32:24.736+0000 [WARNING] Geolocation failed for IP 203.128.250.31: HTTP Error 429: Too Many Requests
+2025-04-04T19:32:24.784+0000 [WARNING] Geolocation failed for IP 69.63.181.250: HTTP Error 429: Too Many Requests
+2025-04-04T19:32:24.829+0000 [WARNING] Geolocation failed for IP 85.210.170.201: HTTP Error 429: Too Many Requests
+2025-04-04T19:32:24.899+0000 [WARNING] Geolocation failed for IP 86.138.141.39: HTTP Error 429: Too Many Requests
+2025-04-04T19:32:24.949+0000 [WARNING] Geolocation failed for IP 217.227.131.203: HTTP Error 429: Too Many Requests
+2025-04-04T19:32:24.996+0000 [WARNING] Geolocation failed for IP 82.6.96.33: HTTP Error 429: Too Many Requests
+2025-04-04T19:32:25.045+0000 [WARNING] Geolocation failed for IP 217.227.182.234: HTTP Error 429: Too Many Requests
+2025-04-04T19:32:25.091+0000 [WARNING] Geolocation failed for IP 217.44.85.20: HTTP Error 429: Too Many Requests
+2025-04-04T19:32:25.136+0000 [WARNING] Geolocation failed for IP 190.14.186.130: HTTP Error 429: Too Many Requests
+2025-04-04T19:32:26.030+0000 [WARNING] Geolocation failed for IP 84.159.103.23: HTTP Error 429: Too Many Requests
+2025-04-04T19:32:26.071+0000 [WARNING] Geolocation failed for IP 200.111.150.2: HTTP Error 429: Too Many Requests
+2025-04-04T19:32:26.116+0000 [WARNING] Geolocation failed for IP 208.80.193.42: HTTP Error 429: Too Many Requests
+2025-04-04T19:32:26.187+0000 [WARNING] Geolocation failed for IP 93.158.145.27: HTTP Error 429: Too Many Requests
+2025-04-04T19:32:26.234+0000 [WARNING] Geolocation failed for IP 208.80.193.30: HTTP Error 429: Too Many Requests
+2025-04-04T19:32:26.278+0000 [WARNING] Geolocation failed for IP 203.128.250.31: HTTP Error 429: Too Many Requests
+2025-04-04T19:32:26.321+0000 [WARNING] Geolocation failed for IP 69.63.181.250: HTTP Error 429: Too Many Requests
+2025-04-04T19:32:26.367+0000 [WARNING] Geolocation failed for IP 85.210.170.201: HTTP Error 429: Too Many Requests
+2025-04-04T19:32:26.412+0000 [WARNING] Geolocation failed for IP 86.138.141.39: HTTP Error 429: Too Many Requests
+2025-04-04T19:32:26.458+0000 [WARNING] Geolocation failed for IP 217.227.131.203: HTTP Error 429: Too Many Requests
+2025-04-04T19:32:26.508+0000 [WARNING] Geolocation failed for IP 82.6.96.33: HTTP Error 429: Too Many Requests
+2025-04-04T19:32:26.552+0000 [WARNING] Geolocation failed for IP 217.227.182.234: HTTP Error 429: Too Many Requests
+2025-04-04T19:32:26.596+0000 [WARNING] Geolocation failed for IP 217.44.85.20: HTTP Error 429: Too Many Requests
+2025-04-04T19:32:26.638+0000 [WARNING] Geolocation failed for IP 190.14.186.130: HTTP Error 429: Too Many Requests
+2025-04-04T19:32:26.684+0000 [WARNING] Geolocation failed for IP 81.234.118.27: HTTP Error 429: Too Many Requests
+2025-04-04T19:32:26.729+0000 [WARNING] Geolocation failed for IP 94.68.160.208: HTTP Error 429: Too Many Requests
+2025-04-04T19:32:26.774+0000 [WARNING] Geolocation failed for IP 66.235.124.55: HTTP Error 429: Too Many Requests
+2025-04-04T19:32:26.823+0000 [WARNING] Geolocation failed for IP 154.20.181.97: HTTP Error 429: Too Many Requests
+2025-04-04T19:32:26.875+0000 [WARNING] Geolocation failed for IP 190.162.28.87: HTTP Error 429: Too Many Requests
+2025-04-04T19:32:26.922+0000 [WARNING] Geolocation failed for IP 83.67.65.16: HTTP Error 429: Too Many Requests
+2025-04-04T19:32:26.965+0000 [WARNING] Geolocation failed for IP 88.234.187.178: HTTP Error 429: Too Many Requests
+2025-04-04T19:32:27.007+0000 [WARNING] Geolocation failed for IP 77.88.43.25: HTTP Error 429: Too Many Requests
+2025-04-04T19:32:27.050+0000 [WARNING] Geolocation failed for IP 220.181.7.49: HTTP Error 429: Too Many Requests
+2025-04-04T19:32:27.095+0000 [WARNING] Geolocation failed for IP 66.249.65.177: HTTP Error 429: Too Many Requests
+2025-04-04T19:32:50.749+0000 [WARNING] Geolocation failed for IP 190.177.75.229: Remote end closed connection without response
+2025-04-04T19:33:26.429+0000 [WARNING] Geolocation failed for IP 66.249.65.172: Remote end closed connection without response
+2025-04-04T19:33:26.964+0000 [WARNING] Geolocation failed for IP 203.128.250.31: HTTP Error 429: Too Many Requests
+2025-04-04T19:33:27.010+0000 [WARNING] Geolocation failed for IP 69.63.181.250: HTTP Error 429: Too Many Requests
+2025-04-04T19:33:27.055+0000 [WARNING] Geolocation failed for IP 85.210.170.201: HTTP Error 429: Too Many Requests
+2025-04-04T19:33:27.101+0000 [WARNING] Geolocation failed for IP 86.138.141.39: HTTP Error 429: Too Many Requests
+2025-04-04T19:33:27.151+0000 [WARNING] Geolocation failed for IP 217.227.131.203: HTTP Error 429: Too Many Requests
+2025-04-04T19:33:27.198+0000 [WARNING] Geolocation failed for IP 82.6.96.33: HTTP Error 429: Too Many Requests
+2025-04-04T19:33:27.243+0000 [WARNING] Geolocation failed for IP 217.227.182.234: HTTP Error 429: Too Many Requests
+2025-04-04T19:33:27.291+0000 [WARNING] Geolocation failed for IP 217.44.85.20: HTTP Error 429: Too Many Requests
+2025-04-04T19:33:27.336+0000 [WARNING] Geolocation failed for IP 190.14.186.130: HTTP Error 429: Too Many Requests
+2025-04-04T19:33:27.377+0000 [WARNING] Geolocation failed for IP 81.234.118.27: HTTP Error 429: Too Many Requests
+2025-04-04T19:33:27.423+0000 [WARNING] Geolocation failed for IP 94.68.160.208: HTTP Error 429: Too Many Requests
+2025-04-04T19:33:27.470+0000 [WARNING] Geolocation failed for IP 66.235.124.55: HTTP Error 429: Too Many Requests
+2025-04-04T19:33:27.515+0000 [WARNING] Geolocation failed for IP 154.20.181.97: HTTP Error 429: Too Many Requests
+2025-04-04T19:33:27.558+0000 [WARNING] Geolocation failed for IP 190.162.28.87: HTTP Error 429: Too Many Requests
+2025-04-04T19:33:27.609+0000 [WARNING] Geolocation failed for IP 83.67.65.16: HTTP Error 429: Too Many Requests
+2025-04-04T19:33:27.653+0000 [WARNING] Geolocation failed for IP 88.234.187.178: HTTP Error 429: Too Many Requests
+2025-04-04T19:33:27.695+0000 [WARNING] Geolocation failed for IP 77.88.43.25: HTTP Error 429: Too Many Requests
+2025-04-04T19:33:27.738+0000 [WARNING] Geolocation failed for IP 220.181.7.49: HTTP Error 429: Too Many Requests
+2025-04-04T19:33:27.782+0000 [WARNING] Geolocation failed for IP 66.249.65.177: HTTP Error 429: Too Many Requests
+2025-04-04T19:33:27.825+0000 [WARNING] Geolocation failed for IP 190.177.75.229: HTTP Error 429: Too Many Requests
+2025-04-04T19:33:27.944+0000 [INFO] Successfully updated all dimension relationships
+2025-04-04T19:33:27.946+0000 [INFO] Done. Returned value was: Dimension loading completed successfully
+2025-04-04T19:33:27.967+0000 [INFO] Marking task as SUCCESS. dag_id=iis_etl, task_id=processing.load_dimensions, execution_date=20250404T192945, start_date=20250404T193055, end_date=20250404T193327
+2025-04-04T19:33:27.999+0000 [INFO] Task exited with return code 0
+2025-04-04T19:33:28.036+0000 [INFO] 1 downstream tasks scheduled from follow-on schedule check

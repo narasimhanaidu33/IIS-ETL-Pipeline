@@ -1,0 +1,14 @@
+2025-04-04T21:43:44.162+0000 [INFO] Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: iis_etl.archive manual__2025-04-04T21:43:17.266443+00:00 [queued]>
+2025-04-04T21:43:44.168+0000 [INFO] Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: iis_etl.archive manual__2025-04-04T21:43:17.266443+00:00 [queued]>
+2025-04-04T21:43:44.168+0000 [INFO] Starting attempt 1 of 4
+2025-04-04T21:43:44.376+0000 [INFO] Executing <Task(PythonOperator): archive> on 2025-04-04 21:43:17.266443+00:00
+2025-04-04T21:43:44.382+0000 [INFO] Started process 1809 to run task
+2025-04-04T21:43:44.385+0000 [INFO] Running: ['airflow', 'tasks', 'run', 'iis_etl', 'archive', 'manual__2025-04-04T21:43:17.266443+00:00', '--job-id', '590', '--raw', '--subdir', 'DAGS_FOLDER/iis_etl.py', '--cfg-path', '/tmp/tmpacirr9n_']
+2025-04-04T21:43:44.386+0000 [INFO] Job 590: Subtask archive
+2025-04-04T21:43:44.427+0000 [INFO] Running <TaskInstance: iis_etl.archive manual__2025-04-04T21:43:17.266443+00:00 [running]> on host b8e5693c89ab
+2025-04-04T21:43:44.476+0000 [INFO] Exporting env vars: AIRFLOW_CTX_DAG_OWNER='airflow' AIRFLOW_CTX_DAG_ID='iis_etl' AIRFLOW_CTX_TASK_ID='archive' AIRFLOW_CTX_EXECUTION_DATE='2025-04-04T21:43:17.266443+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-04-04T21:43:17.266443+00:00'
+2025-04-04T21:43:44.488+0000 [INFO] Archiving /opt/airflow/data/processing/u_ex100923.log to /opt/airflow/data/archive/20250404_214344_u_ex100923.log.gz
+2025-04-04T21:43:44.500+0000 [INFO] Done. Returned value was: None
+2025-04-04T21:43:44.505+0000 [INFO] Marking task as SUCCESS. dag_id=iis_etl, task_id=archive, execution_date=20250404T214317, start_date=20250404T214344, end_date=20250404T214344
+2025-04-04T21:43:44.523+0000 [INFO] Task exited with return code 0
+2025-04-04T21:43:44.535+0000 [INFO] 0 downstream tasks scheduled from follow-on schedule check

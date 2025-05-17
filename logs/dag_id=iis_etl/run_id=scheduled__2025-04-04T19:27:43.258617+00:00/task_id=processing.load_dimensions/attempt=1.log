@@ -1,0 +1,31 @@
+2025-04-04T19:28:52.121+0000 [INFO] Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: iis_etl.processing.load_dimensions scheduled__2025-04-04T19:27:43.258617+00:00 [queued]>
+2025-04-04T19:28:52.126+0000 [INFO] Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: iis_etl.processing.load_dimensions scheduled__2025-04-04T19:27:43.258617+00:00 [queued]>
+2025-04-04T19:28:52.126+0000 [INFO] Starting attempt 1 of 4
+2025-04-04T19:28:52.133+0000 [INFO] Executing <Task(PythonOperator): processing.load_dimensions> on 2025-04-04 19:27:43.258617+00:00
+2025-04-04T19:28:52.136+0000 [INFO] Started process 180 to run task
+2025-04-04T19:28:52.139+0000 [INFO] Running: ['airflow', 'tasks', 'run', 'iis_etl', 'processing.load_dimensions', 'scheduled__2025-04-04T19:27:43.258617+00:00', '--job-id', '47', '--raw', '--subdir', 'DAGS_FOLDER/iis_etl.py', '--cfg-path', '/tmp/tmpy5s6xc9m']
+2025-04-04T19:28:52.140+0000 [INFO] Job 47: Subtask processing.load_dimensions
+2025-04-04T19:28:52.164+0000 [INFO] Running <TaskInstance: iis_etl.processing.load_dimensions scheduled__2025-04-04T19:27:43.258617+00:00 [running]> on host 4c7227608743
+2025-04-04T19:28:52.302+0000 [INFO] Exporting env vars: AIRFLOW_CTX_DAG_OWNER='airflow' AIRFLOW_CTX_DAG_ID='iis_etl' AIRFLOW_CTX_TASK_ID='processing.load_dimensions' AIRFLOW_CTX_EXECUTION_DATE='2025-04-04T19:27:43.258617+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2025-04-04T19:27:43.258617+00:00'
+2025-04-04T19:28:52.344+0000 [INFO] Using connection ID 'postgres_iis' for task execution.
+2025-04-04T19:28:52.513+0000 [WARNING] Geolocation failed for IP 138.100.13.40: HTTP Error 429: Too Many Requests
+2025-04-04T19:28:52.559+0000 [WARNING] Geolocation failed for IP 134.36.36.100: HTTP Error 429: Too Many Requests
+2025-04-04T19:28:52.601+0000 [WARNING] Geolocation failed for IP 216.155.41.11: HTTP Error 429: Too Many Requests
+2025-04-04T19:28:52.648+0000 [WARNING] Geolocation failed for IP 70.143.72.10: HTTP Error 429: Too Many Requests
+2025-04-04T19:28:52.695+0000 [WARNING] Geolocation failed for IP 138.100.13.40: HTTP Error 429: Too Many Requests
+2025-04-04T19:28:52.741+0000 [WARNING] Geolocation failed for IP 134.36.36.100: HTTP Error 429: Too Many Requests
+2025-04-04T19:28:52.788+0000 [WARNING] Geolocation failed for IP 216.155.41.11: HTTP Error 429: Too Many Requests
+2025-04-04T19:28:52.836+0000 [WARNING] Geolocation failed for IP 70.143.72.10: HTTP Error 429: Too Many Requests
+2025-04-04T19:28:52.882+0000 [WARNING] Geolocation failed for IP 138.100.13.40: HTTP Error 429: Too Many Requests
+2025-04-04T19:28:52.928+0000 [WARNING] Geolocation failed for IP 134.36.36.100: HTTP Error 429: Too Many Requests
+2025-04-04T19:28:52.971+0000 [WARNING] Geolocation failed for IP 216.155.41.11: HTTP Error 429: Too Many Requests
+2025-04-04T19:28:53.014+0000 [WARNING] Geolocation failed for IP 70.143.72.10: HTTP Error 429: Too Many Requests
+2025-04-04T19:28:53.061+0000 [WARNING] Geolocation failed for IP 138.100.13.40: HTTP Error 429: Too Many Requests
+2025-04-04T19:28:53.106+0000 [WARNING] Geolocation failed for IP 134.36.36.100: HTTP Error 429: Too Many Requests
+2025-04-04T19:28:53.152+0000 [WARNING] Geolocation failed for IP 216.155.41.11: HTTP Error 429: Too Many Requests
+2025-04-04T19:28:53.199+0000 [WARNING] Geolocation failed for IP 70.143.72.10: HTTP Error 429: Too Many Requests
+2025-04-04T19:28:53.289+0000 [INFO] Successfully updated all dimension relationships
+2025-04-04T19:28:53.290+0000 [INFO] Done. Returned value was: Dimension loading completed successfully
+2025-04-04T19:28:53.306+0000 [INFO] Marking task as SUCCESS. dag_id=iis_etl, task_id=processing.load_dimensions, execution_date=20250404T192743, start_date=20250404T192852, end_date=20250404T192853
+2025-04-04T19:28:53.331+0000 [INFO] Task exited with return code 0
+2025-04-04T19:28:53.367+0000 [INFO] 1 downstream tasks scheduled from follow-on schedule check

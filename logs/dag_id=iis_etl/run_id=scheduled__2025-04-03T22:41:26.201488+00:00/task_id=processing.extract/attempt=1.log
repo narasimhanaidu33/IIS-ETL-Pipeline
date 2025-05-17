@@ -1,0 +1,19 @@
+2025-04-03T22:42:35.836+0000 [INFO] Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: iis_etl.processing.extract scheduled__2025-04-03T22:41:26.201488+00:00 [queued]>
+2025-04-03T22:42:35.885+0000 [INFO] Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: iis_etl.processing.extract scheduled__2025-04-03T22:41:26.201488+00:00 [queued]>
+2025-04-03T22:42:35.885+0000 [INFO] Starting attempt 1 of 4
+2025-04-03T22:42:35.904+0000 [INFO] Executing <Task(PythonOperator): processing.extract> on 2025-04-03 22:41:26.201488+00:00
+2025-04-03T22:42:35.913+0000 [INFO] Started process 1999 to run task
+2025-04-03T22:42:35.922+0000 [INFO] Running: ['airflow', 'tasks', 'run', 'iis_etl', 'processing.extract', 'scheduled__2025-04-03T22:41:26.201488+00:00', '--job-id', '652', '--raw', '--subdir', 'DAGS_FOLDER/iis_etl.py', '--cfg-path', '/tmp/tmpsiccgz6x']
+2025-04-03T22:42:35.929+0000 [INFO] Job 652: Subtask processing.extract
+2025-04-03T22:42:36.089+0000 [INFO] Running <TaskInstance: iis_etl.processing.extract scheduled__2025-04-03T22:41:26.201488+00:00 [running]> on host 13c9a988b40a
+2025-04-03T22:42:37.124+0000 [INFO] Exporting env vars: AIRFLOW_CTX_DAG_OWNER='airflow' AIRFLOW_CTX_DAG_ID='iis_etl' AIRFLOW_CTX_TASK_ID='processing.extract' AIRFLOW_CTX_EXECUTION_DATE='2025-04-03T22:41:26.201488+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2025-04-03T22:41:26.201488+00:00'
+2025-04-03T22:42:37.136+0000 [INFO] No logs found to process
+2025-04-03T22:42:37.136+0000 [ERROR] Extraction failed: No logs to process
+Traceback (most recent call last):
+  File "/opt/airflow/dags/iis_etl.py", line 145, in extract
+    raise AirflowSkipException("No logs to process")
+airflow.exceptions.AirflowSkipException: No logs to process
+2025-04-03T22:42:37.178+0000 [INFO] No logs to process
+2025-04-03T22:42:37.215+0000 [INFO] Marking task as SKIPPED. dag_id=iis_etl, task_id=processing.extract, execution_date=20250403T224126, start_date=20250403T224235, end_date=20250403T224237
+2025-04-03T22:42:37.319+0000 [INFO] Task exited with return code 0
+2025-04-03T22:42:37.538+0000 [INFO] 0 downstream tasks scheduled from follow-on schedule check

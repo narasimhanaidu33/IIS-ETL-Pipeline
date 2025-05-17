@@ -1,0 +1,14 @@
+2025-04-04T15:22:33.068+0000 [INFO] Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: iis_etl.processing.load_dimensions scheduled__2025-04-04T15:16:24.018575+00:00 [queued]>
+2025-04-04T15:22:33.074+0000 [INFO] Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: iis_etl.processing.load_dimensions scheduled__2025-04-04T15:16:24.018575+00:00 [queued]>
+2025-04-04T15:22:33.074+0000 [INFO] Starting attempt 2 of 4
+2025-04-04T15:22:33.081+0000 [INFO] Executing <Task(PythonOperator): processing.load_dimensions> on 2025-04-04 15:16:24.018575+00:00
+2025-04-04T15:22:33.084+0000 [INFO] Started process 1647 to run task
+2025-04-04T15:22:33.087+0000 [INFO] Running: ['airflow', 'tasks', 'run', 'iis_etl', 'processing.load_dimensions', 'scheduled__2025-04-04T15:16:24.018575+00:00', '--job-id', '536', '--raw', '--subdir', 'DAGS_FOLDER/iis_etl.py', '--cfg-path', '/tmp/tmpercd99pi']
+2025-04-04T15:22:33.089+0000 [INFO] Job 536: Subtask processing.load_dimensions
+2025-04-04T15:22:33.128+0000 [INFO] Running <TaskInstance: iis_etl.processing.load_dimensions scheduled__2025-04-04T15:16:24.018575+00:00 [running]> on host 6adf0d434abe
+2025-04-04T15:22:33.444+0000 [INFO] Exporting env vars: AIRFLOW_CTX_DAG_OWNER='airflow' AIRFLOW_CTX_DAG_ID='iis_etl' AIRFLOW_CTX_TASK_ID='processing.load_dimensions' AIRFLOW_CTX_EXECUTION_DATE='2025-04-04T15:16:24.018575+00:00' AIRFLOW_CTX_TRY_NUMBER='2' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2025-04-04T15:16:24.018575+00:00'
+2025-04-04T15:22:33.500+0000 [INFO] Using connection ID 'postgres_iis' for task execution.
+2025-04-04T15:22:33.793+0000 [INFO] Done. Returned value was: Loaded dimensions: time(718), clients(100), requests(1177), responses(10)
+2025-04-04T15:22:33.811+0000 [INFO] Marking task as SUCCESS. dag_id=iis_etl, task_id=processing.load_dimensions, execution_date=20250404T151624, start_date=20250404T152233, end_date=20250404T152233
+2025-04-04T15:22:33.850+0000 [INFO] Task exited with return code 0
+2025-04-04T15:22:33.871+0000 [INFO] 1 downstream tasks scheduled from follow-on schedule check

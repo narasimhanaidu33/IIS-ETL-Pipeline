@@ -1,0 +1,13 @@
+2025-04-03T22:24:33.116+0000 [INFO] Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: iis_etl.validate_environment manual__2025-04-03T22:24:21.669339+00:00 [queued]>
+2025-04-03T22:24:33.128+0000 [INFO] Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: iis_etl.validate_environment manual__2025-04-03T22:24:21.669339+00:00 [queued]>
+2025-04-03T22:24:33.128+0000 [INFO] Starting attempt 1 of 4
+2025-04-03T22:24:33.143+0000 [INFO] Executing <Task(_PythonDecoratedOperator): validate_environment> on 2025-04-03 22:24:21.669339+00:00
+2025-04-03T22:24:33.197+0000 [INFO] Started process 137 to run task
+2025-04-03T22:24:33.203+0000 [INFO] Running: ['airflow', 'tasks', 'run', 'iis_etl', 'validate_environment', 'manual__2025-04-03T22:24:21.669339+00:00', '--job-id', '33', '--raw', '--subdir', 'DAGS_FOLDER/iis_etl.py', '--cfg-path', '/tmp/tmpafhgjr2f']
+2025-04-03T22:24:33.207+0000 [INFO] Job 33: Subtask validate_environment
+2025-04-03T22:24:33.328+0000 [INFO] Running <TaskInstance: iis_etl.validate_environment manual__2025-04-03T22:24:21.669339+00:00 [running]> on host 13c9a988b40a
+2025-04-03T22:24:34.304+0000 [INFO] Exporting env vars: AIRFLOW_CTX_DAG_OWNER='airflow' AIRFLOW_CTX_DAG_ID='iis_etl' AIRFLOW_CTX_TASK_ID='validate_environment' AIRFLOW_CTX_EXECUTION_DATE='2025-04-03T22:24:21.669339+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-04-03T22:24:21.669339+00:00'
+2025-04-03T22:24:34.324+0000 [INFO] Done. Returned value was: True
+2025-04-03T22:24:34.347+0000 [INFO] Marking task as SUCCESS. dag_id=iis_etl, task_id=validate_environment, execution_date=20250403T222421, start_date=20250403T222433, end_date=20250403T222434
+2025-04-03T22:24:34.407+0000 [INFO] Task exited with return code 0
+2025-04-03T22:24:34.435+0000 [INFO] 0 downstream tasks scheduled from follow-on schedule check
